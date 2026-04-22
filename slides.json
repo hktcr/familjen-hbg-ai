@@ -81,6 +81,29 @@
             "style": "typewriter"
         },
         {
+            "id": "merlin-demo",
+            "section": "forstaelse",
+            "type": "step-slide",
+            "title": "Merlin-spåret: Mönster, inte magi",
+            "steps": [
+                {
+                    "type": "headline",
+                    "title": "Hur fungerar AI egentligen?",
+                    "subtitle": "Att förstå algoritmer genom fågelsång"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        { "title": "1. Data in", "desc": "Mikrofonen fångar ett ljud." },
+                        { "title": "2. Omvandling", "desc": "Ljudet ritas upp som en bild (ett spektrogram)." },
+                        { "title": "3. Mönsterigenkänning", "desc": "AI:n matchar bilden mot miljontals inlärda mönster." },
+                        { "title": "4. Sannolikhet", "desc": "Den gissar: '98% chans att det är en Talgoxe'." }
+                    ],
+                    "footer": "ChatGPT gör exakt detta, fast den gissar nästa ord istället för nästa fågel."
+                }
+            ]
+        },
+        {
             "id": "ai-not-thinking",
             "section": "forstaelse",
             "type": "quote",
@@ -136,7 +159,7 @@
             "id": "ai-radar-module",
             "section": "risker",
             "type": "iframe",
-            "title": "AI: Capability & Risk Radar",
+            "title": "Radarn: Tidslinje & Fatala Risker",
             "url": "https://hktcr.github.io/AInstein/Deployments/ai_radar_presentation/index.html"
         },
         {
