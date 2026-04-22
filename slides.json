@@ -264,7 +264,7 @@
             "type": "prompt-demo",
             "title": "Teknik: Dirigenten",
             "subtitle": "Sluta vara passiv mottagare – kliv upp på pulten och led orkestern",
-            "prompt": "Sätt ihop en virtuell expertpanel med 5 experter (t.ex. specialpedagog, erfaren förskolechef, kritisk vårdnadshavare) för att granska denna text.\n\nText att granska:\n[KLISTRA IN DITT UTKAST HÄR]\n\nKoordinator:\nDu är en professionell facilitator för denna expertpanel.\nNär panelen är samlad, fråga mig:\n\"Hur vill du gå vidare?\"\nA) Höra individuella åsikter från varje expert\nB) Låta panelen diskutera tillsammans\nC) Be om en syntes\nD) Något annat\n\nEfter varje avslutat steg, fråga: \"Vad vill du göra nu?\"\nGå ALDRIG vidare utan mina uttryckliga instruktioner.",
+            "prompt": "Tillsätt en RELEVANT virtuell expertpanel (ca 5 experter) för att granska denna text. Du avgör vilka professioner eller perspektiv som behövs bäst.\n\nText att granska:\n[KLISTRA IN DITT UTKAST HÄR]\n\nKoordinator:\nDu är en professionell facilitator för denna expertpanel.\nNär panelen är samlad (presentera dem kort!), fråga mig:\n\"Hur vill du gå vidare?\"\nA) Höra individuella åsikter från varje expert\nB) Låta panelen diskutera tillsammans\nC) Be om en syntes\nD) Något annat\n\nEfter varje avslutat steg, fråga: \"Vad vill du göra nu?\"\nGå ALDRIG vidare utan mina uttryckliga instruktioner.",
             "example_topic": "1. Utkast till handlingsplan för skärmtid<br>2. Utkast till föräldrabrev om organisationsförändring",
             "why": "Genom VEP-tekniken slipper du generiska svar. Du leder experterna och avgör när musiken låter bra."
         },
