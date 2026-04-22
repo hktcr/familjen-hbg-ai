@@ -262,11 +262,11 @@
             "id": "vep-prompt",
             "section": "praktik",
             "type": "prompt-demo",
-            "title": "Teknik: 'Personerna i rummet'",
-            "subtitle": "Hur du får nyanserade svar istället för generiska",
+            "title": "Teknik: Dirigenten",
+            "subtitle": "Sluta vara passiv mottagare – kliv upp på pulten och led orkestern",
             "prompt": "Tillsätt en virtuell expertpanel med relevanta experter (t.ex. specialpedagog, erfaren förskolechef, förälder) som säkerställer att alla perspektiv på [ÄMNE] belyses. Varje expert ska presentera sin syn, sedan ska panelen diskutera och identifiera områden där de är eniga respektive oense. Avsluta med en syntes.",
             "example_topic": "1. hur vi kommunicerar en organisationsförändring till personalen<br>2. hur vi som förskola möter vårdnadshavarnas växande oro för skärmtid",
-            "why": "VEP-tekniken tvingar AI att ge fler perspektiv istället för ett enda generiskt svar."
+            "why": "Genom VEP-tekniken slipper du generiska svar. Du leder experterna och avgör när musiken låter bra."
         },
         {
             "id": "har-vi",
