@@ -53,7 +53,9 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:
 .nav-btn.grid-btn:hover{background:var(--sage-dark)}
 .nav-counter{font-size:.8rem;color:var(--text-muted);font-variant-numeric:tabular-nums}
 .slide-content{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 60px;overflow-y:auto}
+.slide-content.no-padding{padding:0}
 .slide-inner{max-width:960px;width:100%;animation:fadeIn .4s ease}
+.slide-inner.full-width{max-width:100%;height:100%}
 @keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 
 /* ===== SLIDE TYPES ===== */
@@ -254,6 +256,14 @@ function md(t){
 
 function renderSlide(s){
   const el=document.getElementById('slide-render');
+  const contentEl=document.querySelector('.slide-content');
+  if(s.type==='iframe'){
+    el.classList.add('full-width');
+    contentEl.classList.add('no-padding');
+  } else {
+    el.classList.remove('full-width');
+    contentEl.classList.remove('no-padding');
+  }
   let h='';
   switch(s.type){
     case'title':
@@ -261,7 +271,7 @@ function renderSlide(s){
         <div class="subtitle">${md(s.subtitle)}</div>
         <div class="meta">${s.meta||''}</div></div>`;break;
     case'iframe':
-      h=`<div style="width:100%; height:80vh;"><iframe src="${s.url}" style="width:100%;height:100%;border:none;border-radius:var(--radius);box-shadow:var(--shadow-hover);"></iframe></div>`;
+      h=`<div style="width:100%; height:100%;"><iframe src="${s.url}" style="width:100%;height:100%;border:none;"></iframe></div>`;
       break;
     case'presenter':
       h=`<div class="slide-presenter">
