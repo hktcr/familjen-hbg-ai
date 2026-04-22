@@ -160,7 +160,7 @@
             "section": "risker",
             "type": "iframe",
             "title": "Radarn: Tidslinje & Fatala Risker",
-            "url": "https://hktcr.github.io/AInstein/Deployments/ai_radar_presentation/index.html"
+            "url": "modules/ai_radar_presentation/index.html"
         },
         {
             "id": "risks-quad",
