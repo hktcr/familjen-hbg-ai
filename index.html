@@ -353,8 +353,11 @@ function renderSlide(s){
     case'prompt-demo':
       h=`<div class="slide-prompt"><h2>${md(s.title)}</h2>
         <div class="psub">${s.subtitle||''}</div>
-        <div class="prompt-box">${s.prompt}</div>
-        ${s.example_topic?`<div class="prompt-example"><strong>Exempelfråga</strong>${s.example_topic}</div>`:''}
+        <div class="prompt-box" id="prompt-content-${s.id}">${s.prompt}</div>
+        <div style="text-align:right; margin-top:-16px; margin-bottom:16px;">
+          <button class="copy-btn" onclick="navigator.clipboard.writeText(document.getElementById('prompt-content-${s.id}').innerText); this.innerText='Kopierad!'; setTimeout(()=>this.innerText='Kopiera', 2000);" style="background:var(--sage-light); border:1px solid var(--sage); color:var(--sage-dark); padding:6px 14px; border-radius:6px; font-size:0.85rem; font-weight:600; cursor:pointer;">Kopiera</button>
+        </div>
+        ${s.example_topic?`<div class="prompt-example"><strong>Exempel:</strong><br>${s.example_topic}</div>`:''}
         ${s.why?`<div class="prompt-why">${s.why}</div>`:''}
         </div>`;break;
     default:

@@ -264,9 +264,47 @@
             "type": "prompt-demo",
             "title": "Teknik: Dirigenten",
             "subtitle": "Sluta vara passiv mottagare – kliv upp på pulten och led orkestern",
-            "prompt": "Tillsätt en virtuell expertpanel med relevanta experter (t.ex. specialpedagog, erfaren förskolechef, förälder) som säkerställer att alla perspektiv på [ÄMNE] belyses. Varje expert ska presentera sin syn, sedan ska panelen diskutera och identifiera områden där de är eniga respektive oense. Avsluta med en syntes.",
-            "example_topic": "1. hur vi kommunicerar en organisationsförändring till personalen<br>2. hur vi som förskola möter vårdnadshavarnas växande oro för skärmtid",
+            "prompt": "Sätt ihop en virtuell expertpanel med 5 experter (t.ex. specialpedagog, erfaren chef, kritisk vårdnadshavare) för att granska följande: [KLISTRA IN UTKAST].\n\nDin roll: Du är Koordinatorn. Låt experterna granska texten, stanna sedan och fråga mig: Hur vill du gå vidare? (A. Individuella åsikter, B. Gemensam diskussion, C. Syntes). Gå ALDRIG vidare utan mitt godkännande.",
+            "example_topic": "1. Utkast till handlingsplan för skärmtid<br>2. Utkast till föräldrabrev om organisationsförändring",
             "why": "Genom VEP-tekniken slipper du generiska svar. Du leder experterna och avgör när musiken låter bra."
+        },
+        {
+            "id": "vep-progression",
+            "section": "praktik",
+            "type": "step-slide",
+            "steps": [
+                {
+                    "type": "headline",
+                    "title": "Dirigentens 5 Steg",
+                    "subtitle": "Hur du tvingar fram värdet av expert-perspektiven"
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        {
+                            "title": "1. Etablera orkestern",
+                            "desc": "Du definierar experterna och aktiverar Koordinatorn."
+                        },
+                        {
+                            "title": "2. Isoleringen",
+                            "desc": "Låt experterna granska utan att se varandras svar. Undvik Group-think."
+                        },
+                        {
+                            "title": "3. Friktionen (Red Team)",
+                            "desc": "Be dem leta svagheter. Använd AI för att attackera ditt eget förslag."
+                        },
+                        {
+                            "title": "4. Avstämningen",
+                            "desc": "Ställ experterna mot varandra. Tvinga fram en kompromiss."
+                        },
+                        {
+                            "title": "5. Mästerverket",
+                            "desc": "Låt AI bygga den slutgiltiga syntesen utifrån debatten."
+                        }
+                    ],
+                    "footer": "Du använder inte AI för att få ett snabbt svar. Du använder AI som en testbänk."
+                }
+            ]
         },
         {
             "id": "har-vi",
