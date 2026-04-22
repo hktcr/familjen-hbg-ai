@@ -183,8 +183,11 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:
 <div id="slide-view">
   <nav class="slide-nav">
     <button class="nav-btn" onclick="prevSlide()">← Föregående</button>
-    <button class="nav-btn grid-btn" onclick="showGrid()">☰ Översikt</button>
-    <span class="nav-counter" id="nav-counter"></span>
+    <div style="display:flex; gap: 24px; align-items:center;">
+      <button class="nav-btn grid-btn" onclick="showGrid()">☰ Översikt</button>
+      <span class="nav-counter" id="nav-counter"></span>
+      <button class="nav-btn" onclick="toggleFS()" id="fsBtn">⛶ Helskärm</button>
+    </div>
     <button class="nav-btn" onclick="nextSlide()">Nästa →</button>
   </nav>
   <div class="slide-content">
@@ -270,6 +273,16 @@ function showSlide(i){
 
 function prevSlide(){if(currentIndex>0)showSlide(currentIndex-1)}
 function nextSlide(){if(currentIndex<slides.length-1)showSlide(currentIndex+1)}
+
+function toggleFS(){
+  if(!document.fullscreenElement){
+    document.documentElement.requestFullscreen().catch(err=>{console.log('Error attempting to enable fullscreen:',err);});
+    document.getElementById('fsBtn').innerText='🗗 Stäng Helskärm';
+  }else{
+    if(document.exitFullscreen) document.exitFullscreen();
+    document.getElementById('fsBtn').innerText='⛶ Helskärm';
+  }
+}
 
 function md(t){
   if(!t)return'';
