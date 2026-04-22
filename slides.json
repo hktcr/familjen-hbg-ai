@@ -133,6 +133,13 @@
             "style": "typewriter"
         },
         {
+            "id": "ai-radar-module",
+            "section": "risker",
+            "type": "iframe",
+            "title": "AI: Capability & Risk Radar",
+            "url": "https://hktcr.github.io/AInstein/Deployments/ai_radar_presentation/index.html"
+        },
+        {
             "id": "risks-quad",
             "section": "risker",
             "type": "grid",

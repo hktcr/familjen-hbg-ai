@@ -253,6 +253,9 @@ function renderSlide(s){
       h=`<div class="slide-title"><h1>${md(s.title)}</h1>
         <div class="subtitle">${md(s.subtitle)}</div>
         <div class="meta">${s.meta||''}</div></div>`;break;
+    case'iframe':
+      h=`<div style="width:100%; height:80vh;"><iframe src="${s.url}" style="width:100%;height:100%;border:none;border-radius:var(--radius);box-shadow:var(--shadow-hover);"></iframe></div>`;
+      break;
     case'presenter':
       h=`<div class="slide-presenter">
         <img class="presenter-avatar" src="${s.avatar}" alt="${s.name}" onerror="this.style.display='none'">
