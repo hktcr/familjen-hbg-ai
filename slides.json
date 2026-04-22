@@ -107,7 +107,7 @@
             "id": "ai-not-thinking",
             "section": "forstaelse",
             "type": "quote",
-            "text": "AI är inte en tänkande varelse. Men den är den mest övertygande *imitatören* mänskligheten någonsin skapat.",
+            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.",
             "author": "",
             "style": "typewriter"
         },
@@ -265,8 +265,8 @@
             "title": "Teknik: Dirigenten",
             "subtitle": "Sluta vara passiv mottagare – kliv upp på pulten och led orkestern",
             "prompt": "Tillsätt en RELEVANT virtuell expertpanel (ca 5 experter) för att granska denna text. Du avgör vilka professioner eller perspektiv som behövs bäst.\n\nText att granska:\n[KLISTRA IN DITT UTKAST HÄR]\n\nKoordinator:\nDu är en professionell facilitator för denna expertpanel.\nNär panelen är samlad (presentera dem kort!), fråga mig:\n\"Hur vill du gå vidare?\"\nA) Höra individuella åsikter från varje expert\nB) Låta panelen diskutera tillsammans\nC) Be om en syntes\nD) Något annat\n\nEfter varje avslutat steg, fråga: \"Vad vill du göra nu?\"\nGå ALDRIG vidare utan mina uttryckliga instruktioner.",
-            "example_topic": "1. Utkast till handlingsplan för skärmtid<br>2. Utkast till föräldrabrev om organisationsförändring",
-            "why": "Genom VEP-tekniken slipper du generiska svar. Du leder experterna och avgör när musiken låter bra."
+            "example_topic": "1. Tvätta ett argt, frustrerat utkast till föräldrabrev<br>2. Trycktesta en krisplan för personalbrist",
+            "why": "VEP sparar tid och ångest. Låt panelen koka ner din frustration till ett sakligt, juridiskt hållbart brev."
         },
         {
             "id": "vep-progression",
