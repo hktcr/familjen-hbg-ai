@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI i förskolan — Familjen Hbg</title>
+<meta name="description" content="Föreläsning om AI i förskolan för Familjen Hbg Förskolenätverk, 24 april 2026">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#FAFAF8;--bg-card:#FFFFFF;--bg-grid:#F3F1EE;
+--text:#2D2D2D;--text-muted:#6B6B6B;--text-light:#999;
+--sage:#7a8f6e;--sage-light:#e8ede5;--sage-dark:#5d7252;
+--terra:#c4956a;--terra-light:#f5ece4;--terra-dark:#a87a52;
+--coral:#b86e5a;--coral-light:#f5e4df;
+--radius:16px;--radius-sm:10px;
+--shadow:0 2px 12px rgba(0,0,0,.06);--shadow-hover:0 8px 32px rgba(0,0,0,.1);
+--font:'Inter',system-ui,-apple-system,sans-serif;
+}
+html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:100%;overflow:hidden}
+
+/* ===== GRID VIEW ===== */
+#grid-view{display:flex;flex-direction:column;height:100vh;padding:24px 32px;overflow-y:auto}
+.grid-header{text-align:center;margin-bottom:28px}
+.grid-header h1{font-size:1.8rem;font-weight:600;color:var(--text);letter-spacing:-.02em}
+.grid-header p{font-size:.95rem;color:var(--text-muted);margin-top:4px}
+.section-group{margin-bottom:24px}
+.section-label{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;padding:6px 14px;border-radius:20px;display:inline-block;margin-bottom:12px;color:#fff}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.card{background:var(--bg-card);border-radius:var(--radius);padding:20px 18px;cursor:pointer;
+  border:1px solid rgba(0,0,0,.06);transition:all .25s ease;position:relative;min-height:100px;
+  display:flex;flex-direction:column;justify-content:center}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:rgba(0,0,0,.1)}
+.card-icon{font-size:1.6rem;margin-bottom:6px}
+.card-title{font-size:.85rem;font-weight:600;line-height:1.3}
+.card-type{font-size:.65rem;color:var(--text-light);text-transform:uppercase;letter-spacing:.05em;margin-top:6px}
+.card-id{position:absolute;top:8px;right:10px;font-size:.55rem;color:var(--text-light);font-family:monospace;opacity:.5}
+
+/* ===== SLIDE VIEW ===== */
+#slide-view{display:none;height:100vh;flex-direction:column;background:var(--bg)}
+.slide-nav{display:flex;justify-content:space-between;align-items:center;padding:16px 32px;
+  background:rgba(250,250,248,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.05);z-index:10}
+.nav-btn{background:none;border:1px solid rgba(0,0,0,.1);border-radius:var(--radius-sm);
+  padding:8px 18px;cursor:pointer;font-family:var(--font);font-size:.8rem;color:var(--text-muted);
+  transition:all .2s}
+.nav-btn:hover{background:var(--sage-light);color:var(--sage-dark);border-color:var(--sage)}
+.nav-btn.grid-btn{background:var(--sage);color:#fff;border-color:var(--sage)}
+.nav-btn.grid-btn:hover{background:var(--sage-dark)}
+.nav-counter{font-size:.8rem;color:var(--text-muted);font-variant-numeric:tabular-nums}
+.slide-content{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 60px;overflow-y:auto}
+.slide-inner{max-width:960px;width:100%;animation:fadeIn .4s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* ===== SLIDE TYPES ===== */
+/* Title */
+.slide-title{text-align:center}
+.slide-title h1{font-size:3.2rem;font-weight:700;letter-spacing:-.03em;
+  background:linear-gradient(135deg,var(--sage),var(--terra));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.slide-title .subtitle{font-size:1.3rem;color:var(--text-muted);margin-top:12px;font-weight:300}
+.slide-title .meta{font-size:.85rem;color:var(--text-light);margin-top:24px}
+
+/* Presenter */
+.slide-presenter{display:flex;align-items:center;gap:48px;justify-content:center}
+.presenter-avatar{width:160px;height:160px;border-radius:50%;object-fit:cover;
+  border:4px solid var(--sage-light);box-shadow:0 4px 20px rgba(0,0,0,.08)}
+.presenter-info h2{font-size:2rem;font-weight:600}
+.presenter-info .ptitle{font-size:1.1rem;color:var(--sage);font-weight:500;margin-top:4px}
+.presenter-info .porg{font-size:.95rem;color:var(--text-muted);margin-top:2px}
+.presenter-info .pbio{font-size:.95rem;color:var(--text-muted);margin-top:16px;max-width:380px;line-height:1.6}
+
+/* Quote / Typewriter */
+.slide-quote{text-align:center;max-width:740px;margin:0 auto}
+.slide-quote .qtext{font-size:1.8rem;font-weight:300;line-height:1.6;color:var(--text);letter-spacing:-.01em}
+.slide-quote .qtext em{font-style:normal;color:var(--sage-dark);font-weight:500}
+.slide-quote .qauthor{font-size:.9rem;color:var(--text-muted);margin-top:28px;font-style:italic}
+.typewriter-cursor{display:inline-block;width:2px;height:1.1em;background:var(--sage);margin-left:3px;
+  animation:blink 1s step-end infinite;vertical-align:text-bottom}
+@keyframes blink{50%{opacity:0}}
+
+/* Grid */
+.slide-grid{text-align:center}
+.slide-grid h2{font-size:1.8rem;font-weight:600;margin-bottom:32px}
+.grid-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:800px;margin:0 auto}
+.grid-card{background:var(--bg-grid);border-radius:var(--radius);padding:28px 24px;text-align:left;
+  border:1px solid rgba(0,0,0,.04);transition:all .3s}
+.grid-card:hover{box-shadow:var(--shadow);transform:translateY(-2px)}
+.grid-card .gc-icon{font-size:1.8rem;margin-bottom:10px}
+.grid-card .gc-title{font-size:1rem;font-weight:600;margin-bottom:6px}
+.grid-card .gc-desc{font-size:.88rem;color:var(--text-muted);line-height:1.5}
+
+/* Traffic Light */
+.slide-traffic{max-width:820px;margin:0 auto}
+.slide-traffic h2{font-size:1.8rem;font-weight:600;text-align:center;margin-bottom:28px}
+.tl-section{border-radius:var(--radius);padding:24px 28px;margin-bottom:16px}
+.tl-section.green{background:#e8f0e4;border-left:5px solid #5a8a4a}
+.tl-section.yellow{background:#fdf6e3;border-left:5px solid #d4a843}
+.tl-section.red{background:#fde8e4;border-left:5px solid #c0524a}
+.tl-label{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px}
+.tl-section.green .tl-label{color:#4a7a3a}
+.tl-section.yellow .tl-label{color:#b8922e}
+.tl-section.red .tl-label{color:#a8423a}
+.tl-list{list-style:none;padding:0}
+.tl-list li{font-size:.92rem;padding:5px 0;color:var(--text);line-height:1.4}
+.tl-list li::before{content:"·";margin-right:8px;font-weight:700}
+
+/* Step Slide */
+.slide-step{text-align:center;max-width:700px;margin:0 auto}
+.slide-step h2{font-size:2rem;font-weight:700;margin-bottom:8px}
+.slide-step .step-sub{font-size:1.1rem;color:var(--text-muted);margin-bottom:24px}
+.slide-step .step-def{font-size:1.15rem;color:var(--text);background:var(--sage-light);
+  padding:20px 28px;border-radius:var(--radius);line-height:1.6;margin-bottom:24px;text-align:left}
+.step-items{text-align:left}
+.step-item{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid rgba(0,0,0,.05)}
+.step-item:last-child{border:none}
+.step-item .si-title{font-weight:600;min-width:120px;font-size:.92rem}
+.step-item .si-desc{color:var(--text-muted);font-size:.88rem}
+.step-footer{margin-top:16px;font-size:.9rem;color:var(--sage-dark);font-weight:500}
+
+/* Prompt Demo */
+.slide-prompt{max-width:740px;margin:0 auto}
+.slide-prompt h2{font-size:1.8rem;font-weight:600;text-align:center;margin-bottom:8px}
+.slide-prompt .psub{text-align:center;color:var(--text-muted);margin-bottom:28px;font-size:.95rem}
+.prompt-box{background:var(--bg-grid);border-radius:var(--radius);padding:28px;
+  font-family:'SF Mono','Fira Code',monospace;font-size:.88rem;line-height:1.7;color:var(--text);
+  border:1px solid rgba(0,0,0,.06);white-space:pre-wrap}
+.prompt-example{margin-top:20px;padding:16px 20px;background:var(--terra-light);border-radius:var(--radius-sm);
+  font-size:.88rem;color:var(--terra-dark)}
+.prompt-example strong{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.prompt-why{margin-top:16px;font-size:.88rem;color:var(--text-muted);text-align:center;font-style:italic}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+  .slide-content{padding:24px 20px}
+  .slide-title h1{font-size:2.2rem}
+  .slide-quote .qtext{font-size:1.3rem}
+  .grid-cards{grid-template-columns:1fr}
+  .slide-presenter{flex-direction:column;text-align:center}
+  .card-grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+}
+</style>
+</head>
+<body>
+
+<!-- GRID VIEW -->
+<div id="grid-view">
+  <div class="grid-header">
+    <h1>AI i förskolan</h1>
+    <p>Familjen Hbg Förskolenätverk · 24 april 2026</p>
+  </div>
+  <div id="sections-container"></div>
+</div>
+
+<!-- SLIDE VIEW -->
+<div id="slide-view">
+  <nav class="slide-nav">
+    <button class="nav-btn" onclick="prevSlide()">← Föregående</button>
+    <button class="nav-btn grid-btn" onclick="showGrid()">☰ Översikt</button>
+    <span class="nav-counter" id="nav-counter"></span>
+    <button class="nav-btn" onclick="nextSlide()">Nästa →</button>
+  </nav>
+  <div class="slide-content">
+    <div class="slide-inner" id="slide-render"></div>
+  </div>
+</div>
+
+<script>
+let DATA=null,currentIndex=0,slides=[];
+
+async function init(){
+  const r=await fetch('slides.json');
+  DATA=await r.json();
+  slides=DATA.slides;
+  buildGrid();
+  if(location.hash){
+    const id=location.hash.slice(1);
+    const idx=slides.findIndex(s=>s.id===id);
+    if(idx>=0)showSlide(idx);
+  }
+}
+
+function buildGrid(){
+  const c=document.getElementById('sections-container');
+  c.innerHTML='';
+  const sections=DATA.sections||[];
+  const sMap={};
+  sections.forEach(s=>sMap[s.id]=s);
+  const grouped={};
+  slides.forEach((s,i)=>{
+    const sec=s.section||'other';
+    if(!grouped[sec])grouped[sec]=[];
+    grouped[sec].push({slide:s,index:i});
+  });
+  const order=sections.map(s=>s.id);
+  order.forEach(secId=>{
+    if(!grouped[secId])return;
+    const sec=sMap[secId]||{label:secId,color:'#999'};
+    const g=document.createElement('div');
+    g.className='section-group';
+    const label=document.createElement('span');
+    label.className='section-label';
+    label.style.background=sec.color;
+    label.textContent=sec.label;
+    g.appendChild(label);
+    const grid=document.createElement('div');
+    grid.className='card-grid';
+    grouped[secId].forEach(({slide:s,index:i})=>{
+      const card=document.createElement('div');
+      card.className='card';
+      const iconMap={title:'🎯',presenter:'👤','quote':'💬',grid:'📊','step-slide':'📋','traffic-light':'🚦','prompt-demo':'🧠'};
+      card.innerHTML=`
+        <span class="card-id">${s.id}</span>
+        <span class="card-icon">${s.type==='grid'||s.type==='traffic-light'?
+          (s.cards?s.cards[0].icon:iconMap[s.type]):iconMap[s.type]||'📄'}</span>
+        <span class="card-title">${s.title||s.name||s.text?.slice(0,40).replace(/\*/g,'')+'…'||s.id}</span>
+        <span class="card-type">${s.type}</span>`;
+      card.onclick=()=>showSlide(i);
+      grid.appendChild(card);
+    });
+    g.appendChild(grid);
+    c.appendChild(g);
+  });
+}
+
+function showGrid(){
+  document.getElementById('grid-view').style.display='flex';
+  document.getElementById('slide-view').style.display='none';
+  history.replaceState(null,null,' ');
+}
+
+function showSlide(i){
+  currentIndex=i;
+  document.getElementById('grid-view').style.display='none';
+  document.getElementById('slide-view').style.display='flex';
+  renderSlide(slides[i]);
+  document.getElementById('nav-counter').textContent=`${i+1} / ${slides.length}`;
+  history.replaceState(null,null,'#'+slides[i].id);
+}
+
+function prevSlide(){if(currentIndex>0)showSlide(currentIndex-1)}
+function nextSlide(){if(currentIndex<slides.length-1)showSlide(currentIndex+1)}
+
+function md(t){
+  if(!t)return'';
+  return t.replace(/\*(.*?)\*/g,'<em>$1</em>');
+}
+
+function renderSlide(s){
+  const el=document.getElementById('slide-render');
+  let h='';
+  switch(s.type){
+    case'title':
+      h=`<div class="slide-title"><h1>${md(s.title)}</h1>
+        <div class="subtitle">${md(s.subtitle)}</div>
+        <div class="meta">${s.meta||''}</div></div>`;break;
+    case'presenter':
+      h=`<div class="slide-presenter">
+        <img class="presenter-avatar" src="${s.avatar}" alt="${s.name}" onerror="this.style.display='none'">
+        <div class="presenter-info"><h2>${s.name}</h2>
+        <div class="ptitle">${s.title}</div><div class="porg">${s.org}</div>
+        <div class="pbio">${s.bio||''}</div></div></div>`;break;
+    case'quote':
+      h=`<div class="slide-quote">
+        <div class="qtext">${s.style==='typewriter'?'':md(s.text)}</div>
+        ${s.author?`<div class="qauthor">— ${s.author}</div>`:''}
+        </div>`;
+      if(s.style==='typewriter'){el.innerHTML=h;typewrite(el.querySelector('.qtext'),s.text,s.slowSpeed);return;}
+      break;
+    case'grid':
+      h=`<div class="slide-grid"><h2>${md(s.title)}</h2><div class="grid-cards">
+        ${s.cards.map(c=>`<div class="grid-card"><div class="gc-icon">${c.icon}</div>
+        <div class="gc-title">${c.title}</div><div class="gc-desc">${c.desc}</div></div>`).join('')}
+        </div></div>`;break;
+    case'traffic-light':
+      h=`<div class="slide-traffic"><h2>${md(s.title)}</h2>
+        <div class="tl-section green"><div class="tl-label">🟢 Kör på</div>
+        <ul class="tl-list">${s.green.map(i=>`<li>${i}</li>`).join('')}</ul></div>
+        <div class="tl-section yellow"><div class="tl-label">🟡 Var försiktig</div>
+        <ul class="tl-list">${s.yellow.map(i=>`<li>${i}</li>`).join('')}</ul></div>
+        <div class="tl-section red"><div class="tl-label">🛑 Stopp</div>
+        <ul class="tl-list">${s.red.map(i=>`<li>${i}</li>`).join('')}</ul></div></div>`;break;
+    case'step-slide':
+      const st=s.steps||[];
+      h=`<div class="slide-step">`;
+      st.forEach(step=>{
+        if(step.type==='headline')h+=`<h2>${step.title}</h2><div class="step-sub">${step.subtitle||''}</div>`;
+        if(step.type==='definition')h+=`<div class="step-def">${step.text}</div>`;
+        if(step.type==='list'){
+          h+=`<div class="step-items">${step.items.map(i=>`<div class="step-item">
+            <span class="si-title">${i.title}</span><span class="si-desc">${i.desc}</span></div>`).join('')}</div>`;
+          if(step.footer)h+=`<div class="step-footer">${step.footer}</div>`;
+        }
+      });
+      h+=`</div>`;break;
+    case'prompt-demo':
+      h=`<div class="slide-prompt"><h2>${md(s.title)}</h2>
+        <div class="psub">${s.subtitle||''}</div>
+        <div class="prompt-box">${s.prompt}</div>
+        ${s.example_topic?`<div class="prompt-example"><strong>Exempelfråga</strong>${s.example_topic}</div>`:''}
+        ${s.why?`<div class="prompt-why">${s.why}</div>`:''}
+        </div>`;break;
+    default:
+      h=`<div style="text-align:center"><h2>${s.title||s.id}</h2><p>${s.text||''}</p></div>`;
+  }
+  el.innerHTML=h;
+}
+
+function typewrite(el,text,slow){
+  const parsed=md(text);
+  let i=0,html='';
+  const chars=[...parsed];
+  el.innerHTML='<span class="typewriter-cursor"></span>';
+  const speed=slow?80:35;
+  function tick(){
+    if(i>=chars.length){el.innerHTML=parsed;return;}
+    html+=chars[i];i++;
+    el.innerHTML=html+'<span class="typewriter-cursor"></span>';
+    const c=chars[i-1];
+    const delay=(c==='.'||c==='?'||c==='!')?speed*8:c===','?speed*3:c===' '?speed*1.5:speed;
+    setTimeout(tick,delay);
+  }
+  setTimeout(tick,400);
+}
+
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('slide-view').style.display==='flex'){
+    if(e.key==='ArrowRight'||e.key===' ')nextSlide();
+    if(e.key==='ArrowLeft')prevSlide();
+    if(e.key==='Escape')showGrid();
+  }
+});
+
+init();
+</script>
+</body>
+</html>

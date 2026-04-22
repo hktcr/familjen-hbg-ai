@@ -1,0 +1,278 @@
+{
+    "meta": {
+        "project": "AI i förskolan",
+        "event": "Familjen Hbg Förskolenätverk",
+        "date": "2026-04-24",
+        "presenter": {
+            "name": "Håkan Karlsson",
+            "title": "Kommunlektor",
+            "org": "Åstorps kommun"
+        }
+    },
+    "sections": [
+        { "id": "start", "label": "Start", "color": "#7a8f6e" },
+        { "id": "bakgrund", "label": "Bakgrund & Kontext", "color": "#c4956a" },
+        { "id": "forstaelse", "label": "Förståelse", "color": "#7a8f6e" },
+        { "id": "risker", "label": "Risker & Medvetenhet", "color": "#b86e5a" },
+        { "id": "praktik", "label": "Praktik", "color": "#c4956a" },
+        { "id": "avslutning", "label": "Avslutning", "color": "#7a8f6e" }
+    ],
+    "slides": [
+        {
+            "id": "title",
+            "section": "start",
+            "type": "title",
+            "title": "AI i förskolan",
+            "subtitle": "Vi måste börja med oss själva",
+            "meta": "Familjen Hbg Förskolenätverk · 24 april 2026"
+        },
+        {
+            "id": "presenter",
+            "section": "start",
+            "type": "presenter",
+            "name": "Håkan Karlsson",
+            "title": "Kommunlektor",
+            "org": "Åstorps kommun",
+            "bio": "Lärare i NO/Ma vid Björnekullaskolan. Vetenskaplig bakgrund i beräkningsbiologi och evolutionär ekologi.",
+            "avatar": "assets/presenter_avatar.png"
+        },
+        {
+            "id": "dialog-first",
+            "section": "start",
+            "type": "quote",
+            "text": "Avbryt mig. Ställ frågor. Det här handlar om *er* vardag.",
+            "author": "",
+            "style": "typewriter"
+        },
+        {
+            "id": "ai-intro",
+            "section": "bakgrund",
+            "type": "step-slide",
+            "title": "AI är inget nytt",
+            "steps": [
+                {
+                    "type": "headline",
+                    "title": "AI är inget nytt!",
+                    "subtitle": "Vi har redan vant oss"
+                },
+                {
+                    "type": "definition",
+                    "text": "AI är teknik som gör att datorer kan utföra uppgifter som förknippas med mänsklig intelligens."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        { "title": "Mobilkamera", "desc": "Ansiktsigenkänning och bildförbättring" },
+                        { "title": "Sociala medier", "desc": "Personliga flöden och rekommendationer" },
+                        { "title": "Röstassistenter", "desc": "Siri, Alexa, Google Assistant" },
+                        { "title": "Navigation", "desc": "Optimala rutter i realtid" },
+                        { "title": "Översättning", "desc": "Google Translate i fickan" }
+                    ],
+                    "footer": "Barnen möter detta dagligen — hemma."
+                }
+            ]
+        },
+        {
+            "id": "ai-commission",
+            "section": "bakgrund",
+            "type": "quote",
+            "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
+            "author": "AI-kommissionens färdplan, SOU 2025:12",
+            "style": "typewriter"
+        },
+        {
+            "id": "ai-not-thinking",
+            "section": "forstaelse",
+            "type": "quote",
+            "text": "AI är inte en tänkande varelse. Men den är den mest övertygande *imitatören* mänskligheten någonsin skapat.",
+            "author": "",
+            "style": "typewriter"
+        },
+        {
+            "id": "gps-metafor",
+            "section": "forstaelse",
+            "type": "grid",
+            "title": "GPS-metaforen: AI som vägvisare",
+            "cards": [
+                {
+                    "icon": "🗺️",
+                    "title": "Styrkan",
+                    "desc": "Beräknar baserat på miljontals tidigare fall — snabbt och konsekvent"
+                },
+                {
+                    "icon": "⚠️",
+                    "title": "Svagheten",
+                    "desc": "Vet inte att Noa biter när han är trött, att föräldrarna separerat, eller att det är vikarie idag"
+                },
+                {
+                    "icon": "👁️",
+                    "title": "Du är föraren",
+                    "desc": "AI är kartan — din pedagogiska erfarenhet är vindrutan"
+                },
+                {
+                    "icon": "🚧",
+                    "title": "Utan människa",
+                    "desc": "Utan ditt professionella omdöme kör vi i diket"
+                }
+            ]
+        },
+        {
+            "id": "gosedjur-quote",
+            "section": "risker",
+            "type": "quote",
+            "text": "Gosedjuret svarar aldrig. AI:n gör det. Varje gång. Tålmodigt. Utan villkor.",
+            "author": "",
+            "style": "typewriter"
+        },
+        {
+            "id": "falsk-empati",
+            "section": "risker",
+            "type": "quote",
+            "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner ingenting. För ett barn som inte kan skilja på äkta och simulerat — är det skillnad på ett gosedjur som tröstar i *tystnad* och en röst som säger precis det barnet *vill höra*?",
+            "author": "Inspirerad av Sherry Turkle, MIT",
+            "style": "typewriter"
+        },
+        {
+            "id": "risks-quad",
+            "section": "risker",
+            "type": "grid",
+            "title": "Riskområden — barn och AI",
+            "cards": [
+                {
+                    "icon": "📱",
+                    "title": "Tillgänglighet 24/7",
+                    "desc": "Röstassistenter är alltid tillgängliga. Ingen vuxen vet vad barnet frågar Siri klockan 22."
+                },
+                {
+                    "icon": "💔",
+                    "title": "AI som 'vän'",
+                    "desc": "Barn knyter an till röster som alltid lyssnar. AI saknar känslor men låtsas ha dem."
+                },
+                {
+                    "icon": "🔒",
+                    "title": "Integritet",
+                    "desc": "AI har ingen tystnadsplikt. Allt barnet säger lagras och kan användas."
+                },
+                {
+                    "icon": "🔄",
+                    "title": "Normalisering",
+                    "desc": "Barnet lär sig att 'fråga maskinen' istället för att fråga en människa. Tröskeln till riktigt stöd höjs."
+                }
+            ]
+        },
+        {
+            "id": "sewell-incident",
+            "section": "risker",
+            "type": "quote",
+            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism — att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer — den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
+            "author": "",
+            "style": "typewriter",
+            "slowSpeed": true
+        },
+        {
+            "id": "aldrig-i-prompten",
+            "section": "praktik",
+            "type": "grid",
+            "title": "Aldrig i prompten (GDPR)",
+            "cards": [
+                {
+                    "icon": "🚫",
+                    "title": "Barnens namn",
+                    "desc": "Aldrig namn, personnummer eller födelsedatum"
+                },
+                {
+                    "icon": "🏫",
+                    "title": "Verksamhetsidentitet",
+                    "desc": "Inte 'barnet på Solstrålen' — bakvägsidentifiering!"
+                },
+                {
+                    "icon": "📋",
+                    "title": "Dokumentation",
+                    "desc": "Ladda aldrig upp pedagogisk dokumentation med barnuppgifter"
+                },
+                {
+                    "icon": "✅",
+                    "title": "Syntetiska fall",
+                    "desc": "Använd fiktiva exempel: 'Ett barn som ofta...'"
+                }
+            ]
+        },
+        {
+            "id": "human-in-the-loop",
+            "section": "praktik",
+            "type": "quote",
+            "text": "*Human in the loop*: Ingen AI-genererad text får skickas till föräldrar, personal eller huvudman utan att en *människa granskat och godkänt*. Du är alltid *ansvarig*.",
+            "author": "Grundprincipen",
+            "style": "typewriter"
+        },
+        {
+            "id": "traffic-light",
+            "section": "praktik",
+            "type": "traffic-light",
+            "title": "Vad kan du som chef göra med AI?",
+            "green": [
+                "Skapa informationsmaterial till föräldrar",
+                "Brainstorma APT-innehåll och mötesagendor",
+                "Översätta föräldrabrev till andra språk",
+                "Sammanfatta styrdokument och forskning"
+            ],
+            "yellow": [
+                "Skriva kvalitetsrapporter (granska noga!)",
+                "Förbereda svåra samtal med personal",
+                "Analysera läroplan (verifiera alltid mot källan)"
+            ],
+            "red": [
+                "Aldrig barnens personuppgifter i prompten",
+                "Aldrig ersätta professionellt omdöme",
+                "Aldrig låta AI skriva utvecklingssamtal utan granskning",
+                "Aldrig generera individuella bedömningar av barn"
+            ]
+        },
+        {
+            "id": "vep-prompt",
+            "section": "praktik",
+            "type": "prompt-demo",
+            "title": "Teknik: 'Personerna i rummet'",
+            "subtitle": "Hur du får nyanserade svar istället för generiska",
+            "prompt": "Tillsätt en virtuell expertpanel med relevanta experter (t.ex. specialpedagog, erfaren förskolechef, förälder) som säkerställer att alla perspektiv på [ÄMNE] belyses. Varje expert ska presentera sin syn, sedan ska panelen diskutera och identifiera områden där de är eniga respektive oense. Avsluta med en syntes.",
+            "example_topic": "hur vi kommunicerar en organisationsförändring till personalen",
+            "why": "VEP-tekniken tvingar AI att ge fler perspektiv istället för ett enda generiskt svar."
+        },
+        {
+            "id": "har-vi",
+            "section": "avslutning",
+            "type": "grid",
+            "title": "Har vi...?",
+            "cards": [
+                {
+                    "icon": "📋",
+                    "title": "Riktlinjer?",
+                    "desc": "Har vi riktlinjer för AI-användning i vår förskoleverksamhet?"
+                },
+                {
+                    "icon": "👀",
+                    "title": "Översikt?",
+                    "desc": "Vet vi vilka AI-verktyg våra pedagoger redan använder?"
+                },
+                {
+                    "icon": "📚",
+                    "title": "Kompetensutveckling?",
+                    "desc": "Har vi en plan för att hänga med i utvecklingen?"
+                },
+                {
+                    "icon": "🏠",
+                    "title": "Barnens verklighet?",
+                    "desc": "Vet vi vad barnen möter hemma — vilka röster de redan pratar med?"
+                }
+            ]
+        },
+        {
+            "id": "avslutning",
+            "section": "avslutning",
+            "type": "quote",
+            "text": "*Vi måste börja med oss själva.*",
+            "author": "",
+            "style": "typewriter"
+        }
+    ]
+}
