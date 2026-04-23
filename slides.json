@@ -52,8 +52,16 @@
             "name": "Håkan Karlsson",
             "title": "Kommunlektor",
             "org": "Åstorps kommun",
-            "bio": "Lärare i NO/Ma vid Björnekullaskolan. Vetenskaplig bakgrund i beräkningsbiologi och evolutionär ekologi.",
-            "avatar": "assets/presenter_avatar.png"
+            "bio": "Kommunlektor och lärare i NO/Ma. Forskarkollegie-bakgrund med deltagande i Beringia 2005-expeditionen till Nordpolen med isbrytaren Oden. Att söka mönster i extrem miljö är numera utbytt mot att navigera det digitala bruset.",
+            "avatar": "assets/northpole.jpg"
+        },
+        {
+            "id": "prolog",
+            "section": "start",
+            "type": "hero-image",
+            "title": "Prolog: Den Blå Fågeln",
+            "image": "assets/blue_bird.png",
+            "subtitle": "Vad gör vi när magin plötsligt flyttar in i maskinen?"
         },
         {
             "id": "dialog-first",
