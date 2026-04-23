@@ -47,8 +47,8 @@
                     
                     <div class="cover-actions" id="layoutGroup">
                         <button class="launch-system-btn" data-value="radar">[ INITIERA RADAR-SWEEP ]</button>
-                        <button class="launch-system-btn secondary" data-value="chart" style="background:transparent; border:1px solid var(--radar-green); color:var(--radar-green); margin-top:10px;">[ ÖPPNA ANALYSDIAGRAM ]</button>
-                        <button class="launch-system-btn secondary" data-value="timeline" style="background:transparent; border:1px solid var(--radar-faint); color:var(--text-muted); margin-top:10px; opacity: 0.5; font-size: 0.8rem;">[ (Alternativ) Linjär Tidslinje ]</button>
+                        <button class="launch-system-btn secondary" data-value="timeline" style="background:transparent; border:1px solid var(--radar-green); color:var(--text-main);">[ ÖPPNA LINJÄR TIDSLINJE ]</button>
+                        <button class="launch-system-btn secondary" data-value="chart" style="background:transparent; border:1px solid var(--radar-green); color:var(--text-main); margin-top:10px;">[ ÖPPNA ANALYSDIAGRAM ]</button>
                     </div>
                 </div>
             </div>
@@ -289,15 +289,15 @@
         }
 
         // Common Data Prep
-        speciesData.forEach(s => {
-            s.angle = getAngle(s.datum);
+        timelineData.forEach(s => {
+            s.angle = getAngle(s.date);
             s.floatYear = s.year + (s.angle / 360);
             s.vwPos = (s.floatYear - minYear) * VW_PER_YEAR;
             s.hit = false;
         });
-        speciesData.sort((a, b) => a.vwPos - b.vwPos);
+        timelineData.sort((a, b) => a.vwPos - b.vwPos);
 
-        let activeFilters = { 'mojlighet': true, 'nackdel': true, 'risk': true, 'barn_only': false };
+        let activeFilters = { 'positive': true, 'negative': true, 'critical': true, 'barn_only': false };
         let popupTimeout = null;
 
         function updateTimelinePlayhead() {
@@ -322,7 +322,7 @@
                         let activeYear = minYear + Math.floor(Math.max(0, currentVwPos) / VW_PER_YEAR);
                         if (activeYear <= maxYear) simYearIndicator.innerText = `[ KRONOLOGI | ÅR ${activeYear} ]`;
 
-                        hits = speciesData.filter(s => !s.hit && activeFilters[s.type] && (!activeFilters['barn_only'] || s.barn) && s.vwPos > prevVwPos && s.vwPos <= currentVwPos);
+                        hits = timelineData.filter(s => !s.hit && (activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education'))) && s.vwPos > prevVwPos && s.vwPos <= currentVwPos);
                         
                         if (hits.length > 0) {
                             currentVwPos = hits[0].vwPos; // stick to target
@@ -345,8 +345,8 @@
                     if (simYear > maxYear) {
                         finishSimulation();
                     } else {
-                        hits = speciesData.filter(s => {
-                            if (s.year === simYear && !s.hit && activeFilters[s.type] && (!activeFilters['barn_only'] || s.barn)) {
+                        hits = timelineData.filter(s => {
+                            if (s.year === simYear && !s.hit && (activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education')))) {
                                 if (s.angle > prevAngle && s.angle <= simAngle) return true;
                             }
                             return false;
@@ -386,9 +386,9 @@
             globalHitCount++;
             totalValueEl.innerText = globalHitCount.toString().padStart(3, '0');
 
-            const isRare = s.type === 'risk' || s.type === 'nackdel';
+            const isRare = s.impact === 'critical' || s.impact === 'negative';
             
-            const targetEl = activeContainer.querySelector(`.blip[data-id='${s.nr}']`);
+            const targetEl = activeContainer.querySelector(`.blip[data-id='${s.id}']`);
             if (targetEl) {
                 targetEl.classList.add('flash');
                 setTimeout(() => targetEl.classList.remove('flash'), 500);
@@ -467,24 +467,24 @@
             let warningClass = "";
             let borderColor = "var(--radar-green)";
             
-            if (s.type === 'risk') {
+            if (s.impact === 'critical') {
                 color = "var(--nocmig-color)";
                 signalText = "! FATAL RISK DETECTED !";
                 warningClass = "warning";
                 borderColor = "var(--nocmig-color)";
-            } else if (s.type === 'nackdel') {
+            } else if (s.impact === 'negative') {
                 color = "var(--nackdel-color)";
                 signalText = "! KRITISK NACKDEL DETEKTERAD !";
                 borderColor = "var(--nackdel-color)";
             }
 
-            let modeTag = isManual ? "[MANUELL INMATNING]" : `[${s.datum.toUpperCase()}]`;
+            let modeTag = isManual ? "[MANUELL INMATNING]" : `[${s.date.toUpperCase()}]`;
 
             let html = `
                 <div style="border-left: 2px solid ${borderColor}; padding-left: 10px; margin-top: 15px; margin-bottom: 5px; animation: blip-flash 0.5s ease-out;">
                     <span style="color:${color}; font-weight:bold;" class="${warningClass}">> ${signalText} ${modeTag}</span><br>
-                    > MÅL: <span class="highlight" style="font-size: 1.1em;">${s.art.toUpperCase()}</span><br>
-                    > INFO: <span style="color:${color};">"${s.kommentar}"</span>
+                    > MÅL: <span class="highlight" style="font-size: 1.1em;">${s.title.toUpperCase()}</span><br>
+                    > INFO: <span style="color:${color};">"${s.description}"</span>
                 </div>
             `;
             logToTerminal(html);
@@ -494,7 +494,7 @@
         function appendTarget(s, highlightInLog = false) {
             const targetEl = document.createElement('div');
             targetEl.className = `blip blip-${s.type}`;
-            targetEl.dataset.id = s.nr;
+            targetEl.dataset.id = s.id;
 
             if (currentLayout === 'timeline') {
                 targetEl.style.left = `${s.vwPos}vw`;
@@ -510,8 +510,8 @@
             } else if (currentLayout === 'chart') {
                 let xPercent = ((s.floatYear - minYear) / (maxYear - minYear + 1)) * 90 + 5;
                 let yPercent = 50;
-                if (s.type === 'risk') yPercent = 20;
-                else if (s.type === 'nackdel') yPercent = 50;
+                if (s.impact === 'critical') yPercent = 20;
+                else if (s.impact === 'negative') yPercent = 50;
                 else yPercent = 80;
                 
                 // Jitter
@@ -522,7 +522,7 @@
                 targetEl.style.top = `${yPercent}%`;
                 
                 // Add tooltip on hover
-                targetEl.title = `${s.datum.toUpperCase()} | ${s.art}`;
+                targetEl.title = `${s.date.toUpperCase()} | ${s.title}`;
                 
                 // Use lightbox for chart mode instead of default modal
                 targetEl.addEventListener('click', (e) => {
@@ -593,14 +593,14 @@
             document.getElementById('btnPlay').innerText = "[ ▶ STARTA SIMULERING ]";
             activeContainer.innerHTML = '';
             logContent.innerHTML = '<div class="idle-text">> KLAR FÖR SIMULERING OCH MÅLLÅSNING... (KLICKA PLAY)</div>';
-            totalValueEl.innerText = speciesData.length.toString().padStart(3, '0');
+            totalValueEl.innerText = timelineData.length.toString().padStart(3, '0');
             simYearIndicator.innerText = "SEKTOR: ÖVERSIKT";
 
             drawYearRings();
 
-            speciesData.forEach((s) => {
+            timelineData.forEach((s) => {
                 s.hit = true;
-                if(activeFilters[s.type] && (!activeFilters['barn_only'] || s.barn)) appendTarget(s);
+                if((activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education')))) appendTarget(s);
             });
         }
 
@@ -615,7 +615,7 @@
                 currentVwPos = 60; 
                 simAngle = 0;
                 globalHitCount = 0;
-                speciesData.forEach(s => s.hit = false);
+                timelineData.forEach(s => s.hit = false);
                 
                 activeContainer.innerHTML = '';
                 logContent.innerHTML = '';
@@ -623,8 +623,8 @@
                 drawYearRings();
                 
                 // Spawn targets on track so they are visible on the horizon
-                speciesData.forEach((s) => {
-                    if(activeFilters[s.type] && (!activeFilters['barn_only'] || s.barn)) appendTarget(s, false);
+                timelineData.forEach((s) => {
+                    if((activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education')))) appendTarget(s, false);
                 });
                 
                 if (currentLayout === 'timeline') updateTimelinePlayhead();
@@ -651,7 +651,7 @@
             if(simActive) return;
             printTargetDetailBlock(s, true);
             document.querySelectorAll('.blip').forEach(b => b.classList.remove('active'));
-            const activeBlip = document.querySelector(`.blip[data-id='${s.nr}']`);
+            const activeBlip = document.querySelector(`.blip[data-id='${s.id}']`);
             if (activeBlip) activeBlip.classList.add('active');
         }
 
