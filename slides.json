@@ -10,12 +10,31 @@
         }
     },
     "sections": [
-        { "id": "start", "label": "Start", "color": "#7a8f6e" },
-        { "id": "bakgrund", "label": "Bakgrund & Kontext", "color": "#c4956a" },
-        { "id": "forstaelse", "label": "Förståelse", "color": "#7a8f6e" },
-        { "id": "risker", "label": "Risker & Medvetenhet", "color": "#b86e5a" },
-        { "id": "praktik", "label": "Praktik", "color": "#c4956a" },
-        { "id": "avslutning", "label": "Avslutning", "color": "#7a8f6e" }
+        {
+            "id": "start",
+            "label": "Start",
+            "color": "#7a8f6e"
+        },
+        {
+            "id": "bakgrund",
+            "label": "Bakgrund & Kontext",
+            "color": "#c4956a"
+        },
+        {
+            "id": "forstaelse",
+            "label": "Förståelse",
+            "color": "#7a8f6e"
+        },
+        {
+            "id": "praktik",
+            "label": "Praktik",
+            "color": "#c4956a"
+        },
+        {
+            "id": "avslutning",
+            "label": "Avslutning",
+            "color": "#7a8f6e"
+        }
     ],
     "slides": [
         {
@@ -62,11 +81,26 @@
                 {
                     "type": "list",
                     "items": [
-                        { "title": "Mobilkamera", "desc": "Ansiktsigenkänning och bildförbättring" },
-                        { "title": "Sociala medier", "desc": "Personliga flöden och rekommendationer" },
-                        { "title": "Röstassistenter", "desc": "Siri, Alexa, Google Assistant" },
-                        { "title": "Navigation", "desc": "Optimala rutter i realtid" },
-                        { "title": "Översättning", "desc": "Google Translate i fickan" }
+                        {
+                            "title": "Mobilkamera",
+                            "desc": "Ansiktsigenkänning och bildförbättring"
+                        },
+                        {
+                            "title": "Sociala medier",
+                            "desc": "Personliga flöden och rekommendationer"
+                        },
+                        {
+                            "title": "Röstassistenter",
+                            "desc": "Siri, Alexa, Google Assistant"
+                        },
+                        {
+                            "title": "Navigation",
+                            "desc": "Optimala rutter i realtid"
+                        },
+                        {
+                            "title": "Översättning",
+                            "desc": "Google Translate i fickan"
+                        }
                     ],
                     "footer": "Barnen möter detta dagligen — hemma."
                 }
@@ -102,10 +136,22 @@
                 {
                     "type": "list",
                     "items": [
-                        { "title": "1. Data in", "desc": "Mikrofonen fångar ett ljud." },
-                        { "title": "2. Omvandling", "desc": "Ljudet ritas upp som en bild (ett spektrogram)." },
-                        { "title": "3. Mönsterigenkänning", "desc": "AI:n matchar bilden mot miljontals inlärda mönster." },
-                        { "title": "4. Sannolikhet", "desc": "Den gissar: '98% chans att det är en Talgoxe'." }
+                        {
+                            "title": "1. Data in",
+                            "desc": "Mikrofonen fångar ett ljud."
+                        },
+                        {
+                            "title": "2. Omvandling",
+                            "desc": "Ljudet ritas upp som en bild (ett spektrogram)."
+                        },
+                        {
+                            "title": "3. Mönsterigenkänning",
+                            "desc": "AI:n matchar bilden mot miljontals inlärda mönster."
+                        },
+                        {
+                            "title": "4. Sannolikhet",
+                            "desc": "Den gissar: '98% chans att det är en Talgoxe'."
+                        }
                     ],
                     "footer": "ChatGPT gör exakt detta, fast den gissar nästa ord istället för nästa fågel."
                 }
@@ -149,7 +195,7 @@
         },
         {
             "id": "gosedjur-quote",
-            "section": "risker",
+            "section": "forstaelse",
             "type": "quote",
             "text": "Gosedjuret svarar aldrig. AI:n gör det. Varje gång. Tålmodigt. Utan villkor.",
             "author": "",
@@ -157,7 +203,7 @@
         },
         {
             "id": "falsk-empati",
-            "section": "risker",
+            "section": "forstaelse",
             "type": "quote",
             "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner ingenting. För ett barn som inte kan skilja på äkta och simulerat — är det skillnad på ett gosedjur som tröstar i *tystnad* och en röst som säger precis det barnet *vill höra*?",
             "author": "Inspirerad av Sherry Turkle, MIT",
@@ -165,14 +211,14 @@
         },
         {
             "id": "ai-radar-module",
-            "section": "risker",
+            "section": "bakgrund",
             "type": "iframe",
             "title": "Radarn: Tidslinje & Fatala Risker",
             "url": "modules/ai_radar_presentation/index.html"
         },
         {
             "id": "risks-quad",
-            "section": "risker",
+            "section": "bakgrund",
             "type": "grid",
             "title": "Riskområden — barn och AI",
             "cards": [
@@ -200,7 +246,7 @@
         },
         {
             "id": "sewell-incident",
-            "section": "risker",
+            "section": "bakgrund",
             "type": "quote",
             "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism — att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer — den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
             "author": "",

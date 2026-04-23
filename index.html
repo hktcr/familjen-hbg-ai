@@ -30,19 +30,16 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:
 #sections-container::-webkit-scrollbar-track{background:rgba(0,0,0,0.05);border-radius:4px;}
 #sections-container::-webkit-scrollbar-thumb{background:rgba(0,0,0,0.15);border-radius:4px;}
 
-.section-group{flex:0 0 300px;display:flex;flex-direction:column;position:relative;background:rgba(0,0,0,0.02);padding:16px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);min-height:500px;}
+.section-group{flex:0 0 300px;display:flex;flex-direction:column;position:relative;background:rgba(0,0,0,0.02);padding:16px;border-radius:12px;border:1px solid rgba(0,0,0,0.04);}
 .section-label{position:relative;z-index:1;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:8px 20px;border-radius:30px;display:inline-block;margin-bottom:20px;color:#fff;box-shadow:0 4px 15px rgba(0,0,0,.1);align-self:flex-start;}
 .card-grid{display:flex;flex-direction:column;gap:16px;}
-.card{background:var(--bg-card);border-radius:12px;padding:0;cursor:pointer;
-  border:1px solid rgba(0,0,0,.06);transition:all .3s cubic-bezier(0.175,0.885,0.32,1.275);position:relative;
-  overflow:hidden;box-shadow:var(--shadow); display:flex; flex-direction:column;}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.08);border-color:var(--sage)}
-.card-header-bar{background:rgba(255,255,255,1);padding:16px 20px;border-bottom:1px solid rgba(0,0,0,0.05);flex-shrink:0;z-index:2;}
-.card-title{font-size:1.05rem;font-weight:700;line-height:1.2;color:var(--text);margin-bottom:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;}
-.card-type{display:inline-block;font-size:.65rem;color:var(--sage-dark);font-weight:700;background:var(--sage-light);padding:4px 10px;border-radius:8px;text-transform:uppercase;letter-spacing:.05em}
-.card-image-wrap{width:100%;flex:1;position:relative;overflow:hidden;background:#fff;}
-.card-image-wrap img{width:100%;height:100%;object-fit:contain;transition:transform .5s ease; padding:8px;}
-.card:hover .card-image-wrap img{transform:scale(1.05)}
+.card{background:var(--bg-card);border-radius:10px;padding:16px;cursor:pointer;
+  border:1px solid rgba(0,0,0,.08);transition:all .2s ease;position:relative;
+  box-shadow:0 2px 8px rgba(0,0,0,.04); display:flex; flex-direction:column; gap: 8px;}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(0,0,0,.08);border-color:var(--sage)}
+.card-header-bar{display:flex; flex-direction:column; gap:6px;}
+.card-title{font-size:1.05rem;font-weight:600;line-height:1.35;color:var(--text); margin-bottom: 4px;}
+.card-type{display:inline-block;font-size:.65rem;color:var(--sage-dark);font-weight:700;background:var(--sage-light);padding:4px 8px;border-radius:6px;text-transform:uppercase;letter-spacing:.05em; align-self: flex-start;}
 .card-id{display:none}
 
 /* ===== SLIDE VIEW ===== */
@@ -296,9 +293,6 @@ function buildGrid(){
         <div class="card-header-bar">
           <div class="card-title">${s.title||s.name||s.text?.slice(0,40).replace(/\*/g,'')+'…'||s.id}</div>
           <div class="card-type">${s.type}</div>
-        </div>
-        <div class="card-image-wrap">
-          <img src="assets/cover_${s.id}.png" alt="${s.id}" onerror="this.src='assets/cover_start.png'">
         </div>
         <span class="card-id" style="display:none;">${s.id}</span>
       `;
