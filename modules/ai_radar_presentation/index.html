@@ -715,12 +715,20 @@
             document.querySelectorAll('.chart-label').forEach(el => el.remove());
             document.querySelectorAll('.chart-legend').forEach(el => el.remove());
             
+            // Draw horizontal reference lines (grid)
+            [25, 50, 75].forEach(yPos => {
+                let hLine = document.createElement('div');
+                hLine.className = 'chart-line chart-y-line';
+                hLine.style.cssText = `left:5%;right:5%;top:${yPos}%;height:1px;background:rgba(0,0,0,0.03);position:absolute;z-index:0;border-top:1px dashed var(--radar-faint);`;
+                activeContainer.appendChild(hLine);
+            });
+            
             for (let y = minYear; y <= maxYear; y++) {
                 let xPercent = ((y - minYear) / (maxYear - minYear + 1)) * 90 + 5;
                 let label = document.createElement('div');
                 label.className = 'chart-label chart-x-label';
                 label.innerText = y;
-                label.style.cssText = `left:${xPercent}%;bottom:48px;position:absolute;color:var(--text-main);transform:translateX(-50%);font-size:0.85rem;font-family:'JetBrains Mono',monospace;opacity:0.6;`;
+                label.style.cssText = `left:${xPercent}%;bottom:48px;position:absolute;color:var(--text-main);transform:translateX(-50%);font-size:0.95rem;font-weight:bold;font-family:'JetBrains Mono',monospace;opacity:0.8;`;
                 activeContainer.appendChild(label);
                 
                 let line = document.createElement('div');
@@ -731,8 +739,8 @@
             
             let legend = document.createElement('div');
             legend.className = 'chart-legend';
-            legend.style.cssText = 'position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:24px;font-family:"JetBrains Mono",monospace;font-size:0.75rem;z-index:20;';
-            legend.innerHTML = '<span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--radar-green);display:inline-block;"></span><span style="color:var(--text-main);opacity:0.8;">Möjlighet</span></span><span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:var(--nackdel-faint);border:1px solid var(--nackdel-color);display:inline-block;"></span><span style="color:var(--nackdel-color);">Nackdel</span></span><span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:0;background:var(--nocmig-faint);border:2px solid var(--nocmig-color);display:inline-block;"></span><span style="color:var(--nocmig-color);">Fatal risk</span></span>';
+            legend.style.cssText = 'position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:24px;font-family:"JetBrains Mono",monospace;font-size:0.85rem;z-index:20;background:var(--bg-card);padding:12px 28px;border-radius:30px;border:1px solid rgba(0,0,0,0.05);box-shadow:var(--shadow);';
+            legend.innerHTML = '<span style="display:flex;align-items:center;gap:8px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--radar-green);display:inline-block;box-shadow:0 0 8px var(--radar-green);"></span><span style="color:var(--text-main);font-weight:600;">Möjlighet / Lansering</span></span><span style="display:flex;align-items:center;gap:8px;"><span style="width:12px;height:12px;border-radius:2px;background:var(--nackdel-faint);border:1px solid var(--nackdel-color);display:inline-block;"></span><span style="color:var(--nackdel-color);font-weight:600;">Nackdel / Sårbarhet</span></span><span style="display:flex;align-items:center;gap:8px;"><span style="width:14px;height:14px;border-radius:0;background:var(--nocmig-faint);border:2px solid var(--nocmig-color);display:inline-block;"></span><span style="color:var(--nocmig-color);font-weight:800;">Fatal risk</span></span>';
             activeContainer.appendChild(legend);
         }
 
@@ -744,20 +752,20 @@
             if (target.impact === 'critical') color = 'var(--nocmig-color)';
             else if (target.impact === 'negative') color = 'var(--nackdel-color)';
             
-            let html = `<h2 style="color:${color};">${target.title}</h2>
-                        <div style="font-size: 0.9rem; color: var(--radar-dim); margin-bottom:20px; display:flex; gap:16px;">
+            let html = `<h2 style="color:${color};font-size:2.2rem;margin-bottom:12px;line-height:1.2;">${target.title}</h2>
+                        <div style="font-size: 1.05rem; color: var(--radar-dim); margin-bottom:28px; display:flex; gap:16px; font-family:'JetBrains Mono',monospace;">
                             <span>[ ${target.date.toUpperCase()} ]</span>
-                            <span style="color:${color};">${target.category}</span>
+                            <span style="color:${color}; font-weight:600;">${target.category.toUpperCase()}</span>
                         </div>`;
             
             if (target.category === 'Reflektion') {
-                html += `<div style="font-size:1.3rem; font-style:italic; line-height:1.8; color:var(--text-main); border-left:3px solid ${color}; padding-left:20px; margin:20px 0;">${target.description}</div>`;
+                html += `<div style="font-size:1.4rem; font-style:italic; line-height:1.6; color:var(--text-main); border-left:4px solid ${color}; padding-left:24px; margin:24px 0; background:rgba(0,0,0,0.02); padding-top:20px; padding-bottom:20px; border-radius:0 12px 12px 0;">${target.description}</div>`;
             } else {
-                html += `<p style="font-size:1.1rem; line-height:1.7;">${target.description}</p>`;
+                html += `<p style="font-size:1.2rem; line-height:1.7; color:var(--text-main);">${target.description}</p>`;
             }
             
             if (target.url) {
-                html += `<div style="margin-top:30px;"><a href="${target.url}" target="_blank" style="color:var(--radar-green); text-decoration:underline;">[ EXTERN KÄLLA ]</a></div>`;
+                html += `<div style="margin-top:48px; margin-bottom: 12px;"><a href="${target.url}" target="_blank" style="display:inline-block; padding:14px 32px; background:${color}; color:#fff; text-decoration:none; border-radius:30px; font-weight:700; font-size:1rem; letter-spacing:0.05em; transition:all 0.2s ease; box-shadow:0 4px 15px rgba(0,0,0,0.15);">ÖPPNA EXTERN KÄLLA &rarr;</a></div>`;
             }
             
             content.innerHTML = html;
