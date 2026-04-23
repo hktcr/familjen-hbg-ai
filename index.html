@@ -506,7 +506,7 @@ function renderSlide(s){
         ${s.cards.map((c, i) => `
           <div class="cg-card" style="--card-color:${c.color||'var(--sage)'}" onclick="this.classList.toggle('expanded')">
             <div class="cg-title">${c.title}</div>
-            ${c.image ? `<div class="cg-image-container" style="display:none; margin:16px 0;"><img src="${c.image}" style="width:100%; border-radius:8px; max-height:250px; object-fit:cover;" /></div>` : ''}
+            ${c.image ? `<div class="cg-image-container" style="display:none; margin:16px 0;"><img src="${c.image}" style="width:100%; border-radius:8px; max-height:250px; object-fit:cover; cursor:zoom-in;" onclick="event.stopPropagation(); openLightbox('${c.image}')" /></div>` : ''}
             <div class="cg-desc">${c.desc}</div>
           </div>
         `).join('')}

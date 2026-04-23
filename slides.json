@@ -171,7 +171,8 @@
             "title": "Citat: Den kognitiva bryggan",
             "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. *Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.*",
             "author": "Den Kognitiva Bryggan",
-            "style": "normal"
+            "style": "typewriter",
+            "slowSpeed": true
         },
         {
             "id": "bonus-gosedjur",
@@ -180,7 +181,8 @@
             "title": "Citat: Gosedjurs-analogin",
             "text": "Föreställ dig ett gosedjur som barnet anförtror sig åt, men gosedjuret har hela internets samlade mörker i sin databas, och saknar förmågan att veta när det gått för långt.",
             "author": "Gosedjurs-analogin",
-            "style": "normal"
+            "style": "typewriter",
+            "slowSpeed": true
         },
         {
             "id": "bonus-tank-om",
@@ -212,7 +214,8 @@
             "title": "Citat: Prolog (Maskinell gissningslek)",
             "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
             "author": "Prolog",
-            "style": "normal"
+            "style": "typewriter",
+            "slowSpeed": true
         },
         {
             "id": "bonus-5-warnings",
@@ -331,7 +334,8 @@
             "title": "AI-detektion: Illusionen av kontroll",
             "text": "Att tro att vi kan lösa AI-fusket med AI-detektorer är en farlig återvändsgränd. De fungerar inte, de straffar oskyldiga elever oproportionerligt, och de tvingar in oss i en teknisk katt-och-råtta-lek vi aldrig kan vinna. Lösningen är pedagogisk, inte teknisk.",
             "author": "Falsk säkerhet",
-            "style": "normal"
+            "style": "typewriter",
+            "slowSpeed": true
         },
         {
             "id": "apt-samtalsnycklar",
