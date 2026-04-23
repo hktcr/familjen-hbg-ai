@@ -10,41 +10,13 @@
         }
     },
     "sections": [
-        {
-            "id": "start",
-            "label": "Start",
-            "color": "#7a8f6e"
-        },
-        {
-            "id": "forstaelse",
-            "label": "Människa & Maskin",
-            "color": "#c4956a"
-        },
-        {
-            "id": "praktik",
-            "label": "Verktyg & Praktik",
-            "color": "#4a6274"
-        },
-        {
-            "id": "risker",
-            "label": "Tidslinje & Risker",
-            "color": "#b05050"
-        },
-        {
-            "id": "barn",
-            "label": "Barnen & AI",
-            "color": "#7a8f6e"
-        },
-        {
-            "id": "avslutning",
-            "label": "Avslutning",
-            "color": "#c4956a"
-        },
-        {
-            "id": "reserv",
-            "label": "Reserv & Extramaterial",
-            "color": "#9ca3af"
-        }
+        { "id": "start", "label": "Start", "color": "#7a8f6e" },
+        { "id": "forstaelse", "label": "Människa & Maskin", "color": "#c4956a" },
+        { "id": "praktik", "label": "Verktyg & Praktik", "color": "#4a6274" },
+        { "id": "risker", "label": "Tidslinje & Risker", "color": "#b05050" },
+        { "id": "barn", "label": "Barnen & AI", "color": "#7a8f6e" },
+        { "id": "avslutning", "label": "Avslutning", "color": "#c4956a" },
+        { "id": "reserv", "label": "Reserv & Extramaterial", "color": "#9ca3af" }
     ],
     "slides": [
         {
@@ -66,22 +38,22 @@
             "avatar": "assets/presenter_avatar.png",
             "researchImage": "assets/northpole.jpg"
         },
+
+        {
+            "id": "prolog",
+            "section": "forstaelse",
+            "type": "quote",
+            "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
+            "author": "Prolog",
+            "style": "typewriter",
+            "slowSpeed": true
+        },
         {
             "id": "ai-relation",
             "section": "forstaelse",
             "type": "quote",
             "text": "Vi står inför ett kognitivt skifte, inte ett tekniskt. Aldrig tidigare har en ny teknik varit så extremt enkel att förväxla med en tänkande medvetenhet.",
             "author": "Relationen mellan människa och maskin",
-            "style": "typewriter",
-            "slowSpeed": false
-        },
-        {
-            "id": "det-gemensamma-ledarskapet",
-            "section": "forstaelse",
-            "type": "quote",
-            "title": "Det gemensamma ledarskapet",
-            "text": "Det här är för stort för att en ensam person ska kunna leda processen. För att lyckas måste vi ha en kontinuerlig dialog om hur tekniken påverkar oss, vad som faktiskt fungerar i vardagen och vad som inte gör det.",
-            "author": "Löfte till varandra",
             "style": "typewriter",
             "slowSpeed": false
         },
@@ -95,19 +67,19 @@
                 "Det kognitiva språnget"
             ],
             "steps": [
-                {
-                    "quality": "dubbelt så mycket, minst lika bra",
-                    "time": "halva tiden"
-                },
-                {
-                    "quality": "samma sak fast dubbelt så bra",
-                    "time": "samma tid"
-                },
-                {
-                    "quality": "helt nya saker jag inte kunde förut",
-                    "time": "samma tid"
-                }
+                { "quality": "dubbelt så mycket, minst lika bra", "time": "halva tiden" },
+                { "quality": "samma sak fast dubbelt så bra", "time": "samma tid" },
+                { "quality": "helt nya saker jag inte kunde förut", "time": "samma tid" }
             ]
+        },
+        {
+            "id": "det-gemensamma-ledarskapet",
+            "section": "forstaelse",
+            "type": "quote",
+            "text": "Det här är för stort för att en ensam person ska kunna leda processen. För att lyckas måste vi ha en kontinuerlig dialog om hur tekniken påverkar oss, vad som faktiskt fungerar i vardagen och vad som inte gör det.",
+            "author": "Löfte till varandra",
+            "style": "typewriter",
+            "slowSpeed": false
         },
         {
             "id": "rolling-expectations",
@@ -131,7 +103,7 @@
                 },
                 {
                     "text": "Tekniken ska utgå från människans behov. Det är inte tekniken i sig som skapar värde, utan hur människor använder den för att utveckla och förbättra välfärden.",
-                    "author": "Sveriges AI-strategi: 'Människan i centrum'"
+                    "author": "Sveriges AI-strategi: Människan i centrum"
                 },
                 {
                     "text": "Ledningens engagemang är den enskilt viktigaste framgångsfaktorn för att lyckas skapa värde med artificiell intelligens.",
@@ -139,6 +111,7 @@
                 }
             ]
         },
+
         {
             "id": "case-grid-module",
             "section": "praktik",
@@ -213,6 +186,16 @@
                 }
             ]
         },
+
+        {
+            "id": "kapprustning-bridge",
+            "section": "risker",
+            "type": "quote",
+            "text": "De verktyg ni just sett är resultatet av en global kapprustning som accelererar snabbare än någon förutsåg. Låt mig visa er hur snabbt det faktiskt har gått.",
+            "author": "Bryggan till tidslinjen",
+            "style": "typewriter",
+            "slowSpeed": false
+        },
         {
             "id": "ai-timeline-module",
             "section": "risker",
@@ -220,11 +203,20 @@
             "title": "Kapplöpningen (2022-2026)",
             "url": "modules/ai_timeline/index.html"
         },
+
+        {
+            "id": "kognitiva-bryggan",
+            "section": "barn",
+            "type": "quote",
+            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. *Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.*",
+            "author": "Den Kognitiva Bryggan",
+            "style": "typewriter",
+            "slowSpeed": true
+        },
         {
             "id": "barn-ankarplats",
             "section": "barn",
             "type": "quote",
-            "title": "Förskolans nya roll",
             "text": "När barnens hemmiljö i allt högre grad fylls av syntetiska relationer och skräddarsydda illusioner, blir förskolan samhällets viktigaste ankarplats för mänsklig verklighet.",
             "author": "Det kompensatoriska uppdraget",
             "style": "typewriter",
@@ -254,6 +246,7 @@
                 }
             ]
         },
+
         {
             "id": "takeaways",
             "section": "avslutning",
@@ -285,16 +278,7 @@
             "author": "",
             "style": "typewriter"
         },
-        {
-            "id": "bonus-kognitiva",
-            "section": "reserv",
-            "type": "quote",
-            "title": "Citat: Den kognitiva bryggan",
-            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. *Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.*",
-            "author": "Den Kognitiva Bryggan",
-            "style": "typewriter",
-            "slowSpeed": true
-        },
+
         {
             "id": "bonus-gosedjur",
             "section": "reserv",
@@ -306,46 +290,16 @@
             "slowSpeed": true
         },
         {
-            "id": "bonus-prolog",
-            "section": "reserv",
-            "type": "quote",
-            "title": "Citat: Prolog (Maskinell gissningslek)",
-            "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
-            "author": "Prolog",
-            "style": "typewriter",
-            "slowSpeed": true
-        },
-        {
             "id": "bonus-5-warnings",
             "section": "reserv",
             "type": "case-grid",
             "title": "De 5 största fällorna",
             "cards": [
-                {
-                    "title": "Spökskrivarsyndromet",
-                    "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt.",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Kognitiva illusionen",
-                    "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare.",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "'The Yes-Man'",
-                    "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer.",
-                    "color": "var(--coral)"
-                },
-                {
-                    "title": "Den osynliga skulden",
-                    "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad.",
-                    "color": "#a8423a"
-                },
-                {
-                    "title": "Den fiktiva skölden",
-                    "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR.",
-                    "color": "#4a6274"
-                }
+                { "title": "Spökskrivarsyndromet", "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt.", "color": "var(--sage)" },
+                { "title": "Kognitiva illusionen", "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare.", "color": "var(--terra)" },
+                { "title": "'The Yes-Man'", "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer.", "color": "var(--coral)" },
+                { "title": "Den osynliga skulden", "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad.", "color": "#a8423a" },
+                { "title": "Den fiktiva skölden", "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR.", "color": "#4a6274" }
             ]
         },
         {
@@ -354,31 +308,11 @@
             "type": "case-grid",
             "title": "De 5 största möjligheterna",
             "cards": [
-                {
-                    "title": "Virtuella Expertpaneler (VEP)",
-                    "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv.",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Strukturera kaoset",
-                    "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen.",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Sparringpartnern",
-                    "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap.",
-                    "color": "var(--coral)"
-                },
-                {
-                    "title": "Data-triage",
-                    "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö.",
-                    "color": "#a8423a"
-                },
-                {
-                    "title": "Den sokratiska spegeln",
-                    "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör.",
-                    "color": "#4a6274"
-                }
+                { "title": "Virtuella Expertpaneler (VEP)", "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv.", "color": "var(--sage)" },
+                { "title": "Strukturera kaoset", "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen.", "color": "var(--terra)" },
+                { "title": "Sparringpartnern", "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap.", "color": "var(--coral)" },
+                { "title": "Data-triage", "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö.", "color": "#a8423a" },
+                { "title": "Den sokratiska spegeln", "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör.", "color": "#4a6274" }
             ]
         },
         {
@@ -387,21 +321,9 @@
             "type": "case-grid",
             "title": "EU AI Act: Det juridiska landskapet",
             "cards": [
-                {
-                    "title": "Oacceptabel risk (Förbjudet)",
-                    "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning.",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Hög risk",
-                    "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn.",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Låg/Minimal risk",
-                    "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI).",
-                    "color": "var(--coral)"
-                }
+                { "title": "Oacceptabel risk (Förbjudet)", "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning.", "color": "var(--sage)" },
+                { "title": "Hög risk", "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn.", "color": "var(--terra)" },
+                { "title": "Låg/Minimal risk", "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI).", "color": "var(--coral)" }
             ]
         },
         {
@@ -409,21 +331,9 @@
             "section": "reserv",
             "type": "traffic-light",
             "title": "Trafikljusmodellen för skolan",
-            "green": [
-                "Sammanfatta offentliga styrdokument",
-                "Översätta generella informationsbrev",
-                "Brainstorma upplägg för föräldramöten",
-                "Analysera helt avidentifierad data"
-            ],
-            "yellow": [
-                "Skriva utkast till omdömen (kräver extrem försiktighet)",
-                "Skapa lektionsplaneringar (kräver mänsklig faktakoll)"
-            ],
-            "red": [
-                "All inmatning av elevers namn eller personuppgifter (GDPR)",
-                "Använda AI för att ställa diagnoser",
-                "Låta AI fatta automatiserade beslut om elever"
-            ]
+            "green": [ "Sammanfatta offentliga styrdokument", "Översätta generella informationsbrev", "Brainstorma upplägg för föräldramöten", "Analysera helt avidentifierad data" ],
+            "yellow": [ "Skriva utkast till omdömen (kräver extrem försiktighet)", "Skapa lektionsplaneringar (kräver mänsklig faktakoll)" ],
+            "red": [ "All inmatning av elevers namn eller personuppgifter (GDPR)", "Använda AI för att ställa diagnoser", "Låta AI fatta automatiserade beslut om elever" ]
         },
         {
             "id": "apt-ai-detection",
@@ -441,21 +351,9 @@
             "type": "case-grid",
             "title": "Samtalsnycklar för pedagoger/elevhälsa",
             "cards": [
-                {
-                    "title": "Sociala surrogat",
-                    "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Bekräftelsen",
-                    "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Reflektionen",
-                    "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'",
-                    "color": "var(--coral)"
-                }
+                { "title": "Sociala surrogat", "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'", "color": "var(--sage)" },
+                { "title": "Bekräftelsen", "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'", "color": "var(--terra)" },
+                { "title": "Reflektionen", "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'", "color": "var(--coral)" }
             ]
         },
         {
@@ -464,21 +362,9 @@
             "type": "case-grid",
             "title": "Frågor för ledningsgruppen (Har vi...?)",
             "cards": [
-                {
-                    "title": "Integritet",
-                    "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Kompetens",
-                    "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Krisberedskap",
-                    "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?",
-                    "color": "var(--coral)"
-                }
+                { "title": "Integritet", "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?", "color": "var(--sage)" },
+                { "title": "Kompetens", "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?", "color": "var(--terra)" },
+                { "title": "Krisberedskap", "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?", "color": "var(--coral)" }
             ]
         }
     ]
