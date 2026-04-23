@@ -333,7 +333,7 @@ function buildGrid(){
       card.className='card';
       card.innerHTML=`
         <div class="card-header-bar">
-          <div class="card-title">${s.title||s.name||s.text?.slice(0,40).replace(/\*/g,'')+'…'||s.id}</div>
+          <div class="card-title">${i+1}. ${s.title||s.name||s.text?.slice(0,40).replace(/\*/g,'')+'…'||s.id}</div>
           <div class="card-type">${s.type}</div>
         </div>
         <span class="card-id" style="display:none;">${s.id}</span>

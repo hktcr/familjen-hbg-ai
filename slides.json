@@ -213,6 +213,72 @@
             "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
             "author": "Prolog",
             "style": "normal"
+        },
+        {
+            "id": "bonus-5-warnings",
+            "section": "reserv",
+            "type": "grid",
+            "title": "De 5 största fällorna",
+            "cards": [
+                {
+                    "icon": "👻",
+                    "title": "Spökskrivarsyndromet",
+                    "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt."
+                },
+                {
+                    "icon": "🧸",
+                    "title": "Kognitiva illusionen",
+                    "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare."
+                },
+                {
+                    "icon": "🤖",
+                    "title": "'The Yes-Man'",
+                    "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer."
+                },
+                {
+                    "icon": "🕳️",
+                    "title": "Den osynliga skulden",
+                    "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad."
+                },
+                {
+                    "icon": "🛡️",
+                    "title": "Den fiktiva skölden",
+                    "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR."
+                }
+            ]
+        },
+        {
+            "id": "bonus-5-opportunities",
+            "section": "reserv",
+            "type": "grid",
+            "title": "De 5 största möjligheterna",
+            "cards": [
+                {
+                    "icon": "⚖️",
+                    "title": "Virtuella Expertpaneler (VEP)",
+                    "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv."
+                },
+                {
+                    "icon": "🏗️",
+                    "title": "Strukturera kaoset",
+                    "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen."
+                },
+                {
+                    "icon": "🥊",
+                    "title": "Sparringpartnern",
+                    "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap."
+                },
+                {
+                    "icon": "🔍",
+                    "title": "Data-triage",
+                    "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö."
+                },
+                {
+                    "icon": "🪞",
+                    "title": "Den sokratiska spegeln",
+                    "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör."
+                }
+            ]
         }
     ]
 }
