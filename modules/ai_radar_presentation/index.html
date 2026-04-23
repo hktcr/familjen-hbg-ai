@@ -313,6 +313,10 @@
             s.floatYear = s.year + (s.angle / 360);
             s.vwPos = (s.floatYear - minYear) * VW_PER_YEAR;
             s.hit = false;
+            // Map impact to legacy blip type classes
+            if (s.impact === 'critical') s.type = 'risk';
+            else if (s.impact === 'negative') s.type = 'nackdel';
+            else s.type = 'mojlighet';
         });
         timelineData.sort((a, b) => a.vwPos - b.vwPos);
 
@@ -529,14 +533,11 @@
                 targetEl.style.top = `${y}%`;
             } else if (currentLayout === 'chart') {
                 let xPercent = ((s.floatYear - minYear) / (maxYear - minYear + 1)) * 90 + 5;
-                let yPercent = 50;
-                if (s.impact === 'critical') yPercent = 20;
-                else if (s.impact === 'negative') yPercent = 50;
-                else yPercent = 80;
+                // Scatter randomly across y-axis, colors differentiate categories
+                let yPercent = 15 + (Math.random() * 70);
                 
-                // Jitter
-                yPercent += (Math.random() - 0.5) * 12;
-                xPercent += (Math.random() - 0.5) * 1;
+                // Small x jitter to separate overlapping dates
+                xPercent += (Math.random() - 0.5) * 2;
                 
                 targetEl.style.left = `${xPercent}%`;
                 targetEl.style.top = `${yPercent}%`;
@@ -708,60 +709,27 @@
         function drawChartAxes() {
             document.querySelectorAll('.chart-line').forEach(el => el.remove());
             document.querySelectorAll('.chart-label').forEach(el => el.remove());
+            document.querySelectorAll('.chart-legend').forEach(el => el.remove());
             
             for (let y = minYear; y <= maxYear; y++) {
                 let xPercent = ((y - minYear) / (maxYear - minYear + 1)) * 90 + 5;
                 let label = document.createElement('div');
                 label.className = 'chart-label chart-x-label';
-                label.innerText = `[ ${y} ]`;
-                label.style.left = `${xPercent}%`;
-                label.style.bottom = '20px';
-                label.style.position = 'absolute';
-                label.style.color = 'var(--text-main)';
-                label.style.transform = 'translateX(-50%)';
+                label.innerText = y;
+                label.style.cssText = `left:${xPercent}%;bottom:48px;position:absolute;color:var(--text-main);transform:translateX(-50%);font-size:0.85rem;font-family:'JetBrains Mono',monospace;opacity:0.6;`;
                 activeContainer.appendChild(label);
                 
                 let line = document.createElement('div');
                 line.className = 'chart-line chart-x-line';
-                line.style.left = `${xPercent}%`;
-                line.style.top = '0';
-                line.style.bottom = '50px';
-                line.style.width = '1px';
-                line.style.background = 'var(--radar-faint)';
-                line.style.position = 'absolute';
-                line.style.zIndex = '0';
+                line.style.cssText = `left:${xPercent}%;top:0;bottom:70px;width:1px;background:var(--radar-faint);position:absolute;z-index:0;`;
                 activeContainer.appendChild(line);
             }
             
-            const categories = [
-                { y: 20, text: 'FATALA RISKER', color: 'var(--nocmig-color)' },
-                { y: 50, text: 'NACKDELAR/SÅRBARHET', color: 'var(--nackdel-color)' },
-                { y: 80, text: 'MÖJLIGHETER', color: 'var(--radar-green)' }
-            ];
-            
-            categories.forEach(c => {
-                let label = document.createElement('div');
-                label.className = 'chart-label chart-y-label';
-                label.innerText = c.text;
-                label.style.top = `${c.y}%`;
-                label.style.left = '40px';
-                label.style.position = 'absolute';
-                label.style.color = c.color;
-                label.style.transform = 'translateY(-50%)';
-                label.style.fontWeight = 'bold';
-                activeContainer.appendChild(label);
-                
-                let line = document.createElement('div');
-                line.className = 'chart-line chart-y-line';
-                line.style.top = `${c.y}%`;
-                line.style.left = '0';
-                line.style.right = '0';
-                line.style.height = '1px';
-                line.style.background = 'var(--radar-faint)';
-                line.style.position = 'absolute';
-                line.style.zIndex = '0';
-                activeContainer.appendChild(line);
-            });
+            let legend = document.createElement('div');
+            legend.className = 'chart-legend';
+            legend.style.cssText = 'position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:24px;font-family:"JetBrains Mono",monospace;font-size:0.75rem;z-index:20;';
+            legend.innerHTML = '<span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:50%;background:var(--radar-green);display:inline-block;"></span><span style="color:var(--text-main);opacity:0.8;">Möjlighet</span></span><span style="display:flex;align-items:center;gap:6px;"><span style="width:12px;height:12px;border-radius:2px;background:var(--nackdel-faint);border:1px solid var(--nackdel-color);display:inline-block;"></span><span style="color:var(--nackdel-color);">Nackdel</span></span><span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:0;background:var(--nocmig-faint);border:2px solid var(--nocmig-color);display:inline-block;"></span><span style="color:var(--nocmig-color);">Fatal risk</span></span>';
+            activeContainer.appendChild(legend);
         }
 
         function openLightbox(target) {
