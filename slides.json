@@ -169,7 +169,7 @@
             "section": "reserv",
             "type": "quote",
             "title": "Citat: Den kognitiva bryggan",
-            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.",
+            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. *Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.*",
             "author": "Den Kognitiva Bryggan",
             "style": "normal"
         },
@@ -191,17 +191,17 @@
                 {
                     "icon": "🎭",
                     "title": "Tänk om jag ber den agera som...",
-                    "desc": "Istället för att be AI 'skriva ett brev', be den agera som en specifik mottagare. 'Läs denna policy som en stressad förskollärare och berätta vad som skapar oro.' (Virtuell Expertpanel)."
+                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel)."
                 },
                 {
                     "icon": "🥊",
                     "title": "Tänk om jag ber den leta efter...",
-                    "desc": "Mata in dina halvfärdiga tankar och be den agera djävulens advokat. 'Hitta de tre svagaste argumenten i min personalpresentation och kom med motargument.' (Sparringpartner)."
+                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner)."
                 },
                 {
                     "icon": "🏗️",
                     "title": "Tänk om jag ber den strukturera...",
-                    "desc": "Det största värdet är inte generering, det är struktur. 'Här är 100 osorterade anteckningar från dagens möte. Skapa en kronologisk åtgärdslista med en röd tråd.' (Kaoshanteraren)."
+                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren)."
                 }
             ]
         },
