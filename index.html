@@ -156,10 +156,10 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:
 }
 .cg-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
 .cg-card.expanded { grid-column: 1 / -1; }
-.cg-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 8px; color: var(--text); }
-.cg-desc { font-size: 1.15rem; color: var(--text-muted); line-height: 1.6; display: none; }
-.cg-card.expanded .cg-desc { display: block; margin-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 20px; }
-.cg-card.expanded .cg-image-container { display: flex !important; justify-content: center; }
+.cg-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; color: var(--text); }
+.cg-desc { font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; }
+.cg-card.expanded { grid-column: 1 / -1; }
+.cg-card.expanded .cg-desc { font-size: 1.15rem; margin-top: 20px; border-top: 1px dashed rgba(0,0,0,0.1); padding-top: 20px; }
 
 /* Vector Bird */
 .slide-vector-bird { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; background: #0f172a; color: #fff; }
@@ -501,11 +501,11 @@ function renderSlide(s){
     case'traffic-light':
       h=`<div class="slide-traffic"><h2>${md(s.title)}</h2>
         <div class="tl-grid">
-        <div class="tl-section green"><div class="tl-label">🟢 Kör på</div>
+        <div class="tl-section green"><div class="tl-label">Kör på</div>
         <ul class="tl-list">${s.green.map(i=>`<li>${i}</li>`).join('')}</ul></div>
-        <div class="tl-section yellow"><div class="tl-label">🟡 Var försiktig</div>
+        <div class="tl-section yellow"><div class="tl-label">Var försiktig</div>
         <ul class="tl-list">${s.yellow.map(i=>`<li>${i}</li>`).join('')}</ul></div>
-        <div class="tl-section red"><div class="tl-label">🛑 Stopp</div>
+        <div class="tl-section red"><div class="tl-label">Stopp</div>
         <ul class="tl-list">${s.red.map(i=>`<li>${i}</li>`).join('')}</ul></div>
         </div></div>`;break;
     case'step-slide':
