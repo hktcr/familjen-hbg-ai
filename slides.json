@@ -58,10 +58,12 @@
         {
             "id": "prolog",
             "section": "start",
-            "type": "hero-image",
-            "title": "Prolog: Den Blå Fågeln",
-            "image": "assets/blue_bird.png",
-            "subtitle": "Vad gör vi när magin plötsligt flyttar in i maskinen?"
+            "type": "progression",
+            "steps": [
+                "Hur många av er har bett en AI om hjälp den senaste veckan?",
+                "Hur många vet vad barnen pratar med hemma? När ingen vuxen lyssnar?",
+                "Vi börjar där ni är. Inte där tekniken är."
+            ]
         },
         {
             "id": "dialog-first",
@@ -110,7 +112,7 @@
                             "desc": "Google Translate i fickan"
                         }
                     ],
-                    "footer": "Barnen möter detta dagligen — hemma."
+                    "footer": "Barnen möter detta dagligen. Hemma."
                 }
             ]
         },
@@ -126,7 +128,7 @@
             "id": "merlin-hero",
             "section": "forstaelse",
             "type": "hero-image",
-            "image": "assets/merlin_hero.png",
+            "image": "assets/blue_bird.png",
             "title": "Mönster, inte Magi",
             "subtitle": "Hur algoritmer förstår världen"
         },
@@ -169,7 +171,7 @@
             "id": "ai-not-thinking",
             "section": "forstaelse",
             "type": "quote",
-            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.",
+            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen. Faran är att vi är biologiskt kodade att lita på en vänlig röst.",
             "author": "",
             "style": "typewriter"
         },
@@ -182,7 +184,7 @@
                 {
                     "icon": "🗺️",
                     "title": "Styrkan",
-                    "desc": "Beräknar baserat på miljontals tidigare fall — snabbt och konsekvent"
+                    "desc": "Beräknar baserat på miljontals tidigare fall, snabbt och konsekvent"
                 },
                 {
                     "icon": "⚠️",
@@ -192,7 +194,7 @@
                 {
                     "icon": "👁️",
                     "title": "Du är föraren",
-                    "desc": "AI är kartan — din pedagogiska erfarenhet är vindrutan"
+                    "desc": "AI är kartan. Din pedagogiska erfarenhet är vindrutan."
                 },
                 {
                     "icon": "🚧",
@@ -213,7 +215,7 @@
             "id": "falsk-empati",
             "section": "forstaelse",
             "type": "quote",
-            "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner ingenting. För ett barn som inte kan skilja på äkta och simulerat — är det skillnad på ett gosedjur som tröstar i *tystnad* och en röst som säger precis det barnet *vill höra*?",
+            "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner ingenting. För ett barn som inte kan skilja på äkta och simulerat: är det skillnad på ett gosedjur som tröstar i *tystnad* och en röst som säger precis det barnet *vill höra*?",
             "author": "Inspirerad av Sherry Turkle, MIT",
             "style": "typewriter"
         },
@@ -228,7 +230,7 @@
             "id": "risks-quad",
             "section": "bakgrund",
             "type": "grid",
-            "title": "Riskområden — barn och AI",
+            "title": "Riskområden: barn och AI",
             "cards": [
                 {
                     "icon": "📱",
@@ -256,7 +258,7 @@
             "id": "sewell-incident",
             "section": "bakgrund",
             "type": "quote",
-            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism — att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer — den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
+            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism, att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer, den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
             "author": "",
             "style": "typewriter",
             "slowSpeed": true
@@ -285,7 +287,7 @@
                 {
                     "icon": "🏫",
                     "title": "Verksamhetsidentitet",
-                    "desc": "Inte 'barnet på Solstrålen' — bakvägsidentifiering!"
+                    "desc": "Inte 'barnet på Solstrålen'. Bakvägsidentifiering!"
                 },
                 {
                     "icon": "📋",
@@ -335,7 +337,7 @@
             "section": "praktik",
             "type": "prompt-demo",
             "title": "Teknik: Dirigenten",
-            "subtitle": "Sluta vara passiv mottagare – kliv upp på pulten och led orkestern",
+            "subtitle": "Sluta vara passiv mottagare. Kliv upp på pulten och led orkestern.",
             "prompt": "Tillsätt en RELEVANT virtuell expertpanel (ca 5 experter) för att granska denna text. Du avgör vilka professioner eller perspektiv som behövs bäst.\n\nText att granska:\n[KLISTRA IN DITT UTKAST HÄR]\n\nKoordinator:\nDu är en professionell facilitator för denna expertpanel.\nNär panelen är samlad (presentera dem kort!), fråga mig:\n\"Hur vill du gå vidare?\"\nA) Höra individuella åsikter från varje expert\nB) Låta panelen diskutera tillsammans\nC) Be om en syntes\nD) Något annat\n\nEfter varje avslutat steg, fråga: \"Vad vill du göra nu?\"\nGå ALDRIG vidare utan mina uttryckliga instruktioner.",
             "example_topic": "1. Tvätta ett argt, frustrerat utkast till föräldrabrev<br>2. Trycktesta en krisplan för personalbrist",
             "why": "VEP sparar tid och ångest. Låt panelen koka ner din frustration till ett sakligt, juridiskt hållbart brev."
@@ -402,7 +404,7 @@
                 {
                     "icon": "🏠",
                     "title": "Barnens verklighet?",
-                    "desc": "Vet vi vad barnen möter hemma — vilka röster de redan pratar med?"
+                    "desc": "Vet vi vad barnen möter hemma? Vilka röster de redan pratar med?"
                 }
             ]
         },
