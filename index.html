@@ -431,8 +431,8 @@ function renderSlide(s){
     case'rolling-quotes':
       h=`<div class="slide-quote slide-rolling-quotes">
         ${s.title ? `<h2>${s.title}</h2>` : ''}
-        <div class="qtext" style="transition: opacity 1s; font-size: 1.2em; margin-top: 10%;"></div>
-        <div class="qauthor" style="opacity:0; transition: opacity 1s; font-size: 0.9em; margin-top: 2rem; color: var(--text-light);"></div>
+        <div class="qtext" style="transition: opacity 1s;"></div>
+        <div class="qauthor" style="opacity:0; transition: opacity 1s; color: var(--text-light);"></div>
         </div>`;
       el.innerHTML=h;
       let qIndex=0;
