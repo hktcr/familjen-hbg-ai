@@ -239,12 +239,14 @@
         {
             "id": "tänk-om",
             "section": "praktik",
-            "type": "progression",
+            "type": "rewrite-progression",
+            "template": "Tänk om jag kan göra dubbelt så mycket, {quality}, på {time}",
             "steps": [
-                "1. Tänk om jag kunde skriva dubbelt så många föräldrabrev på halva tiden?",
-                "2. Tänk om jag hade en administrativ assistent som aldrig blev trött?",
-                "3. Tänk om jag kunde använda tiden till att leda verksamheten istället?"
-            ]
+                {"quality": "minst lika bra", "time": "hälften så lång tid"},
+                {"quality": "dubbelt så bra", "time": "lika lång tid"},
+                {"quality": "dubbelt så bra", "time": "hälften så lång tid"}
+            ],
+            "prefix": ["eller kanske...", "eller till och med..."]
         },
         {
             "id": "chefsscenarier",
