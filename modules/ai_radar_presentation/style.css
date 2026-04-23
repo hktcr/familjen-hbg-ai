@@ -520,3 +520,90 @@ button:hover:not(.modal-close):not(.start-btn):not(.launch-system-btn) { backgro
   background: var(--bg-hud);
   padding: 0.5rem;
 }
+
+/* =========================================
+   SLIDE LIGHTBOX
+   ========================================= */
+.slide-lightbox {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  z-index: 9999;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.slide-lightbox.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.slide-lightbox.theme-light {
+  background: #fafaf8;
+  color: #2d2d2d;
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: transparent;
+  border: 1px solid var(--radar-green);
+  color: var(--radar-green);
+  padding: 8px 16px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  z-index: 10000;
+  transition: all 0.2s;
+}
+.lightbox-close:hover {
+  background: var(--radar-dim);
+  color: #fff;
+}
+.slide-lightbox.theme-light .lightbox-close {
+  border-color: #7a8f6e;
+  color: #7a8f6e;
+}
+.slide-lightbox.theme-light .lightbox-close:hover {
+  background: #e8ede5;
+  color: #5d7252;
+}
+.lightbox-content {
+  max-width: 900px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  font-family: 'Inter', system-ui, sans-serif;
+  padding: 40px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+}
+.slide-lightbox.theme-light .lightbox-content {
+  background: #fff;
+  border-color: rgba(0,0,0,0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+.lightbox-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-family: 'Outfit', sans-serif;
+}
+.lightbox-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.lightbox-content .quote {
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.4;
+  border-left: 4px solid var(--radar-green);
+  padding-left: 20px;
+  margin: 30px 0;
+}
+.slide-lightbox.theme-light .lightbox-content .quote {
+  border-left-color: #7a8f6e;
+}
