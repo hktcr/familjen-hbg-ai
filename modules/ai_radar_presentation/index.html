@@ -591,8 +591,12 @@
                     let label = document.createElement('div');
                     label.className = 'year-ring-label';
                     label.innerText = y;
-                    label.style.top = `${50 + radiusPercent}%`;
-                    label.style.left = `50%`;
+                    // Place along the left ray (9 o'clock direction)
+                    label.style.top = '50%';
+                    label.style.left = `${50 - radiusPercent}%`;
+                    label.style.transform = 'translate(-50%, -50%)';
+                    label.style.fontSize = '0.7rem';
+                    label.style.opacity = '0.5';
                     activeContainer.appendChild(label);
                 }
             }
@@ -736,13 +740,20 @@
             const lightbox = document.getElementById('slideLightbox');
             const content = document.getElementById('lightboxContent');
             
-            let html = `<h2>${target.art}</h2>
-                        <div style="font-size: 1.1rem; color: var(--radar-dim); margin-bottom:20px;">[ ${target.datum.toUpperCase()} ]</div>`;
+            let color = 'var(--radar-green)';
+            if (target.impact === 'critical') color = 'var(--nocmig-color)';
+            else if (target.impact === 'negative') color = 'var(--nackdel-color)';
             
-            if (target.type === 'reflection') {
-                html += `<div class="quote">"${target.kommentar}"</div>`;
+            let html = `<h2 style="color:${color};">${target.title}</h2>
+                        <div style="font-size: 0.9rem; color: var(--radar-dim); margin-bottom:20px; display:flex; gap:16px;">
+                            <span>[ ${target.date.toUpperCase()} ]</span>
+                            <span style="color:${color};">${target.category}</span>
+                        </div>`;
+            
+            if (target.category === 'Reflektion') {
+                html += `<div style="font-size:1.3rem; font-style:italic; line-height:1.8; color:var(--text-main); border-left:3px solid ${color}; padding-left:20px; margin:20px 0;">${target.description}</div>`;
             } else {
-                html += `<p>${target.kommentar}</p>`;
+                html += `<p style="font-size:1.1rem; line-height:1.7;">${target.description}</p>`;
             }
             
             if (target.url) {
