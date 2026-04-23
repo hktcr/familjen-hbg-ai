@@ -6,6 +6,26 @@
     <title>AI & RISKER: TIDSLINJE-VISUALISERING</title>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,700;1,400&family=Outfit:wght@800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <style>
+    .blip { position: relative; }
+    .blip[data-tooltip]:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      bottom: calc(100% + 8px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.92);
+      color: #0f0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.7rem;
+      padding: 6px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      z-index: 9999;
+      pointer-events: none;
+      border: 1px solid rgba(0,255,0,0.3);
+    }
+    </style>
 </head>
 <body class="theme-light">
     
@@ -494,6 +514,7 @@
             const targetEl = document.createElement('div');
             targetEl.className = `blip blip-${s.type}`;
             targetEl.dataset.id = s.id;
+            targetEl.dataset.tooltip = `${s.date} · ${s.title}`;
 
             if (currentLayout === 'timeline') {
                 targetEl.style.left = `${s.vwPos}vw`;
@@ -519,9 +540,6 @@
                 
                 targetEl.style.left = `${xPercent}%`;
                 targetEl.style.top = `${yPercent}%`;
-                
-                // Add tooltip on hover
-                targetEl.title = `${s.date.toUpperCase()} | ${s.title}`;
                 
                 // Use lightbox for chart mode instead of default modal
                 targetEl.addEventListener('click', (e) => {
