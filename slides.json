@@ -137,17 +137,17 @@
                 {
                     "icon": "🎼",
                     "title": "Du är dirigenten",
-                    "desc": "Koordinatorn är ditt verktyg för att styra orkestern av experter, inte din chef. Du håller i taktpinnen."
+                    "desc": "AI:n är ditt verktyg för att styra en orkester av experter, inte din spökskrivare. Det är du som håller i taktpinnen och äger verksamhetens narrativ."
                 },
                 {
                     "icon": "🎯",
                     "title": "Var explicit",
-                    "desc": "Tydliga och specifika instruktioner är nyckeln till kontroll. Kräv att AI:n aldrig fortsätter utan din explicita riktning."
+                    "desc": "Svaga instruktioner ger platta resultat. Kräv friktion, beställ motargument och instruera AI:n att systematiskt leta efter blinda fläckar."
                 },
                 {
                     "icon": "🔄",
                     "title": "Iterera aktivt",
-                    "desc": "Acceptera aldrig det första svaret om du vill nå djupare. Dirigera panelen genom friktion, diskussion och syntes."
+                    "desc": "Acceptera aldrig det första maskinpolerade svaret. Dirigera tekniken genom diskussion och tvinga fram alternativ innan du fattar beslut."
                 }
             ]
         },
