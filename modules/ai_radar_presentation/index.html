@@ -623,15 +623,19 @@
             document.getElementById('btnPlay').innerText = "[ ▶ STARTA SIMULERING ]";
             activeContainer.innerHTML = '';
             logContent.innerHTML = '<div class="idle-text">> KLAR FÖR SIMULERING OCH MÅLLÅSNING... (KLICKA PLAY)</div>';
-            totalValueEl.innerText = timelineData.length.toString().padStart(3, '0');
             simYearIndicator.innerText = "SEKTOR: ÖVERSIKT";
 
             drawYearRings();
 
+            let visibleCount = 0;
             timelineData.forEach((s) => {
                 s.hit = true;
-                if((activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education')))) appendTarget(s);
+                if((activeFilters[s.impact] !== undefined ? activeFilters[s.impact] : true) && (!activeFilters['barn_only'] || (s.tags && s.tags.includes('education')))) {
+                    appendTarget(s);
+                    visibleCount++;
+                }
             });
+            totalValueEl.innerText = visibleCount.toString().padStart(3, '0');
         }
 
         function toggleSimulation() {
@@ -782,6 +786,56 @@
 
         document.getElementById('lightboxClose').addEventListener('click', () => {
             document.getElementById('slideLightbox').classList.remove('visible');
+        });
+
+        // Pan and Zoom logic for chart system
+        const chartSys = document.getElementById('chartSystem');
+        const chartViewport = document.getElementById('chart-viewport');
+        let chartScale = 1;
+        let chartPanX = 0;
+        let chartPanY = 0;
+        let isChartPanning = false;
+        let chartStartX = 0;
+        let chartStartY = 0;
+
+        chartSys.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            chartScale += e.deltaY * -0.002;
+            chartScale = Math.min(Math.max(0.5, chartScale), 5); // limit scale 0.5x to 5x
+            applyChartTransform();
+        });
+
+        chartSys.addEventListener('mousedown', (e) => {
+            isChartPanning = true;
+            chartStartX = e.clientX - chartPanX;
+            chartStartY = e.clientY - chartPanY;
+            chartViewport.style.cursor = 'grabbing';
+        });
+
+        chartSys.addEventListener('mousemove', (e) => {
+            if(!isChartPanning) return;
+            chartPanX = e.clientX - chartStartX;
+            chartPanY = e.clientY - chartStartY;
+            applyChartTransform();
+        });
+
+        window.addEventListener('mouseup', () => {
+            isChartPanning = false;
+            chartViewport.style.cursor = 'grab';
+        });
+
+        function applyChartTransform() {
+            chartViewport.style.transform = `translate(${chartPanX}px, ${chartPanY}px) scale(${chartScale})`;
+        }
+        
+        // Reset pan/zoom when changing layouts
+        document.querySelectorAll('#layoutGroup .launch-system-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                chartScale = 1;
+                chartPanX = 0;
+                chartPanY = 0;
+                applyChartTransform();
+            });
         });
     </script>
 </body>
