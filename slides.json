@@ -106,6 +106,29 @@
             ]
         },
         {
+            "id": "takeaways",
+            "section": "avslutning",
+            "type": "grid",
+            "title": "Tre regler för styrning",
+            "cards": [
+                {
+                    "icon": "🎼",
+                    "title": "Du är dirigenten",
+                    "desc": "Koordinatorn är ditt verktyg för att styra orkestern av experter, inte din chef. Du håller i taktpinnen."
+                },
+                {
+                    "icon": "🎯",
+                    "title": "Var explicit",
+                    "desc": "Tydliga och specifika instruktioner är nyckeln till kontroll. Kräv att AI:n aldrig fortsätter utan din explicita riktning."
+                },
+                {
+                    "icon": "🔄",
+                    "title": "Iterera aktivt",
+                    "desc": "Acceptera aldrig det första svaret om du vill nå djupare. Dirigera panelen genom friktion, diskussion och syntes."
+                }
+            ]
+        },
+        {
             "id": "avslutning",
             "section": "avslutning",
             "type": "quote",
