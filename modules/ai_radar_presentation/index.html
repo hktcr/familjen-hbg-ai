@@ -533,8 +533,16 @@
                 targetEl.style.top = `${y}%`;
             } else if (currentLayout === 'chart') {
                 let xPercent = ((s.floatYear - minYear) / (maxYear - minYear + 1)) * 90 + 5;
-                // Scatter randomly across y-axis, colors differentiate categories
-                let yPercent = 15 + (Math.random() * 70);
+                
+                // Distribute on Y-axis based on impact category
+                let yPercent;
+                if (s.impact === 'critical') {
+                    yPercent = 25 + (Math.random() - 0.5) * 15; // Top band
+                } else if (s.impact === 'negative') {
+                    yPercent = 50 + (Math.random() - 0.5) * 15; // Middle band
+                } else {
+                    yPercent = 75 + (Math.random() - 0.5) * 15; // Bottom band
+                }
                 
                 // Small x jitter to separate overlapping dates
                 xPercent += (Math.random() - 0.5) * 2;
@@ -583,7 +591,7 @@
                     line.style.zIndex = '0';
                     activeContainer.appendChild(line);
                 }
-            } else {
+            } else if (currentLayout === 'radar') {
                 let step = 1;
                 let totalYears = maxYear - minYear + 1;
                 for (let y = minYear; y <= maxYear; y += step) {
