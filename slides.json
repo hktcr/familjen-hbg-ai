@@ -279,6 +279,105 @@
                     "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör."
                 }
             ]
+        },
+        {
+            "id": "apt-eu-ai-act",
+            "section": "reserv",
+            "type": "grid",
+            "title": "EU AI Act: Det juridiska landskapet",
+            "cards": [
+                {
+                    "icon": "🚫",
+                    "title": "Oacceptabel risk (Förbjudet)",
+                    "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning."
+                },
+                {
+                    "icon": "⚠️",
+                    "title": "Hög risk",
+                    "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn."
+                },
+                {
+                    "icon": "✅",
+                    "title": "Låg/Minimal risk",
+                    "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI)."
+                }
+            ]
+        },
+        {
+            "id": "apt-traffic-light",
+            "section": "reserv",
+            "type": "traffic-light",
+            "title": "Trafikljusmodellen för skolan",
+            "green": [
+                "Sammanfatta offentliga styrdokument",
+                "Översätta generella informationsbrev",
+                "Brainstorma upplägg för föräldramöten",
+                "Analysera helt avidentifierad data"
+            ],
+            "yellow": [
+                "Skriva utkast till omdömen (kräver extrem försiktighet)",
+                "Skapa lektionsplaneringar (kräver mänsklig faktakoll)"
+            ],
+            "red": [
+                "All inmatning av elevers namn eller personuppgifter (GDPR)",
+                "Använda AI för att ställa diagnoser",
+                "Låta AI fatta automatiserade beslut om elever"
+            ]
+        },
+        {
+            "id": "apt-ai-detection",
+            "section": "reserv",
+            "type": "quote",
+            "title": "AI-detektion: Illusionen av kontroll",
+            "text": "Att tro att vi kan lösa AI-fusket med AI-detektorer är en farlig återvändsgränd. De fungerar inte, de straffar oskyldiga elever oproportionerligt, och de tvingar in oss i en teknisk katt-och-råtta-lek vi aldrig kan vinna. Lösningen är pedagogisk, inte teknisk.",
+            "author": "Falsk säkerhet",
+            "style": "normal"
+        },
+        {
+            "id": "apt-samtalsnycklar",
+            "section": "reserv",
+            "type": "grid",
+            "title": "Samtalsnycklar för pedagoger/elevhälsa",
+            "cards": [
+                {
+                    "icon": "🗣️",
+                    "title": "Sociala surrogat",
+                    "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'"
+                },
+                {
+                    "icon": "🪞",
+                    "title": "Bekräftelsen",
+                    "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'"
+                },
+                {
+                    "icon": "⚖️",
+                    "title": "Reflektionen",
+                    "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'"
+                }
+            ]
+        },
+        {
+            "id": "apt-policy-reflektion",
+            "section": "reserv",
+            "type": "grid",
+            "title": "Frågor för ledningsgruppen (Har vi...?)",
+            "cards": [
+                {
+                    "icon": "🛡️",
+                    "title": "Integritet",
+                    "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?"
+                },
+                {
+                    "icon": "📚",
+                    "title": "Kompetens",
+                    "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?"
+                },
+                {
+                    "icon": "🛑",
+                    "title": "Krisberedskap",
+                    "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?"
+                }
+            ]
         }
     ]
 }
