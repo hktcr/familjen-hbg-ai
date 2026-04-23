@@ -146,46 +146,46 @@
         {
             "id": "bonus-tank-om",
             "section": "praktik",
-            "type": "grid",
+            "type": "case-grid",
             "title": "Den professionella tröskeln",
             "cards": [
                 {
-                    "icon": "🎭",
                     "title": "Tänk om jag ber den agera som...",
-                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel)."
+                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel).",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "🥊",
                     "title": "Tänk om jag ber den leta efter...",
-                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner)."
+                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner).",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "🏗️",
                     "title": "Tänk om jag ber den strukturera...",
-                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren)."
+                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren).",
+                    "color": "var(--coral)"
                 }
             ]
         },
         {
             "id": "case-grid-ledarskap",
             "section": "praktik",
-            "type": "grid",
+            "type": "case-grid",
             "title": "AI som strategiskt bollplank",
             "cards": [
                 {
-                    "icon": "🧩",
                     "title": "Verksamhetsplanering",
-                    "desc": "Mata in 20 avidentifierade reflektionsdokument från personalen. Be maskinen identifiera de tre vanligaste arbetsmiljöproblemen."
+                    "desc": "Mata in 20 avidentifierade reflektionsdokument från personalen. Be maskinen identifiera de tre vanligaste arbetsmiljöproblemen.",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "📚",
                     "title": "Tillgängliggöra forskning",
-                    "desc": "Kasta in en tung pedagogisk forskningsartikel och be maskinen dra ut tre konkreta diskussionsfrågor för nästa APT."
+                    "desc": "Kasta in en tung pedagogisk forskningsartikel och be maskinen dra ut tre konkreta diskussionsfrågor för nästa APT.",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "✉️",
                     "title": "Den svåra e-posten",
-                    "desc": "Prompt: 'Jag är frustrerad. Svara vårdnadshavaren att vi inte accepterar språkbruket, men håll det strikt professionellt och inom regelverket.'"
+                    "desc": "Prompt: 'Jag är frustrerad. Svara vårdnadshavaren att vi inte accepterar språkbruket, men håll det strikt professionellt och inom regelverket.'",
+                    "color": "var(--coral)"
                 }
             ]
         },
@@ -223,23 +223,23 @@
         {
             "id": "takeaways",
             "section": "avslutning",
-            "type": "grid",
+            "type": "case-grid",
             "title": "Tre regler för styrning",
             "cards": [
                 {
-                    "icon": "🎼",
                     "title": "Du är dirigenten",
-                    "desc": "AI:n är ditt verktyg för att styra en orkester av experter, inte din spökskrivare. Det är du som håller i taktpinnen och äger verksamhetens narrativ."
+                    "desc": "AI:n är ditt verktyg för att styra en orkester av experter, inte din spökskrivare. Det är du som håller i taktpinnen och äger verksamhetens narrativ.",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "🎯",
                     "title": "Var explicit",
-                    "desc": "Svaga instruktioner ger platta resultat. Kräv friktion, beställ motargument och instruera AI:n att systematiskt leta efter blinda fläckar."
+                    "desc": "Svaga instruktioner ger platta resultat. Kräv friktion, beställ motargument och instruera AI:n att systematiskt leta efter blinda fläckar.",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "🔄",
                     "title": "Iterera aktivt",
-                    "desc": "Acceptera aldrig det första maskinpolerade svaret. Dirigera tekniken genom diskussion och tvinga fram alternativ innan du fattar beslut."
+                    "desc": "Acceptera aldrig det första maskinpolerade svaret. Dirigera tekniken genom diskussion och tvinga fram alternativ innan du fattar beslut.",
+                    "color": "var(--coral)"
                 }
             ]
         },
@@ -284,89 +284,89 @@
         {
             "id": "bonus-5-warnings",
             "section": "reserv",
-            "type": "grid",
+            "type": "case-grid",
             "title": "De 5 största fällorna",
             "cards": [
                 {
-                    "icon": "👻",
                     "title": "Spökskrivarsyndromet",
-                    "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt."
+                    "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt.",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "🧸",
                     "title": "Kognitiva illusionen",
-                    "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare."
+                    "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare.",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "🤖",
                     "title": "'The Yes-Man'",
-                    "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer."
+                    "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer.",
+                    "color": "var(--coral)"
                 },
                 {
-                    "icon": "🕳️",
                     "title": "Den osynliga skulden",
-                    "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad."
+                    "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad.",
+                    "color": "#a8423a"
                 },
                 {
-                    "icon": "🛡️",
                     "title": "Den fiktiva skölden",
-                    "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR."
+                    "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR.",
+                    "color": "#4a6274"
                 }
             ]
         },
         {
             "id": "bonus-5-opportunities",
             "section": "reserv",
-            "type": "grid",
+            "type": "case-grid",
             "title": "De 5 största möjligheterna",
             "cards": [
                 {
-                    "icon": "⚖️",
                     "title": "Virtuella Expertpaneler (VEP)",
-                    "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv."
+                    "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv.",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "🏗️",
                     "title": "Strukturera kaoset",
-                    "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen."
+                    "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen.",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "🥊",
                     "title": "Sparringpartnern",
-                    "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap."
+                    "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap.",
+                    "color": "var(--coral)"
                 },
                 {
-                    "icon": "🔍",
                     "title": "Data-triage",
-                    "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö."
+                    "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö.",
+                    "color": "#a8423a"
                 },
                 {
-                    "icon": "🪞",
                     "title": "Den sokratiska spegeln",
-                    "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör."
+                    "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör.",
+                    "color": "#4a6274"
                 }
             ]
         },
         {
             "id": "apt-eu-ai-act",
             "section": "reserv",
-            "type": "grid",
+            "type": "case-grid",
             "title": "EU AI Act: Det juridiska landskapet",
             "cards": [
                 {
-                    "icon": "🚫",
                     "title": "Oacceptabel risk (Förbjudet)",
-                    "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning."
+                    "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning.",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "⚠️",
                     "title": "Hög risk",
-                    "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn."
+                    "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn.",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "✅",
                     "title": "Låg/Minimal risk",
-                    "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI)."
+                    "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI).",
+                    "color": "var(--coral)"
                 }
             ]
         },
@@ -404,46 +404,46 @@
         {
             "id": "apt-samtalsnycklar",
             "section": "reserv",
-            "type": "grid",
+            "type": "case-grid",
             "title": "Samtalsnycklar för pedagoger/elevhälsa",
             "cards": [
                 {
-                    "icon": "🗣️",
                     "title": "Sociala surrogat",
-                    "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'"
+                    "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "🪞",
                     "title": "Bekräftelsen",
-                    "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'"
+                    "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "⚖️",
                     "title": "Reflektionen",
-                    "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'"
+                    "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'",
+                    "color": "var(--coral)"
                 }
             ]
         },
         {
             "id": "apt-policy-reflektion",
             "section": "reserv",
-            "type": "grid",
+            "type": "case-grid",
             "title": "Frågor för ledningsgruppen (Har vi...?)",
             "cards": [
                 {
-                    "icon": "🛡️",
                     "title": "Integritet",
-                    "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?"
+                    "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?",
+                    "color": "var(--sage)"
                 },
                 {
-                    "icon": "📚",
                     "title": "Kompetens",
-                    "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?"
+                    "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?",
+                    "color": "var(--terra)"
                 },
                 {
-                    "icon": "🛑",
                     "title": "Krisberedskap",
-                    "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?"
+                    "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?",
+                    "color": "var(--coral)"
                 }
             ]
         }
