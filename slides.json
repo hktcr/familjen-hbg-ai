@@ -16,24 +16,24 @@
             "color": "#7a8f6e"
         },
         {
-            "id": "bakgrund",
-            "label": "Bakgrund & Kontext",
+            "id": "forstaelse",
+            "label": "Vad är AI?",
             "color": "#c4956a"
         },
         {
-            "id": "forstaelse",
-            "label": "Förståelse",
-            "color": "#7a8f6e"
+            "id": "risker",
+            "label": "Varför bry sig?",
+            "color": "#b05050"
         },
         {
             "id": "praktik",
-            "label": "Praktik",
-            "color": "#c4956a"
+            "label": "Så kan ni använda det",
+            "color": "#7a8f6e"
         },
         {
             "id": "avslutning",
             "label": "Avslutning",
-            "color": "#7a8f6e"
+            "color": "#c4956a"
         }
     ],
     "slides": [
@@ -75,7 +75,7 @@
         },
         {
             "id": "ai-intro",
-            "section": "bakgrund",
+            "section": "forstaelse",
             "type": "step-slide",
             "title": "AI är inget nytt",
             "steps": [
@@ -115,14 +115,6 @@
                     "footer": "Barnen möter detta dagligen. Hemma."
                 }
             ]
-        },
-        {
-            "id": "ai-commission",
-            "section": "bakgrund",
-            "type": "quote",
-            "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
-            "author": "AI-kommissionens färdplan, SOU 2025:12",
-            "style": "typewriter"
         },
         {
             "id": "merlin-hero",
@@ -204,64 +196,44 @@
             ]
         },
         {
+            "id": "ai-commission",
+            "section": "risker",
+            "type": "quote",
+            "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
+            "author": "AI-kommissionens färdplan, SOU 2025:12",
+            "style": "typewriter"
+        },
+        {
+            "id": "ai-radar-module",
+            "section": "risker",
+            "type": "iframe",
+            "title": "Radarn: Tidslinje & Fatala Risker",
+            "url": "modules/ai_radar_presentation/index.html"
+        },
+        {
+            "id": "sewell-incident",
+            "section": "risker",
+            "type": "quote",
+            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism, att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer, den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
+            "author": "",
+            "style": "typewriter",
+            "slowSpeed": true
+        },
+        {
             "id": "gosedjur-quote",
-            "section": "forstaelse",
+            "section": "risker",
             "type": "quote",
             "text": "Gosedjuret svarar aldrig. AI:n gör det. Varje gång. Tålmodigt. Utan villkor.",
             "author": "",
             "style": "typewriter"
         },
         {
-            "id": "falsk-empati",
-            "section": "forstaelse",
+            "id": "brygga",
+            "section": "risker",
             "type": "quote",
-            "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner ingenting. För ett barn som inte kan skilja på äkta och simulerat: är det skillnad på ett gosedjur som tröstar i *tystnad* och en röst som säger precis det barnet *vill höra*?",
-            "author": "Inspirerad av Sherry Turkle, MIT",
-            "style": "typewriter"
-        },
-        {
-            "id": "ai-radar-module",
-            "section": "bakgrund",
-            "type": "iframe",
-            "title": "Radarn: Tidslinje & Fatala Risker",
-            "url": "modules/ai_radar_presentation/index.html"
-        },
-        {
-            "id": "risks-quad",
-            "section": "bakgrund",
-            "type": "grid",
-            "title": "Riskområden: barn och AI",
-            "cards": [
-                {
-                    "icon": "📱",
-                    "title": "Tillgänglighet 24/7",
-                    "desc": "Röstassistenter är alltid tillgängliga. Ingen vuxen vet vad barnet frågar Siri klockan 22."
-                },
-                {
-                    "icon": "💔",
-                    "title": "AI som 'vän'",
-                    "desc": "Barn knyter an till röster som alltid lyssnar. AI saknar känslor men låtsas ha dem."
-                },
-                {
-                    "icon": "🔒",
-                    "title": "Integritet",
-                    "desc": "AI har ingen tystnadsplikt. Allt barnet säger lagras och kan användas."
-                },
-                {
-                    "icon": "🔄",
-                    "title": "Normalisering",
-                    "desc": "Barnet lär sig att 'fråga maskinen' istället för att fråga en människa. Tröskeln till riktigt stöd höjs."
-                }
-            ]
-        },
-        {
-            "id": "sewell-incident",
-            "section": "bakgrund",
-            "type": "quote",
-            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism, att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer, den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
+            "text": "Vi skyddar barnen bäst genom att själva förstå verktyget. Låt oss titta på hur ni kan använda det.",
             "author": "",
-            "style": "typewriter",
-            "slowSpeed": true
+            "style": "typewriter"
         },
         {
             "id": "tänk-om",
@@ -271,6 +243,29 @@
                 "1. Tänk om jag kunde skriva dubbelt så många föräldrabrev på halva tiden?",
                 "2. Tänk om jag hade en administrativ assistent som aldrig blev trött?",
                 "3. Tänk om jag kunde använda tiden till att leda verksamheten istället?"
+            ]
+        },
+        {
+            "id": "chefsscenarier",
+            "section": "praktik",
+            "type": "grid",
+            "title": "Tre saker du kan göra på måndag",
+            "cards": [
+                {
+                    "icon": "✉️",
+                    "title": "Tvätta ett föräldrabrev",
+                    "desc": "Klistra in ditt frustrerade utkast. Be AI omformulera till saklig, professionell ton. Granska. Skicka."
+                },
+                {
+                    "icon": "🗣️",
+                    "title": "Förbereda ett svårt samtal",
+                    "desc": "Be AI ge struktur, föreslå formuleringar och identifiera fallgropar. Du väljer strategi och anpassar till personen."
+                },
+                {
+                    "icon": "📄",
+                    "title": "Sammanfatta ett styrdokument",
+                    "desc": "Mata in 40 sidor. Be om 1 sida med nyckelbudskap. Verifiera alltid mot originalet."
+                }
             ]
         },
         {
