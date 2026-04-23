@@ -537,11 +537,11 @@
                 // Distribute on Y-axis based on impact category
                 let yPercent;
                 if (s.impact === 'critical') {
-                    yPercent = 25 + (Math.random() - 0.5) * 15; // Top band
+                    yPercent = 15 + (Math.random() - 0.5) * 15; // Top band
                 } else if (s.impact === 'negative') {
-                    yPercent = 50 + (Math.random() - 0.5) * 15; // Middle band
+                    yPercent = 40 + (Math.random() - 0.5) * 15; // Middle band
                 } else {
-                    yPercent = 75 + (Math.random() - 0.5) * 15; // Bottom band
+                    yPercent = 65 + (Math.random() - 0.5) * 15; // Bottom band
                 }
                 
                 // Small x jitter to separate overlapping dates
@@ -728,12 +728,18 @@
             document.querySelectorAll('.chart-legend').forEach(el => el.remove());
             
             // Draw horizontal reference lines (grid)
-            [25, 50, 75].forEach(yPos => {
+            [15, 40, 65].forEach(yPos => {
                 let hLine = document.createElement('div');
                 hLine.className = 'chart-line chart-y-line';
                 hLine.style.cssText = `left:5%;right:5%;top:${yPos}%;height:1px;background:rgba(0,0,0,0.03);position:absolute;z-index:0;border-top:1px dashed var(--radar-faint);`;
                 activeContainer.appendChild(hLine);
             });
+            
+            // Draw main X-axis base line
+            let baseLine = document.createElement('div');
+            baseLine.className = 'chart-line chart-base-line';
+            baseLine.style.cssText = `left:5%;right:5%;bottom:70px;height:1px;background:var(--radar-dim);position:absolute;z-index:0;`;
+            activeContainer.appendChild(baseLine);
             
             for (let y = minYear; y <= maxYear; y++) {
                 let xPercent = ((y - minYear) / (maxYear - minYear + 1)) * 90 + 5;
