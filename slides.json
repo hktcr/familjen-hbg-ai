@@ -86,6 +86,30 @@
             "slowSpeed": false
         },
         {
+            "id": "tank-om-progression",
+            "section": "forstaelse",
+            "type": "rewrite-progression",
+            "template": "Tänk om jag kan göra {quality}, på {time}?",
+            "prefix": [
+                "Den professionella förstärkaren",
+                "Det kognitiva språnget"
+            ],
+            "steps": [
+                {
+                    "quality": "dubbelt så mycket, minst lika bra",
+                    "time": "halva tiden"
+                },
+                {
+                    "quality": "samma sak fast dubbelt så bra",
+                    "time": "samma tid"
+                },
+                {
+                    "quality": "helt nya saker jag inte kunde förut",
+                    "time": "samma tid"
+                }
+            ]
+        },
+        {
             "id": "rolling-expectations",
             "section": "forstaelse",
             "type": "rolling-quotes",

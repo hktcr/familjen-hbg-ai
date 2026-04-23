@@ -429,37 +429,69 @@ function renderSlide(s){
       if(s.style==='typewriter'){el.innerHTML=h;typewrite(el.querySelector('.qtext'),s.text,s.slowSpeed);return;}
       break;
     case'rolling-quotes':
-      h=`<div class="slide-quote slide-rolling-quotes">
+      h=`<div class="slide-quote slide-rolling-quotes" style="cursor:pointer; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100%; position:relative;">
         ${s.title ? `<h2>${s.title}</h2>` : ''}
-        <div class="qtext" style="transition: opacity 1s;"></div>
-        <div class="qauthor" style="opacity:0; transition: opacity 1s; color: var(--text-light);"></div>
+        <div class="quote-dots" style="display:flex; gap:12px; margin-bottom:2rem;">
+          ${s.quotes.map((_,i)=>`<div class="quote-dot" id="qdot-${i}" style="width:10px; height:10px; border-radius:50%; background:var(--surface-3); transition:background 0.3s;"></div>`).join('')}
+        </div>
+        <div class="qtext" style="transition: opacity 0.5s; width:100%;"></div>
+        <div class="qauthor" style="opacity:0; transition: opacity 0.5s; color: var(--text-light); margin-top:2rem;"></div>
         </div>`;
       el.innerHTML=h;
       let qIndex=0;
+      let isTyping = false;
       const textEl = el.querySelector('.qtext');
       const authEl = el.querySelector('.qauthor');
-      const showNextQuote = () => {
-        if(!document.contains(el)) return; // Stop if slide changed
-        if(qIndex >= s.quotes.length) qIndex = 0;
+      
+      const updateDots = () => {
+        for(let i=0; i<s.quotes.length; i++) {
+          const dot = el.querySelector('#qdot-'+i);
+          if(dot) dot.style.background = i === qIndex ? 'var(--text)' : 'var(--surface-3)';
+        }
+      };
+
+      const renderCurrentQuote = () => {
+        if(!document.contains(el)) return;
         const q = s.quotes[qIndex];
         authEl.style.opacity = 0;
         textEl.style.opacity = 1;
         textEl.innerHTML = '';
+        updateDots();
+        isTyping = true;
         typewrite(textEl, q.text, s.slowSpeed, () => {
+          isTyping = false;
           authEl.innerHTML = `— ${q.author}`;
           authEl.style.opacity = 1;
-          setTimeout(() => {
-            if(!document.contains(el)) return;
-            textEl.style.opacity = 0;
-            authEl.style.opacity = 0;
-            setTimeout(() => {
-              qIndex++;
-              showNextQuote();
-            }, 1000);
-          }, s.delay || 5000);
         });
       };
-      setTimeout(showNextQuote, 500); // Initial delay
+      
+      const rqContainer = el.querySelector('.slide-rolling-quotes');
+      const nextQ = (e) => {
+        if (e && e.stopPropagation) e.stopPropagation();
+        if (isTyping) return;
+        if (qIndex < s.quotes.length - 1) {
+          textEl.style.opacity = 0;
+          authEl.style.opacity = 0;
+          setTimeout(() => {
+            qIndex++;
+            renderCurrentQuote();
+          }, 500);
+        } else {
+           nextSlide();
+        }
+      };
+
+      rqContainer.addEventListener('click', nextQ);
+      rqContainer.keyHandler = (e) => {
+        if (e.key === 'ArrowRight' || e.key === ' ') {
+          e.preventDefault();
+          e.stopPropagation();
+          nextQ(e);
+        }
+      };
+      document.addEventListener('keydown', rqContainer.keyHandler);
+      
+      setTimeout(renderCurrentQuote, 500);
       return;
     case'grid':
       h=`<div class="slide-grid"><h2>${md(s.title)}</h2><div class="grid-cards">
@@ -668,6 +700,10 @@ function cleanupProgression() {
   const rwContainer = document.querySelector('.slide-rewrite');
   if (rwContainer && rwContainer.rewriteHandler) {
     document.removeEventListener('keydown', rwContainer.rewriteHandler);
+  }
+  const rqContainer = document.querySelector('.slide-rolling-quotes');
+  if (rqContainer && rqContainer.keyHandler) {
+    document.removeEventListener('keydown', rqContainer.keyHandler);
   }
 }
 
