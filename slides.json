@@ -158,6 +158,53 @@
             "text": "*Vi måste börja med oss själva.*",
             "author": "",
             "style": "typewriter"
+        },
+        {
+            "id": "bonus-kognitiva",
+            "section": "reserv",
+            "type": "quote",
+            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.",
+            "author": "Den Kognitiva Bryggan",
+            "style": "normal"
+        },
+        {
+            "id": "bonus-gosedjur",
+            "section": "reserv",
+            "type": "quote",
+            "text": "Föreställ dig ett gosedjur som barnet anförtror sig åt, men gosedjuret har hela internets samlade mörker i sin databas, och saknar förmågan att veta när det gått för långt.",
+            "author": "Gosedjurs-analogin",
+            "style": "normal"
+        },
+        {
+            "id": "bonus-teachiq",
+            "section": "reserv",
+            "type": "grid",
+            "title": "Lärdomar från Teachiq & Kunskapsmatrisen",
+            "cards": [
+                {
+                    "icon": "🥊",
+                    "title": "Sparringpartnern",
+                    "desc": "Använd inte AI för att generera text från noll. Kasta in dina egna halvfärdiga, röriga tankar och kräv att AI:n hittar luckorna och tvingar dig att tänka skarpare."
+                },
+                {
+                    "icon": "⚖️",
+                    "title": "Mångfald av perspektiv (VEP)",
+                    "desc": "Du kan be AI agera som en 'Virtuell Expertpanel'. Innan du publicerar en text, be AI:n läsa den som 'en orolig förälder', 'en stressad pedagog' och 'en jurist'. Analysera friktionen."
+                },
+                {
+                    "icon": "🏗️",
+                    "title": "Strukturera kaos",
+                    "desc": "Det största värdet för professionella är inte att AI skriver bra, utan att den kan ta 100 osorterade post-it lappar eller ostrukturerade workshop-anteckningar och omedelbart bygga en robust, röd tråd."
+                }
+            ]
+        },
+        {
+            "id": "bonus-prolog",
+            "section": "reserv",
+            "type": "quote",
+            "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
+            "author": "Prolog",
+            "style": "normal"
         }
     ]
 }
