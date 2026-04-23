@@ -59,360 +59,49 @@
         {
             "id": "prolog",
             "section": "start",
-            "type": "progression",
-            "steps": [
-                "Hur många av er har bett en AI om hjälp den senaste veckan?",
-                "Hur många vet vad barnen pratar med hemma? När ingen vuxen lyssnar?",
-                "Vi börjar där ni är. Inte där tekniken är."
-            ]
-        },
-        {
-            "id": "dialog-first",
-            "section": "start",
-            "type": "quote",
-            "text": "Avbryt mig. Ställ frågor. Det här handlar om *er* vardag.",
-            "author": "",
-            "style": "typewriter"
-        },
-        {
-            "id": "ai-intro",
-            "section": "forstaelse",
-            "type": "step-slide",
-            "title": "AI är inget nytt",
-            "steps": [
-                {
-                    "type": "headline",
-                    "title": "AI är inget nytt!",
-                    "subtitle": "Vi har redan vant oss"
-                },
-                {
-                    "type": "definition",
-                    "text": "AI är teknik som gör att datorer kan utföra uppgifter som förknippas med mänsklig intelligens."
-                },
-                {
-                    "type": "list",
-                    "items": [
-                        {
-                            "title": "Mobilkamera",
-                            "desc": "Ansiktsigenkänning och bildförbättring"
-                        },
-                        {
-                            "title": "Sociala medier",
-                            "desc": "Personliga flöden och rekommendationer"
-                        },
-                        {
-                            "title": "Röstassistenter",
-                            "desc": "Siri, Alexa, Google Assistant"
-                        },
-                        {
-                            "title": "Navigation",
-                            "desc": "Optimala rutter i realtid"
-                        },
-                        {
-                            "title": "Översättning",
-                            "desc": "Google Translate i fickan"
-                        }
-                    ],
-                    "footer": "Barnen möter detta dagligen. Hemma."
-                }
-            ]
-        },
-        {
-            "id": "merlin-hero",
-            "section": "forstaelse",
-            "type": "hero-image",
-            "image": "assets/blue_bird.png",
-            "title": "Mönster, inte Magi",
-            "subtitle": "Hur algoritmer förstår världen"
-        },
-        {
-            "id": "merlin-demo",
-            "section": "forstaelse",
-            "type": "step-slide",
-            "title": "Merlin-spåret: Mönster, inte magi",
-            "steps": [
-                {
-                    "type": "headline",
-                    "title": "Hur fungerar AI egentligen?",
-                    "subtitle": "Att förstå algoritmer genom fågelsång"
-                },
-                {
-                    "type": "list",
-                    "items": [
-                        {
-                            "title": "1. Data in",
-                            "desc": "Mikrofonen fångar ett ljud."
-                        },
-                        {
-                            "title": "2. Omvandling",
-                            "desc": "Ljudet ritas upp som en bild (ett spektrogram)."
-                        },
-                        {
-                            "title": "3. Mönsterigenkänning",
-                            "desc": "AI:n matchar bilden mot miljontals inlärda mönster."
-                        },
-                        {
-                            "title": "4. Sannolikhet",
-                            "desc": "Den gissar: '98% chans att det är en Talgoxe'."
-                        }
-                    ],
-                    "footer": "ChatGPT gör exakt detta, fast den gissar nästa ord istället för nästa fågel."
-                }
-            ]
-        },
-        {
-            "id": "ai-not-thinking",
-            "section": "forstaelse",
-            "type": "quote",
-            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen. Faran är att vi är biologiskt kodade att lita på en vänlig röst.",
-            "author": "",
-            "style": "typewriter"
-        },
-        {
-            "id": "gps-metafor",
-            "section": "forstaelse",
-            "type": "grid",
-            "title": "GPS-metaforen: AI som vägvisare",
-            "cards": [
-                {
-                    "icon": "🗺️",
-                    "title": "Styrkan",
-                    "desc": "Beräknar baserat på miljontals tidigare fall, snabbt och konsekvent"
-                },
-                {
-                    "icon": "⚠️",
-                    "title": "Svagheten",
-                    "desc": "Vet inte att Noa biter när han är trött, att föräldrarna separerat, eller att det är vikarie idag"
-                },
-                {
-                    "icon": "👁️",
-                    "title": "Du är föraren",
-                    "desc": "AI är kartan. Din pedagogiska erfarenhet är vindrutan."
-                },
-                {
-                    "icon": "🚧",
-                    "title": "Utan människa",
-                    "desc": "Utan ditt professionella omdöme kör vi i diket"
-                }
-            ]
-        },
-        {
-            "id": "ai-commission",
-            "section": "risker",
-            "type": "quote",
-            "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
-            "author": "AI-kommissionens färdplan, SOU 2025:12",
-            "style": "typewriter"
+            "type": "iframe",
+            "title": "Vad du behöver veta om Generativ AI",
+            "url": "modules/llm_probability/index.html"
         },
         {
             "id": "ai-radar-module",
             "section": "risker",
             "type": "iframe",
-            "title": "Radarn: Tidslinje & Fatala Risker",
+            "title": "Händelsedatabasen: Tidslinje & Risker",
             "url": "modules/ai_radar_presentation/index.html"
         },
         {
-            "id": "sewell-incident",
-            "section": "risker",
-            "type": "quote",
-            "text": "Det här fallet handlar om en tonåring. Men samma grundmekanism, att knyta an till en röst som alltid finns där, alltid lyssnar, aldrig dömer, den startar inte vid 14. Den startar när ett barn för första gången säger *'Siri, gillar du mig?'* och får ett vänligt svar.",
-            "author": "",
-            "style": "typewriter",
-            "slowSpeed": true
+            "id": "merlin-bird",
+            "section": "forstaelse",
+            "type": "vector-bird",
+            "title": "Merlin: Mönster, inte magi",
+            "subtitle": "Hur AI ser världen som matematik"
         },
         {
-            "id": "gosedjur-quote",
-            "section": "risker",
-            "type": "quote",
-            "text": "Gosedjuret svarar aldrig. AI:n gör det. Varje gång. Tålmodigt. Utan villkor.",
-            "author": "",
-            "style": "typewriter"
-        },
-        {
-            "id": "brygga",
-            "section": "risker",
-            "type": "quote",
-            "text": "Vi skyddar barnen bäst genom att själva förstå verktyget. Låt oss titta på hur ni kan använda det.",
-            "author": "",
-            "style": "typewriter"
-        },
-        {
-            "id": "tänk-om",
+            "id": "case-grid-module",
             "section": "praktik",
-            "type": "rewrite-progression",
-            "template": "Tänk om jag kan göra dubbelt så mycket, {quality}, på {time}",
-            "steps": [
-                {"quality": "minst lika bra", "time": "hälften så lång tid"},
-                {"quality": "dubbelt så bra", "time": "lika lång tid"},
-                {"quality": "dubbelt så bra", "time": "hälften så lång tid"}
-            ],
-            "prefix": ["eller kanske...", "eller till och med..."]
-        },
-        {
-            "id": "chefsscenarier",
-            "section": "praktik",
-            "type": "grid",
-            "title": "Tre saker du kan göra på måndag",
+            "type": "case-grid",
+            "title": "Praktiska scenarier i vardagen",
             "cards": [
                 {
-                    "icon": "✉️",
                     "title": "Tvätta ett föräldrabrev",
-                    "desc": "Klistra in ditt frustrerade utkast. Be AI omformulera till saklig, professionell ton. Granska. Skicka."
+                    "color": "var(--sage)",
+                    "desc": "Använd en Virtuell Expertpanel (VEP) för att ta ditt frustrerade utkast och formulera om det till en saklig och professionell ton, utan att förlora kärnbudskapet. Panelen letar juridiska fallgropar och konfliktrisker."
                 },
                 {
-                    "icon": "🗣️",
                     "title": "Förbereda ett svårt samtal",
-                    "desc": "Be AI ge struktur, föreslå formuleringar och identifiera fallgropar. Du väljer strategi och anpassar till personen."
+                    "color": "var(--terra)",
+                    "desc": "Låt AI simulera ett svårt personal- eller föräldrasamtal. Trycktesta dina argument, identifiera var motparten kan gå i försvarsställning, och öva på att behålla lugnet."
                 },
                 {
-                    "icon": "📄",
-                    "title": "Sammanfatta ett styrdokument",
-                    "desc": "Mata in 40 sidor. Be om 1 sida med nyckelbudskap. Verifiera alltid mot originalet."
-                }
-            ]
-        },
-        {
-            "id": "mail-prompt",
-            "section": "praktik",
-            "type": "prompt-demo",
-            "title": "Teknik: Tvätta mejlet",
-            "subtitle": "Från impuls till professionell ton. Utan att förlora kärnan.",
-            "prompt": "Tillsätt en virtuell expertpanel med 5 experter inom professionell kommunikation, föräldrasamverkan, juridik, ledarskap och pedagogik.\n\nGranska detta mejl-utkast:\n[KLISTRA IN DITT UTKAST]\n\nPanelen ska:\n1. Identifiera tonläge, juridiska risker och otydligheter\n2. Föreslå en omskrivning som behåller sakinnehållet men höjer den professionella tonen\n3. Flagga om något kan missförstås eller eskalera konflikten\n\nKoordinator: Fråga mig efter varje steg hur jag vill gå vidare.",
-            "example_topic": "Fiktivt scenario: Du har fått ett upprört föräldramejl om att barnet inte fått vara med på utflykten. Du har skrivit ett impulsivt svar.",
-            "why": "Du behöver inte skicka det du skrev klockan 22. Låt panelen tvätta ditt utkast medan du sover på saken."
-        },
-        {
-            "id": "aldrig-i-prompten",
-            "section": "praktik",
-            "type": "grid",
-            "title": "Aldrig i prompten (GDPR)",
-            "cards": [
-                {
-                    "icon": "🚫",
-                    "title": "Barnens namn",
-                    "desc": "Aldrig namn, personnummer eller födelsedatum"
+                    "title": "Sammanfatta styrdokument",
+                    "color": "var(--coral)",
+                    "desc": "Mata in 40 sidor svårgenomtränglig policy och be om en 1-sidig sammanfattning av nyckelbudskapen. En tidssparare för att snabbt hitta relevant text, men verifiera alltid mot originalet."
                 },
                 {
-                    "icon": "🏫",
-                    "title": "Verksamhetsidentitet",
-                    "desc": "Inte 'barnet på Solstrålen'. Bakvägsidentifiering!"
-                },
-                {
-                    "icon": "📋",
-                    "title": "Dokumentation",
-                    "desc": "Ladda aldrig upp pedagogisk dokumentation med barnuppgifter"
-                },
-                {
-                    "icon": "✅",
-                    "title": "Syntetiska fall",
-                    "desc": "Använd fiktiva exempel: 'Ett barn som ofta...'"
-                }
-            ]
-        },
-        {
-            "id": "human-in-the-loop",
-            "section": "praktik",
-            "type": "quote",
-            "text": "*Human in the loop*: Ingen AI-genererad text får skickas till föräldrar, personal eller huvudman utan att en *människa granskat och godkänt*. Du är alltid *ansvarig*.",
-            "author": "Grundprincipen",
-            "style": "typewriter"
-        },
-        {
-            "id": "traffic-light",
-            "section": "praktik",
-            "type": "traffic-light",
-            "title": "Vad kan du som chef göra med AI?",
-            "green": [
-                "Skapa informationsmaterial till föräldrar",
-                "Brainstorma APT-innehåll och mötesagendor",
-                "Översätta föräldrabrev till andra språk",
-                "Sammanfatta styrdokument och forskning"
-            ],
-            "yellow": [
-                "Skriva kvalitetsrapporter (granska noga!)",
-                "Förbereda svåra samtal med personal",
-                "Analysera läroplan (verifiera alltid mot källan)"
-            ],
-            "red": [
-                "Aldrig barnens personuppgifter i prompten",
-                "Aldrig ersätta professionellt omdöme",
-                "Aldrig låta AI skriva utvecklingssamtal utan granskning",
-                "Aldrig generera individuella bedömningar av barn"
-            ]
-        },
-        {
-            "id": "vep-prompt",
-            "section": "praktik",
-            "type": "prompt-demo",
-            "title": "Teknik: Dirigenten",
-            "subtitle": "Sluta vara passiv mottagare. Kliv upp på pulten och led orkestern.",
-            "prompt": "Tillsätt en RELEVANT virtuell expertpanel (ca 5 experter) för att granska denna text. Du avgör vilka professioner eller perspektiv som behövs bäst.\n\nText att granska:\n[KLISTRA IN DITT UTKAST HÄR]\n\nKoordinator:\nDu är en professionell facilitator för denna expertpanel.\nNär panelen är samlad (presentera dem kort!), fråga mig:\n\"Hur vill du gå vidare?\"\nA) Höra individuella åsikter från varje expert\nB) Låta panelen diskutera tillsammans\nC) Be om en syntes\nD) Något annat\n\nEfter varje avslutat steg, fråga: \"Vad vill du göra nu?\"\nGå ALDRIG vidare utan mina uttryckliga instruktioner.",
-            "example_topic": "1. Tvätta ett argt, frustrerat utkast till föräldrabrev<br>2. Trycktesta en krisplan för personalbrist",
-            "why": "VEP sparar tid och ångest. Låt panelen koka ner din frustration till ett sakligt, juridiskt hållbart brev."
-        },
-        {
-            "id": "vep-progression",
-            "section": "praktik",
-            "type": "step-slide",
-            "steps": [
-                {
-                    "type": "headline",
-                    "title": "Dirigentens 5 Steg",
-                    "subtitle": "Hur du tvingar fram värdet av expert-perspektiven"
-                },
-                {
-                    "type": "list",
-                    "items": [
-                        {
-                            "title": "1. Etablera orkestern",
-                            "desc": "Du definierar experterna och aktiverar Koordinatorn."
-                        },
-                        {
-                            "title": "2. Isoleringen",
-                            "desc": "Låt experterna granska utan att se varandras svar. Undvik Group-think."
-                        },
-                        {
-                            "title": "3. Friktionen (Red Team)",
-                            "desc": "Be dem leta svagheter. Använd AI för att attackera ditt eget förslag."
-                        },
-                        {
-                            "title": "4. Avstämningen",
-                            "desc": "Ställ experterna mot varandra. Tvinga fram en kompromiss."
-                        },
-                        {
-                            "title": "5. Mästerverket",
-                            "desc": "Låt AI bygga den slutgiltiga syntesen utifrån debatten."
-                        }
-                    ],
-                    "footer": "Du använder inte AI för att få ett snabbt svar. Du använder AI som en testbänk."
-                }
-            ]
-        },
-        {
-            "id": "har-vi",
-            "section": "avslutning",
-            "type": "grid",
-            "title": "Har vi...?",
-            "cards": [
-                {
-                    "icon": "📋",
-                    "title": "Riktlinjer?",
-                    "desc": "Har vi riktlinjer för AI-användning i vår förskoleverksamhet?"
-                },
-                {
-                    "icon": "👀",
-                    "title": "Översikt?",
-                    "desc": "Vet vi vilka AI-verktyg våra pedagoger redan använder?"
-                },
-                {
-                    "icon": "📚",
-                    "title": "Kompetensutveckling?",
-                    "desc": "Har vi en plan för att hänga med i utvecklingen?"
-                },
-                {
-                    "icon": "🏠",
-                    "title": "Barnens verklighet?",
-                    "desc": "Vet vi vad barnen möter hemma? Vilka röster de redan pratar med?"
+                    "title": "Aldrig i prompten (GDPR)",
+                    "color": "#a8423a",
+                    "desc": "Mata aldrig in barnens namn, verksamhetens identitet, eller specifik pedagogisk dokumentation. Lär dig använda syntetiska fall istället ('Ett fiktivt barn som ofta...')."
                 }
             ]
         },
