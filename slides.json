@@ -81,6 +81,14 @@
             "style": "typewriter"
         },
         {
+            "id": "merlin-hero",
+            "section": "forstaelse",
+            "type": "hero-image",
+            "image": "assets/merlin_hero.png",
+            "title": "Mönster, inte Magi",
+            "subtitle": "Hur algoritmer förstår världen"
+        },
+        {
             "id": "merlin-demo",
             "section": "forstaelse",
             "type": "step-slide",
@@ -198,6 +206,16 @@
             "author": "",
             "style": "typewriter",
             "slowSpeed": true
+        },
+        {
+            "id": "tänk-om",
+            "section": "praktik",
+            "type": "progression",
+            "steps": [
+                "1. Tänk om jag kunde skriva dubbelt så många föräldrabrev på halva tiden?",
+                "2. Tänk om jag hade en administrativ assistent som aldrig blev trött?",
+                "3. Tänk om jag kunde använda tiden till att leda verksamheten istället?"
+            ]
         },
         {
             "id": "aldrig-i-prompten",

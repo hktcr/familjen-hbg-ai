@@ -48,8 +48,23 @@
                     <div class="cover-actions" id="layoutGroup">
                         <button class="launch-system-btn" data-value="radar">[ INITIERA RADAR-SWEEP ]</button>
                         <button class="launch-system-btn secondary" data-value="timeline" style="background:transparent; border:1px solid var(--radar-green); color:var(--text-main);">[ ÖPPNA LINJÄR TIDSLINJE ]</button>
+                        <button class="launch-system-btn secondary" data-value="chart" style="background:transparent; border:1px solid var(--radar-green); color:var(--text-main); margin-top:10px;">[ ÖPPNA ANALYSDIAGRAM ]</button>
                     </div>
                 </div>
+            </div>
+
+            <!-- CHART MODE -->
+            <div class="chart-system" id="chartSystem" style="display:none; width:100%; height:100%; position:relative; overflow:hidden; background:var(--bg-dark);">
+                <div id="chart-viewport" style="width:100%; height:100%; position:absolute; transform-origin: 0 0; cursor: grab;">
+                    <!-- Grid Lines and Labels will be generated here -->
+                    <div id="chart-targets-layer" style="width:100%; height:100%; position:absolute; top:0; left:0;"></div>
+                </div>
+            </div>
+
+            <!-- Slide Lightbox -->
+            <div id="slideLightbox" class="slide-lightbox" style="display:none;">
+                <button id="lightboxClose" class="lightbox-close">[ STÄNG ]</button>
+                <div id="lightboxContent" class="lightbox-content"></div>
             </div>
 
             <!-- Event Popup Modal -->
@@ -182,15 +197,24 @@
                 if (currentLayout === 'timeline') {
                     document.getElementById('timelineSystem').style.display = 'flex';
                     document.getElementById('radarSystem').style.display = 'none';
+                    document.getElementById('chartSystem').style.display = 'none';
                     activeContainer = containerTimeline;
                     document.getElementById('activeModeText').innerText = '[ TIDSLINJE-LÄGE AKTIVT ]';
                     document.getElementById('hudFooterText').innerHTML = '> PROGRESSIV TIDSLINJE (2022 - 2026)<br>> ALLA INCIDENTER LOGGAS';
-                } else {
+                } else if (currentLayout === 'radar') {
                     document.getElementById('timelineSystem').style.display = 'none';
                     document.getElementById('radarSystem').style.display = 'block';
+                    document.getElementById('chartSystem').style.display = 'none';
                     activeContainer = containerRadar;
                     document.getElementById('activeModeText').innerText = '[ CIRKULÄR RADAR AKTIV ]';
                     document.getElementById('hudFooterText').innerHTML = '> KRONOLOGISK SWEEP (2022 - 2026)<br>> 1 FULL ROTATION = 1 ÅR';
+                } else if (currentLayout === 'chart') {
+                    document.getElementById('timelineSystem').style.display = 'none';
+                    document.getElementById('radarSystem').style.display = 'none';
+                    document.getElementById('chartSystem').style.display = 'block';
+                    activeContainer = document.getElementById('chart-targets-layer');
+                    document.getElementById('activeModeText').innerText = '[ ANALYSDIAGRAM AKTIVT ]';
+                    document.getElementById('hudFooterText').innerHTML = '> KATEGORISK ANALYS (2022 - 2026)<br>> KLICKA PÅ NODER FÖR DETALJER';
                 }
                 
                 // Hide Cover, Show HUD
@@ -200,7 +224,13 @@
                 }, 1000);
                 document.getElementById('hudSection').style.display = 'flex';
                 
+                if (currentLayout === 'chart') {
+                    document.querySelector('.sim-controls').style.display = 'none';
+                    document.getElementById('hudSection').style.display = 'none'; // Give more room for chart
+                }
+                
                 renderFullGrid(); // Setup static grid
+                if (currentLayout === 'chart') drawChartAxes();
             });
         });
 
@@ -468,7 +498,7 @@
 
             if (currentLayout === 'timeline') {
                 targetEl.style.left = `${s.vwPos}vw`;
-            } else {
+            } else if (currentLayout === 'radar') {
                 let totalYears = maxYear - minYear + 1;
                 let exactYearFraction = (s.year - minYear) + (s.angle / 360);
                 let radiusPercent = minRadius + (exactYearFraction / totalYears) * (maxRadius - minRadius);
@@ -477,9 +507,34 @@
                 const y = 50 + (radiusPercent * Math.sin(angleRad));
                 targetEl.style.left = `${x}%`;
                 targetEl.style.top = `${y}%`;
+            } else if (currentLayout === 'chart') {
+                let xPercent = ((s.floatYear - minYear) / (maxYear - minYear + 1)) * 90 + 5;
+                let yPercent = 50;
+                if (s.type === 'risk') yPercent = 20;
+                else if (s.type === 'nackdel') yPercent = 50;
+                else yPercent = 80;
+                
+                // Jitter
+                yPercent += (Math.random() - 0.5) * 12;
+                xPercent += (Math.random() - 0.5) * 1;
+                
+                targetEl.style.left = `${xPercent}%`;
+                targetEl.style.top = `${yPercent}%`;
+                
+                // Add tooltip on hover
+                targetEl.title = `${s.datum.toUpperCase()} | ${s.art}`;
+                
+                // Use lightbox for chart mode instead of default modal
+                targetEl.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openLightbox(s);
+                });
             }
 
-            targetEl.addEventListener('mouseenter', () => selectTarget(s));
+            if (currentLayout !== 'chart') {
+                targetEl.addEventListener('mouseenter', () => selectTarget(s));
+            }
+            
             activeContainer.appendChild(targetEl);
 
             if (highlightInLog) targetEl.classList.add('flash');
@@ -631,6 +686,90 @@
         document.getElementById('chk-barn').addEventListener('change', (e) => {
             activeFilters['barn_only'] = e.target.checked;
             if (!simActive) renderFullGrid();
+        });
+
+        function drawChartAxes() {
+            document.querySelectorAll('.chart-line').forEach(el => el.remove());
+            document.querySelectorAll('.chart-label').forEach(el => el.remove());
+            
+            for (let y = minYear; y <= maxYear; y++) {
+                let xPercent = ((y - minYear) / (maxYear - minYear + 1)) * 90 + 5;
+                let label = document.createElement('div');
+                label.className = 'chart-label chart-x-label';
+                label.innerText = `[ ${y} ]`;
+                label.style.left = `${xPercent}%`;
+                label.style.bottom = '20px';
+                label.style.position = 'absolute';
+                label.style.color = 'var(--text-main)';
+                label.style.transform = 'translateX(-50%)';
+                activeContainer.appendChild(label);
+                
+                let line = document.createElement('div');
+                line.className = 'chart-line chart-x-line';
+                line.style.left = `${xPercent}%`;
+                line.style.top = '0';
+                line.style.bottom = '50px';
+                line.style.width = '1px';
+                line.style.background = 'var(--radar-faint)';
+                line.style.position = 'absolute';
+                line.style.zIndex = '0';
+                activeContainer.appendChild(line);
+            }
+            
+            const categories = [
+                { y: 20, text: 'FATALA RISKER', color: 'var(--nocmig-color)' },
+                { y: 50, text: 'NACKDELAR/SÅRBARHET', color: 'var(--nackdel-color)' },
+                { y: 80, text: 'MÖJLIGHETER', color: 'var(--radar-green)' }
+            ];
+            
+            categories.forEach(c => {
+                let label = document.createElement('div');
+                label.className = 'chart-label chart-y-label';
+                label.innerText = c.text;
+                label.style.top = `${c.y}%`;
+                label.style.left = '40px';
+                label.style.position = 'absolute';
+                label.style.color = c.color;
+                label.style.transform = 'translateY(-50%)';
+                label.style.fontWeight = 'bold';
+                activeContainer.appendChild(label);
+                
+                let line = document.createElement('div');
+                line.className = 'chart-line chart-y-line';
+                line.style.top = `${c.y}%`;
+                line.style.left = '0';
+                line.style.right = '0';
+                line.style.height = '1px';
+                line.style.background = 'var(--radar-faint)';
+                line.style.position = 'absolute';
+                line.style.zIndex = '0';
+                activeContainer.appendChild(line);
+            });
+        }
+
+        function openLightbox(target) {
+            const lightbox = document.getElementById('slideLightbox');
+            const content = document.getElementById('lightboxContent');
+            
+            let html = `<h2>${target.art}</h2>
+                        <div style="font-size: 1.1rem; color: var(--radar-dim); margin-bottom:20px;">[ ${target.datum.toUpperCase()} ]</div>`;
+            
+            if (target.type === 'reflection') {
+                html += `<div class="quote">"${target.kommentar}"</div>`;
+            } else {
+                html += `<p>${target.kommentar}</p>`;
+            }
+            
+            if (target.url) {
+                html += `<div style="margin-top:30px;"><a href="${target.url}" target="_blank" style="color:var(--radar-green); text-decoration:underline;">[ EXTERN KÄLLA ]</a></div>`;
+            }
+            
+            content.innerHTML = html;
+            lightbox.classList.add('visible');
+        }
+
+        document.getElementById('lightboxClose').addEventListener('click', () => {
+            document.getElementById('slideLightbox').classList.remove('visible');
         });
     </script>
 </body>
