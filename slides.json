@@ -52,8 +52,9 @@
             "name": "Håkan Karlsson",
             "title": "Kommunlektor",
             "org": "Åstorps kommun",
-            "bio": "Kommunlektor och lärare i NO/Ma. Forskarkollegie-bakgrund med deltagande i Beringia 2005-expeditionen till Nordpolen med isbrytaren Oden. Att söka mönster i extrem miljö är numera utbytt mot att navigera det digitala bruset.",
-            "avatar": "assets/northpole.jpg"
+            "bio": "Lärare i NO/Ma vid Björnekullaskolan. Vetenskaplig bakgrund i beräkningsbiologi och evolutionär ekologi.",
+            "avatar": "assets/presenter_avatar.png",
+            "researchImage": "assets/northpole.jpg"
         },
         {
             "id": "prolog",
