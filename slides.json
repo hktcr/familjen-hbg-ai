@@ -90,24 +90,16 @@
             "delay": 5000,
             "quotes": [
                 {
-                    "text": "Sverige ska vara bäst i världen på att använda AI i offentlig sektor.",
-                    "author": "Sveriges AI-strategi, Regeringen 2026"
+                    "text": "Sverige ska vara bäst i världen på att använda AI i offentlig förvaltning.",
+                    "author": "Sveriges AI-strategi, Regeringen feb 2026"
                 },
                 {
                     "text": "Om skolan inte introducerar eleverna till AI finns risken att elevernas olika socioekonomiska bakgrunder leder till växande klyftor.",
                     "author": "AI-kommissionens färdplan, SOU 2025:12"
                 },
                 {
-                    "text": "Implementering av AI är i grunden en fråga om verksamhetsutveckling, inte ett renodlat it-projekt. Ledarskapet är helt avgörande.",
-                    "author": "Myndigheten för digital förvaltning (Digg)"
-                },
-                {
-                    "text": "Tekniken ska utgå från människans behov. Det är inte tekniken i sig som skapar värde, utan hur människor använder den för att utveckla och förbättra välfärden.",
-                    "author": "Sveriges AI-strategi: Människan i centrum"
-                },
-                {
-                    "text": "Ledningens engagemang är den enskilt viktigaste framgångsfaktorn för att lyckas skapa värde med artificiell intelligens.",
-                    "author": "Sveriges Kommuner och Regioner (SKR)"
+                    "text": "Beslut med stöd av generativ AI bör ha mänsklig kontroll.",
+                    "author": "Digg och IMY: Riktlinjer för generativ AI i offentlig förvaltning"
                 }
             ]
         },
