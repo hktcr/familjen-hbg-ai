@@ -217,6 +217,9 @@ html,body{font-family:var(--font);background:var(--bg);color:var(--text);height:
 
 <!-- GRID VIEW -->
 <div id="grid-view">
+  <div style="position: absolute; top: 24px; right: 24px; z-index: 10;">
+    <button class="nav-btn" onclick="toggleFS()" id="fsBtnGrid">⛶ Helskärm</button>
+  </div>
   <div class="grid-header">
     <h1>AI i förskolan</h1>
     <p>Familjen Hbg Förskolenätverk · 24 april 2026</p>
@@ -325,10 +328,12 @@ function nextSlide(){if(currentIndex<slides.length-1)showSlide(currentIndex+1)}
 function toggleFS(){
   if(!document.fullscreenElement){
     document.documentElement.requestFullscreen().catch(err=>{console.log('Error attempting to enable fullscreen:',err);});
-    document.getElementById('fsBtn').innerText='🗗 Stäng Helskärm';
+    if(document.getElementById('fsBtn')) document.getElementById('fsBtn').innerText='🗗 Stäng Helskärm';
+    if(document.getElementById('fsBtnGrid')) document.getElementById('fsBtnGrid').innerText='🗗 Stäng Helskärm';
   }else{
     if(document.exitFullscreen) document.exitFullscreen();
-    document.getElementById('fsBtn').innerText='⛶ Helskärm';
+    if(document.getElementById('fsBtn')) document.getElementById('fsBtn').innerText='⛶ Helskärm';
+    if(document.getElementById('fsBtnGrid')) document.getElementById('fsBtnGrid').innerText='⛶ Helskärm';
   }
 }
 
