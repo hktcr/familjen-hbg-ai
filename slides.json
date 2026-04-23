@@ -39,6 +39,11 @@
             "id": "avslutning",
             "label": "Avslutning",
             "color": "#c4956a"
+        },
+        {
+            "id": "reserv",
+            "label": "Reserv & Extramaterial",
+            "color": "#9ca3af"
         }
     ],
     "slides": [
@@ -163,6 +168,7 @@
             "id": "bonus-kognitiva",
             "section": "reserv",
             "type": "quote",
+            "title": "Citat: Den kognitiva bryggan",
             "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.",
             "author": "Den Kognitiva Bryggan",
             "style": "normal"
@@ -171,6 +177,7 @@
             "id": "bonus-gosedjur",
             "section": "reserv",
             "type": "quote",
+            "title": "Citat: Gosedjurs-analogin",
             "text": "Föreställ dig ett gosedjur som barnet anförtror sig åt, men gosedjuret har hela internets samlade mörker i sin databas, och saknar förmågan att veta när det gått för långt.",
             "author": "Gosedjurs-analogin",
             "style": "normal"
@@ -202,6 +209,7 @@
             "id": "bonus-prolog",
             "section": "reserv",
             "type": "quote",
+            "title": "Citat: Prolog (Maskinell gissningslek)",
             "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
             "author": "Prolog",
             "style": "normal"
