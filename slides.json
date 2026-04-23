@@ -17,18 +17,23 @@
         },
         {
             "id": "forstaelse",
-            "label": "Vad är AI?",
+            "label": "Människa & Maskin",
             "color": "#c4956a"
         },
         {
             "id": "risker",
-            "label": "Varför bry sig?",
+            "label": "Tidslinje & Risker",
             "color": "#b05050"
         },
         {
-            "id": "praktik",
-            "label": "Så kan ni använda det",
+            "id": "barn",
+            "label": "Barnen & AI",
             "color": "#7a8f6e"
+        },
+        {
+            "id": "praktik",
+            "label": "För chefer",
+            "color": "#4a6274"
         },
         {
             "id": "avslutning",
@@ -57,25 +62,43 @@
             "researchImage": "assets/northpole.jpg"
         },
         {
-            "id": "prolog",
-            "section": "start",
-            "type": "iframe",
-            "title": "Vad du behöver veta om Generativ AI",
-            "url": "modules/llm_probability/index.html"
+            "id": "ai-relation",
+            "section": "forstaelse",
+            "type": "quote",
+            "text": "Vi står inför ett kognitivt skifte, inte ett tekniskt. Aldrig tidigare har en ny teknik varit så extremt enkel att förväxla med en tänkande medvetenhet.",
+            "author": "Relationen mellan människa och maskin",
+            "style": "typewriter"
         },
         {
-            "id": "ai-radar-module",
+            "id": "ai-timeline-module",
             "section": "risker",
             "type": "iframe",
-            "title": "Händelsedatabasen: Tidslinje & Risker",
-            "url": "modules/ai_radar_presentation/index.html"
+            "title": "Kapplöpningen (2022-2026)",
+            "url": "modules/ai_timeline/index.html"
         },
         {
-            "id": "merlin-bird",
-            "section": "forstaelse",
-            "type": "vector-bird",
-            "title": "Merlin: Mönster, inte magi",
-            "subtitle": "Hur AI ser världen som matematik"
+            "id": "children-grid",
+            "section": "barn",
+            "type": "case-grid",
+            "title": "Barnen och den nya tekniken",
+            "cards": [
+                {
+                    "title": "Visuell Källkritik",
+                    "color": "var(--sage)",
+                    "desc": "Förskolebarn har svårt att skilja på fantasi och verklighet. När fotorealistiska bilder på dinosaurier i sandlådan kan genereras på två sekunder, ställs helt nya krav på hur vi pratar om vad som är på riktigt.",
+                    "image": "assets/dinosaur.png"
+                },
+                {
+                    "title": "Den levande nallebjörnen",
+                    "color": "var(--terra)",
+                    "desc": "Leksaker med inbyggd generativ AI kan tilltala barn med namn, minnas deras hemligheter och agera som 'bästa kompis'. Var går gränsen mellan lek och emotionellt beroende för en treåring?"
+                },
+                {
+                    "title": "Röstkidnappning",
+                    "color": "#a8423a",
+                    "desc": "Tre sekunder röstklipp från förskolans Instagram är allt som krävs för att klona ett barns röst. Hur skyddar vi barnens integritet när data är den nya valutan?"
+                }
+            ]
         },
         {
             "id": "case-grid-module",
