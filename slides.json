@@ -183,25 +183,25 @@
             "style": "normal"
         },
         {
-            "id": "bonus-teachiq",
+            "id": "bonus-tank-om",
             "section": "reserv",
             "type": "grid",
-            "title": "Lärdomar från Teachiq & Kunskapsmatrisen",
+            "title": "Den professionella tröskeln",
             "cards": [
                 {
-                    "icon": "🥊",
-                    "title": "Sparringpartnern",
-                    "desc": "Använd inte AI för att generera text från noll. Kasta in dina egna halvfärdiga, röriga tankar och kräv att AI:n hittar luckorna och tvingar dig att tänka skarpare."
+                    "icon": "🎭",
+                    "title": "Tänk om jag ber den agera som...",
+                    "desc": "Istället för att be AI 'skriva ett brev', be den agera som en specifik mottagare. 'Läs denna policy som en stressad förskollärare och berätta vad som skapar oro.' (Virtuell Expertpanel)."
                 },
                 {
-                    "icon": "⚖️",
-                    "title": "Mångfald av perspektiv (VEP)",
-                    "desc": "Du kan be AI agera som en 'Virtuell Expertpanel'. Innan du publicerar en text, be AI:n läsa den som 'en orolig förälder', 'en stressad pedagog' och 'en jurist'. Analysera friktionen."
+                    "icon": "🥊",
+                    "title": "Tänk om jag ber den leta efter...",
+                    "desc": "Mata in dina halvfärdiga tankar och be den agera djävulens advokat. 'Hitta de tre svagaste argumenten i min personalpresentation och kom med motargument.' (Sparringpartner)."
                 },
                 {
                     "icon": "🏗️",
-                    "title": "Strukturera kaos",
-                    "desc": "Det största värdet för professionella är inte att AI skriver bra, utan att den kan ta 100 osorterade post-it lappar eller ostrukturerade workshop-anteckningar och omedelbart bygga en robust, röd tråd."
+                    "title": "Tänk om jag ber den strukturera...",
+                    "desc": "Det största värdet är inte generering, det är struktur. 'Här är 100 osorterade anteckningar från dagens möte. Skapa en kronologisk åtgärdslista med en röd tråd.' (Kaoshanteraren)."
                 }
             ]
         },
