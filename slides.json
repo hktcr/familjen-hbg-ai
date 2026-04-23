@@ -76,6 +76,38 @@
             "slowSpeed": false
         },
         {
+            "id": "det-gemensamma-ledarskapet",
+            "section": "forstaelse",
+            "type": "quote",
+            "title": "Det gemensamma ledarskapet",
+            "text": "Det här är för stort för att en ensam person ska kunna leda processen. För att lyckas måste vi ha en kontinuerlig dialog om hur tekniken påverkar oss, vad som faktiskt fungerar i vardagen och vad som inte gör det.",
+            "author": "Löfte till varandra",
+            "style": "typewriter",
+            "slowSpeed": false
+        },
+        {
+            "id": "rolling-expectations",
+            "section": "forstaelse",
+            "type": "rolling-quotes",
+            "title": "Röster just nu",
+            "slowSpeed": false,
+            "delay": 5000,
+            "quotes": [
+                {
+                    "text": "Sverige ska vara bäst i världen på att använda AI i offentlig sektor.",
+                    "author": "Sveriges AI-strategi, Regeringen 2026"
+                },
+                {
+                    "text": "Om skolan inte introducerar eleverna till AI finns risken att elevernas olika socioekonomiska bakgrunder leder till växande klyftor.",
+                    "author": "AI-kommissionens färdplan, SOU 2025:12"
+                },
+                {
+                    "text": "Internet kommer översvämmas av falska foton, videor och texter. Den genomsnittliga personen kommer inte längre kunna veta vad som är sant.",
+                    "author": "Geoffrey Hinton, Nobelpristagare AI 2024"
+                }
+            ]
+        },
+        {
             "id": "case-grid-module",
             "section": "praktik",
             "type": "case-grid",

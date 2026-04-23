@@ -428,6 +428,39 @@ function renderSlide(s){
         </div>`;
       if(s.style==='typewriter'){el.innerHTML=h;typewrite(el.querySelector('.qtext'),s.text,s.slowSpeed);return;}
       break;
+    case'rolling-quotes':
+      h=`<div class="slide-quote slide-rolling-quotes">
+        ${s.title ? `<h2>${s.title}</h2>` : ''}
+        <div class="qtext" style="transition: opacity 1s; font-size: 1.2em; margin-top: 10%;"></div>
+        <div class="qauthor" style="opacity:0; transition: opacity 1s; font-size: 0.9em; margin-top: 2rem; color: var(--text-light);"></div>
+        </div>`;
+      el.innerHTML=h;
+      let qIndex=0;
+      const textEl = el.querySelector('.qtext');
+      const authEl = el.querySelector('.qauthor');
+      const showNextQuote = () => {
+        if(!document.contains(el)) return; // Stop if slide changed
+        if(qIndex >= s.quotes.length) qIndex = 0;
+        const q = s.quotes[qIndex];
+        authEl.style.opacity = 0;
+        textEl.style.opacity = 1;
+        textEl.innerHTML = '';
+        typewrite(textEl, q.text, s.slowSpeed, () => {
+          authEl.innerHTML = `— ${q.author}`;
+          authEl.style.opacity = 1;
+          setTimeout(() => {
+            if(!document.contains(el)) return;
+            textEl.style.opacity = 0;
+            authEl.style.opacity = 0;
+            setTimeout(() => {
+              qIndex++;
+              showNextQuote();
+            }, 1000);
+          }, s.delay || 5000);
+        });
+      };
+      setTimeout(showNextQuote, 500); // Initial delay
+      return;
     case'grid':
       h=`<div class="slide-grid"><h2>${md(s.title)}</h2><div class="grid-cards">
         ${s.cards.map(c=>`<div class="grid-card"><div class="gc-icon">${c.icon}</div>
@@ -642,14 +675,18 @@ nextSlide = function() { cleanupProgression(); originalNextSlide(); };
 prevSlide = function() { cleanupProgression(); originalPrevSlide(); };
 showGrid = function() { cleanupProgression(); originalShowGrid(); };
 
-function typewrite(el,text,slow){
+function typewrite(el,text,slow,onComplete){
   const parsed=md(text);
   let i=0,html='';
   const chars=[...parsed];
   el.innerHTML='<span class="typewriter-cursor"></span>';
   const speed=slow?80:35;
   function tick(){
-    if(i>=chars.length){el.innerHTML=parsed;return;}
+    if(i>=chars.length){
+      el.innerHTML=parsed;
+      if (onComplete) onComplete();
+      return;
+    }
     html+=chars[i];i++;
     el.innerHTML=html+'<span class="typewriter-cursor"></span>';
     const c=chars[i-1];
