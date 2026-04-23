@@ -312,11 +312,10 @@ function buildGrid(){
 function openLightbox(imageSrc) {
   const lb = document.getElementById('slideLightbox');
   const content = document.getElementById('lightboxContent');
-  lb.className = 'slide-lightbox theme-dark';
+  lb.className = 'slide-lightbox theme-dark visible';
   content.innerHTML = `<img src="${imageSrc}" style="width:100%;max-height:80vh;object-fit:contain;border-radius:12px;">`;
-  lb.style.display = 'flex';
-  document.getElementById('lightboxClose').onclick = () => { lb.style.display = 'none'; };
-  lb.onclick = (e) => { if(e.target === lb) lb.style.display = 'none'; };
+  document.getElementById('lightboxClose').onclick = () => { lb.classList.remove('visible'); };
+  lb.onclick = (e) => { if(e.target === lb) lb.classList.remove('visible'); };
 }
 
 function showGrid(){

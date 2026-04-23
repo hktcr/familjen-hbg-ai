@@ -270,6 +270,16 @@
             ]
         },
         {
+            "id": "mail-prompt",
+            "section": "praktik",
+            "type": "prompt-demo",
+            "title": "Teknik: Tvätta mejlet",
+            "subtitle": "Från impuls till professionell ton. Utan att förlora kärnan.",
+            "prompt": "Tillsätt en virtuell expertpanel med 5 experter inom professionell kommunikation, föräldrasamverkan, juridik, ledarskap och pedagogik.\n\nGranska detta mejl-utkast:\n[KLISTRA IN DITT UTKAST]\n\nPanelen ska:\n1. Identifiera tonläge, juridiska risker och otydligheter\n2. Föreslå en omskrivning som behåller sakinnehållet men höjer den professionella tonen\n3. Flagga om något kan missförstås eller eskalera konflikten\n\nKoordinator: Fråga mig efter varje steg hur jag vill gå vidare.",
+            "example_topic": "Fiktivt scenario: Du har fått ett upprört föräldramejl om att barnet inte fått vara med på utflykten. Du har skrivit ett impulsivt svar.",
+            "why": "Du behöver inte skicka det du skrev klockan 22. Låt panelen tvätta ditt utkast medan du sover på saken."
+        },
+        {
             "id": "aldrig-i-prompten",
             "section": "praktik",
             "type": "grid",
