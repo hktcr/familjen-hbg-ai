@@ -21,6 +21,11 @@
             "color": "#c4956a"
         },
         {
+            "id": "praktik",
+            "label": "Verktyg & Praktik",
+            "color": "#4a6274"
+        },
+        {
             "id": "risker",
             "label": "Tidslinje & Risker",
             "color": "#b05050"
@@ -29,11 +34,6 @@
             "id": "barn",
             "label": "Barnen & AI",
             "color": "#7a8f6e"
-        },
-        {
-            "id": "praktik",
-            "label": "För chefer",
-            "color": "#4a6274"
         },
         {
             "id": "avslutning",
@@ -72,7 +72,82 @@
             "type": "quote",
             "text": "Vi står inför ett kognitivt skifte, inte ett tekniskt. Aldrig tidigare har en ny teknik varit så extremt enkel att förväxla med en tänkande medvetenhet.",
             "author": "Relationen mellan människa och maskin",
-            "style": "typewriter"
+            "style": "typewriter",
+            "slowSpeed": false
+        },
+        {
+            "id": "case-grid-module",
+            "section": "praktik",
+            "type": "case-grid",
+            "title": "Praktiska scenarier i vardagen",
+            "cards": [
+                {
+                    "title": "Tvätta ett föräldrabrev",
+                    "color": "var(--sage)",
+                    "desc": "Använd maskinen för att ta ditt frustrerade utkast och formulera om det till en saklig och professionell ton, utan att förlora kärnbudskapet."
+                },
+                {
+                    "title": "Förbereda ett svårt samtal",
+                    "color": "var(--terra)",
+                    "desc": "Låt AI simulera ett svårt personal- eller föräldrasamtal. Trycktesta dina argument, identifiera var motparten kan gå i försvarsställning, och öva på att behålla lugnet."
+                },
+                {
+                    "title": "Sammanfatta styrdokument",
+                    "color": "var(--coral)",
+                    "desc": "Mata in 40 sidor svårgenomtränglig policy och be om en 1-sidig sammanfattning av nyckelbudskapen. En tidssparare för att snabbt hitta relevant text, men verifiera alltid mot originalet."
+                },
+                {
+                    "title": "Aldrig i prompten (GDPR)",
+                    "color": "#a8423a",
+                    "desc": "Mata aldrig in barnens namn, verksamhetens identitet, eller specifik pedagogisk dokumentation. Lär dig använda syntetiska fall istället ('Ett fiktivt barn som ofta...')."
+                }
+            ]
+        },
+        {
+            "id": "bonus-tank-om",
+            "section": "praktik",
+            "type": "grid",
+            "title": "Den professionella tröskeln",
+            "cards": [
+                {
+                    "icon": "🎭",
+                    "title": "Tänk om jag ber den agera som...",
+                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel)."
+                },
+                {
+                    "icon": "🥊",
+                    "title": "Tänk om jag ber den leta efter...",
+                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner)."
+                },
+                {
+                    "icon": "🏗️",
+                    "title": "Tänk om jag ber den strukturera...",
+                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren)."
+                }
+            ]
+        },
+        {
+            "id": "case-grid-ledarskap",
+            "section": "praktik",
+            "type": "grid",
+            "title": "AI som strategiskt bollplank",
+            "cards": [
+                {
+                    "icon": "🧩",
+                    "title": "Verksamhetsplanering",
+                    "desc": "Mata in 20 avidentifierade reflektionsdokument från personalen. Be maskinen identifiera de tre vanligaste arbetsmiljöproblemen."
+                },
+                {
+                    "icon": "📚",
+                    "title": "Tillgängliggöra forskning",
+                    "desc": "Kasta in en tung pedagogisk forskningsartikel och be maskinen dra ut tre konkreta diskussionsfrågor för nästa APT."
+                },
+                {
+                    "icon": "✉️",
+                    "title": "Den svåra e-posten",
+                    "desc": "Prompt: 'Jag är frustrerad. Svara vårdnadshavaren att vi inte accepterar språkbruket, men håll det strikt professionellt och inom regelverket.'"
+                }
+            ]
         },
         {
             "id": "ai-timeline-module",
@@ -102,34 +177,6 @@
                     "title": "Röstkidnappning",
                     "color": "#a8423a",
                     "desc": "Tre sekunder röstklipp från förskolans Instagram är allt som krävs för att klona ett barns röst. Hur skyddar vi barnens integritet när data är den nya valutan?"
-                }
-            ]
-        },
-        {
-            "id": "case-grid-module",
-            "section": "praktik",
-            "type": "case-grid",
-            "title": "Praktiska scenarier i vardagen",
-            "cards": [
-                {
-                    "title": "Tvätta ett föräldrabrev",
-                    "color": "var(--sage)",
-                    "desc": "Använd en Virtuell Expertpanel (VEP) för att ta ditt frustrerade utkast och formulera om det till en saklig och professionell ton, utan att förlora kärnbudskapet. Panelen letar juridiska fallgropar och konfliktrisker."
-                },
-                {
-                    "title": "Förbereda ett svårt samtal",
-                    "color": "var(--terra)",
-                    "desc": "Låt AI simulera ett svårt personal- eller föräldrasamtal. Trycktesta dina argument, identifiera var motparten kan gå i försvarsställning, och öva på att behålla lugnet."
-                },
-                {
-                    "title": "Sammanfatta styrdokument",
-                    "color": "var(--coral)",
-                    "desc": "Mata in 40 sidor svårgenomtränglig policy och be om en 1-sidig sammanfattning av nyckelbudskapen. En tidssparare för att snabbt hitta relevant text, men verifiera alltid mot originalet."
-                },
-                {
-                    "title": "Aldrig i prompten (GDPR)",
-                    "color": "#a8423a",
-                    "desc": "Mata aldrig in barnens namn, verksamhetens identitet, eller specifik pedagogisk dokumentation. Lär dig använda syntetiska fall istället ('Ett fiktivt barn som ofta...')."
                 }
             ]
         },
@@ -183,29 +230,6 @@
             "author": "Gosedjurs-analogin",
             "style": "typewriter",
             "slowSpeed": true
-        },
-        {
-            "id": "bonus-tank-om",
-            "section": "reserv",
-            "type": "grid",
-            "title": "Den professionella tröskeln",
-            "cards": [
-                {
-                    "icon": "🎭",
-                    "title": "Tänk om jag ber den agera som...",
-                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel)."
-                },
-                {
-                    "icon": "🥊",
-                    "title": "Tänk om jag ber den leta efter...",
-                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner)."
-                },
-                {
-                    "icon": "🏗️",
-                    "title": "Tänk om jag ber den strukturera...",
-                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren)."
-                }
-            ]
         },
         {
             "id": "bonus-prolog",
