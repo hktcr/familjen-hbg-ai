@@ -2096,7 +2096,6 @@
                 await new Promise(r => setTimeout(r, 800));
                 }
 
-                const slots = mainEl.querySelectorAll('.rw-slot');
                 for (const slot of slots) {
                 const key = slot.dataset.key;
                 if (prevStep[key] !== step[key]) {
