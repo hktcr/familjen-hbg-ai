@@ -73,6 +73,20 @@
       "style": "typewriter"
     },
     {
+      "id": "olampligt-ai",
+      "type": "rewrite-progression",
+      "template": "När är det {modifier} att använda AI?",
+      "prefix": [],
+      "steps": [
+        {
+          "modifier": "olämpligt"
+        },
+        {
+          "modifier": "olämpligt att INTE"
+        }
+      ]
+    },
+    {
       "id": "ai-intro",
       "type": "step-slide",
       "title": "AI är inget nytt!",
@@ -209,8 +223,8 @@
         {
           "title": "Visuell Källkritik",
           "color": "var(--sage)",
-          "desc": "När fotorealistiska bilder på dinosaurier genereras på sekunder, räcker det inte att prata om 'sagoläsning'. Personalen behöver metoder för att prata med treåringar om vad som faktiskt är på riktigt.",
-          "image": "assets/dinosaur.png"
+          "desc": "När overkliga men fotorealistiska bilder kan genereras på sekunder, behöver personalen pedagogiska metoder för att samtala med barnen om vad som faktiskt är på riktigt.",
+          "image": "assets/purple_cat.png"
         },
         {
           "title": "Emotionella surrogat",
@@ -430,7 +444,7 @@
     {
       "id": "chefens-nytta",
       "type": "grid",
-      "title": "Dirigenten i rektorsvardagen",
+      "title": "Dirigenten i chefsvardagen",
       "cards": [
         {
           "icon": "📝",
