@@ -210,9 +210,16 @@
     {
       "id": "token-demo",
       "type": "token-demo",
-      "title": "Så funkar 'Gissningsmaskinen'",
+      "title": "Är generativ AI bara en avancerad autocomplete... en gissningsmaskin?",
       "prompt": "Förskolan ska lägga grunden för ett",
       "description": "Modellen 'förstår' inte läroplanen, men den har tränats på den. Nu beräknar den matematiskt vilket ord som är mest sannolikt att följa. Välj ett ord och se hur kontexten styr nästa gissning!"
+    },
+    {
+      "id": "human-guessing",
+      "type": "quote",
+      "text": "Våra hjärnor förutspår också konstant vad som ska hända härnäst, baserat på vår egen 'träningsdata' (våra erfarenheter). Skillnaden? Vi förstår *betydelsen* och *kontexten* av det vi gör.",
+      "author": "Är vi människor också gissningsmaskiner?",
+      "style": "typewriter"
     },
     {
       "id": "children-grid",
