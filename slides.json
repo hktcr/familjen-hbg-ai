@@ -152,13 +152,13 @@
     {
       "id": "rand-statistik",
       "type": "stat",
-      "value": "46%",
-      "label": "av barn mellan 2 och 4 år interagerar redan med röstassistenter (Siri, Alexa) hemma. AI är inte framtiden, det är deras normalitet.",
-      "source": "Common Sense Media, 2024",
+      "value": "60%",
+      "label": "av föräldrar till barn mellan 2 och 8 år uppger att barnen interagerar med röstassistenter (Siri, Alexa) hemma.",
+      "source": "Common Sense Media",
       "sources": [
         {
-          "name": "RAND: One in Eight Adolescents Use AI Chatbots for Mental Health",
-          "url": "https://www.rand.org/pubs/research_reports/RRA3007-1.html"
+          "name": "Brookings: Voice assistants and children",
+          "url": "https://www.brookings.edu/articles/how-children-interact-with-voice-assistants/"
         }
       ]
     },
