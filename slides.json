@@ -295,8 +295,7 @@
       "id": "gdpr-kort",
       "type": "quote",
       "title": "GDPR i prompts",
-      "text": "*ALDRIG I PROMPTEN (GDPR):* Mata aldrig in barnens namn, verksamhetens identitet eller specifik pedagogisk dokumentation. Skapa syntetiska fall istället.",
-      "author": "Regel nr 1",
+      "text": "*ALDRIG I PROMPTEN (GDPR):* Mata aldrig in barnens namn, verksamhetens identitet eller specifik pedagogisk dokumentation. *Beskriv istället situationen generellt utan att någon individ kan pekas ut.*",
       "style": "typewriter",
       "slowSpeed": false
     },
@@ -304,8 +303,7 @@
       "id": "human-in-the-loop",
       "type": "quote",
       "title": "Human in the Loop",
-      "text": "*Human in the loop*: Ingen AI-text får skickas till elever utan att en *människa granskat*. Du är alltid *ansvarig* för texten.",
-      "author": "Grundprincipen för AI-användning",
+      "text": "*Lita aldrig blint på AI.* En människa måste alltid finnas med i processen för att granska, värdera och fatta besluten. Du är alltid *ytterst ansvarig* för det som används i verksamheten.",
       "style": "typewriter",
       "sources": [
         {

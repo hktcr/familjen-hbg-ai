@@ -1677,7 +1677,7 @@
             } else {
                 const text = rawText.replace(/\*([^*]+)\*/g, '<span class="highlight">$1</span>');
                 return `<div class="slide-quote">
-                    <div class="quote-text">"${text}"</div>
+                    <div class="quote-text">${text}</div>
                     ${s.author ? `<div class="quote-author">— ${s.author}</div>` : ''}
                 </div>`;
             }
@@ -1704,7 +1704,7 @@
                 }
             }
 
-            container.innerHTML = '"';
+            container.innerHTML = '';
             let charIndex = 0;
 
             function typeNext() {
@@ -1721,9 +1721,9 @@
                     setTimeout(typeNext, baseDelay + Math.random() * randomDelay);
                 } else {
                     container.innerHTML = container.innerHTML.replace(/<span class="cursor"><\/span>$/, '');
-                    container.innerHTML += '"<span class="cursor"></span>';
+                    container.innerHTML += '<span class="cursor"></span>';
                     if (author && authorEl) {
-                        authorEl.textContent = '— ' + author;
+                        authorEl.textContent = author.startsWith('—') ? author : '— ' + author;
                         authorEl.style.opacity = '0.6';
                     }
                 }
