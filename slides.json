@@ -148,7 +148,17 @@
       "title": "Den osynliga kompisen",
       "text": "I samtalsrummet finns nu ofta en *osynlig tredje stol* – ockuperad av de algoritmer eleven redan pratat med.",
       "author": "",
-      "style": "typewriter"
+      "style": "typewriter",
+      "sources": [
+        {
+          "name": "Harvard GSE (Xu, 2024): AI saknar delade erfarenheter & riskerar sudda ut gränser",
+          "url": "https://www.gse.harvard.edu/ideas/edcast/24/10/impact-ai-childrens-development"
+        },
+        {
+          "name": "Springer (2025): Risk för undanträngning av lek och relationer",
+          "url": "https://link.springer.com/article/10.1007/s44436-025-00023-1"
+        }
+      ]
     },
     {
       "id": "rand-statistik",
@@ -296,7 +306,17 @@
       "title": "Human in the Loop",
       "text": "*Human in the loop*: Ingen AI-text får skickas till elever utan att en *människa granskat*. Du är alltid *ansvarig* för texten.",
       "author": "Grundprincipen för AI-användning",
-      "style": "typewriter"
+      "style": "typewriter",
+      "sources": [
+        {
+          "name": "CedTech (Zhang et al. 2026): SWOT - Risk för överberoende och minskad kreativitet",
+          "url": "https://www.cedtech.net/download/generative-ai-in-preschool-education-a-systematic-review-with-swot-analysis-17866.pdf"
+        },
+        {
+          "name": "The Conversation (2025): Lösningen - Låt pedagoger och familjer samskapa med AI",
+          "url": "https://theconversation.com/generative-ai-can-play-a-role-uplifting-family-and-community-in-early-childhood-education-272237"
+        }
+      ]
     },
     {
       "id": "sewell-tragedy",
