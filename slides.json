@@ -160,7 +160,7 @@
       "id": "tredje-stolen",
       "type": "quote",
       "title": "Den osynliga kompisen",
-      "text": "I samtalsrummet finns nu ofta en *osynlig tredje stol* – ockuperad av de algoritmer eleven redan pratat med.",
+      "text": "I samtalsrummet finns nu ofta en *osynlig tredje stol* som ockuperas av de algoritmer eleven redan pratat med.",
       "author": "",
       "style": "typewriter",
       "sources": [
@@ -182,15 +182,15 @@
       "source": "Common Sense Media",
       "sources": [
         {
-          "name": "Brookings: Voice assistants and children",
-          "url": "https://www.brookings.edu/articles/how-children-interact-with-voice-assistants/"
+          "name": "Brookings: Generation AI starts early",
+          "url": "https://www.brookings.edu/articles/generation-ai-starts-early-a-guide-to-technologies-already-shaping-young-childrens-lives/"
         }
       ]
     },
     {
       "id": "falsk-empati",
       "type": "quote",
-      "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati – men känner *ingenting*. För sårbara unga kan skillnaden vara svår att se.",
+      "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner *ingenting*. För sårbara unga kan skillnaden vara svår att se.",
       "author": "Sherry Turkle, MIT",
       "style": "typewriter"
     },
