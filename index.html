@@ -1471,6 +1471,10 @@
         📚 Källor
     </button>
 
+    <button id="fullscreenBtn" onclick="toggleFullScreen()" title="Helskärm" style="position: fixed; bottom: 15px; left: 15px; z-index: 10000; background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.5rem; opacity: 0.3; padding: 10px; transition: opacity 0.2s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.3">
+        ⛶
+    </button>
+
     <!-- Slide Lightbox -->
     <div id="slideLightbox" class="slide-lightbox theme-dark">
         <button id="lightboxClose" class="lightbox-close">[ STÄNG ]</button>
@@ -1573,6 +1577,18 @@
             const dimmerBtn = document.getElementById('dimmerBtn');
             slideView.classList.toggle('dimmed');
             dimmerBtn.classList.toggle('active');
+        }
+
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.log(`Kunde inte starta helskärm: ${err.message}`);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
         }
 
         function prevSlide() {
@@ -2260,10 +2276,21 @@
             if (expl) expl.innerHTML = '<strong>👆 Klicka på ett ord!</strong><br>AI:n ser prompten och beräknar matematiskt sannolikheten för varje möjligt nästa ord baserat på Lpfö 18.';
         }
 
-        // Keyboard navigation - only Escape to close
+        // Keyboard navigation
         document.addEventListener('keydown', (e) => {
+            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+            
             if (!document.getElementById('slideView').classList.contains('active')) return;
-            if (e.key === 'Escape') closeSlide();
+            
+            if (e.key === 'Escape') {
+                closeSlide();
+            } else if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
         });
 
         // Init
