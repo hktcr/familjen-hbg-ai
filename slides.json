@@ -390,6 +390,69 @@
           ]
         }
       ]
+    },
+    {
+      "id": "dirigent-intro",
+      "type": "quote",
+      "title": "Från publik till dirigent",
+      "text": "En orkester utan dirigent spelar bara noter. Med en dirigent skapar de musik.",
+      "author": "Det är dags att bli dirigent.",
+      "style": "typewriter"
+    },
+    {
+      "id": "tre-roller",
+      "type": "step-slide",
+      "steps": [
+        {
+          "type": "headline",
+          "title": "De Tre Rollerna",
+          "subtitle": "Hur vi strukturerar samarbetet med AI"
+        },
+        {
+          "type": "list",
+          "items": [
+            {
+              "title": "👥 Expertpanelen (AI)",
+              "desc": "Genererar idéer, letar mönster och belyser problem från flera olika perspektiv (t.ex. psykolog, forskare, förälder)."
+            },
+            {
+              "title": "🎯 Koordinatorn (AI)",
+              "desc": "Sammanställer experternas åsikter, strukturerar materialet och ser till att dina instruktioner följs till punkt och pricka."
+            },
+            {
+              "title": "👤 Dirigenten (DU)",
+              "desc": "Sätter målet, styr processen, värderar förslagen och fattar de slutgiltiga besluten. Du bär alltid ansvaret."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chefens-nytta",
+      "type": "grid",
+      "title": "Dirigenten i rektorsvardagen",
+      "cards": [
+        {
+          "icon": "📝",
+          "title": "Sparra svåra samtal",
+          "desc": "Låt AI spela en upprörd förälder eller tveksam medarbetare så att du kan öva din argumentation."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Granska handlingsplaner",
+          "desc": "Ladda upp ett (avidentifierat) utkast och be en Virtuell Expertpanel (VEP) leta efter svagheter eller oklarheter."
+        },
+        {
+          "icon": "🔍",
+          "title": "Mönster i dokumentation",
+          "desc": "Be AI analysera stora mängder kvalitetsrapporter för att hitta trender och dolda mönster."
+        },
+        {
+          "icon": "🚀",
+          "title": "Låt oss testa!",
+          "desc": "Nu går vi över till att interagera med tekniken live. Vilka utmaningar vill NI lösa?"
+        }
+      ]
     }
   ]
 }
