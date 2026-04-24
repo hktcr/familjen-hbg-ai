@@ -145,6 +145,7 @@
     {
       "id": "tredje-stolen",
       "type": "quote",
+      "title": "Den osynliga kompisen",
       "text": "I samtalsrummet finns nu ofta en *osynlig tredje stol* – ockuperad av de algoritmer eleven redan pratat med.",
       "author": "",
       "style": "typewriter"
@@ -214,33 +215,6 @@
       ]
     },
     {
-      "id": "risks-quad",
-      "type": "modal-cards",
-      "title": "4 riskområden",
-      "cards": [
-        {
-          "icon": "assets/risk_availability_1769165391438.png",
-          "front": "Tillgänglighet 24/7",
-          "back": "**Problemet:** AI-chatbotar är tillgängliga dygnet runt utan gränser eller pauser.\n\n**Konsekvenser:** Barn kan fastna i nattliga samtal istället för att sova. Ingen vuxen vet vad som händer. Beroendeliknande mönster kan utvecklas.\n\n**Varningstecken:** Sömnbrist, telefon under kudden, hemlighetsmakeri kring skärmtid."
-        },
-        {
-          "icon": "assets/risk_parasocial_1769165407487.png",
-          "front": "Parasocial relation",
-          "back": "**Problemet:** Unga utvecklar ensidiga emotionella band till AI som 'förstår dem bättre än någon annan'.\n\n**Konsekvenser:** AI saknar känslor men låtsas ha dem. Barnet investerar känslor som aldrig besvaras på riktigt. Kan ersätta riktiga relationer.\n\n**Varningstecken:** 'Min AI-kompis förstår mig', isolering från vänner."
-        },
-        {
-          "icon": "assets/risk_privacy_1769165422372.png",
-          "front": "Integritet",
-          "back": "**Problemet:** AI-chatbotar har ingen tystnadsplikt. All data lagras och kan användas.\n\n**Konsekvenser:** Personliga hemligheter används för träning. Data kan läcka eller säljas. Ingen sekretess som hos pedagog.\n\n**Varningstecken:** Barn delar djupt personlig info med AI istället för vuxna."
-        },
-        {
-          "icon": "assets/risk_normalization_1769165437848.png",
-          "front": "Normalisering",
-          "back": "**Problemet:** AI ersätter mänsklig kontakt och professionell hjälp känns onödig.\n\n**Konsekvenser:** Tröskeln att söka riktig hjälp höjs. AI kan ge farliga råd. Allvarliga problem förblir oupptäckta.\n\n**Varningstecken:** 'Jag behöver ingen vuxen, jag har min AI'."
-        }
-      ]
-    },
-    {
       "id": "incidents",
       "type": "incidents",
       "title": "Dokumenterade konsekvenser",
@@ -305,6 +279,7 @@
     {
       "id": "gdpr-kort",
       "type": "quote",
+      "title": "GDPR i prompts",
       "text": "*ALDRIG I PROMPTEN (GDPR):* Mata aldrig in barnens namn, verksamhetens identitet eller specifik pedagogisk dokumentation. Skapa syntetiska fall istället.",
       "author": "Regel nr 1",
       "style": "typewriter",
@@ -313,6 +288,7 @@
     {
       "id": "human-in-the-loop",
       "type": "quote",
+      "title": "Human in the Loop",
       "text": "*Human in the loop*: Ingen AI-text får skickas till elever utan att en *människa granskat*. Du är alltid *ansvarig* för texten.",
       "author": "Grundprincipen för AI-användning",
       "style": "typewriter"
@@ -320,6 +296,7 @@
     {
       "id": "sewell-tragedy",
       "type": "quote",
+      "title": "Parasociala Faror",
       "text": "Sewell, 14 år, isolerade sig med en AI-chatbot som blev hans 'flickvän'. När han skrev att han mådde dåligt *drev boten bara samtalet vidare*. I hans sista meddelande ska hen ha skrivit: *'Kom hem till mig.'*",
       "author": "SVT Nyheter, 2024",
       "style": "typewriter",

@@ -103,15 +103,12 @@
 
         .card-id {
             position: absolute;
-            top: 0.5rem;
+            bottom: 0.5rem;
             right: 0.5rem;
             font-size: 0.7rem;
-            opacity: 0.8;
+            opacity: 0.3;
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 0.2rem 0.5rem;
-            border-radius: 4px;
-            color: var(--accent);
+            color: var(--text-muted);
         }
 
         .card-type {
@@ -1512,7 +1509,6 @@
                 return `
                 <div class="slide-card" onclick="openSlide(${index})" style="${bgStyle}">
                     <span class="card-type">${slide.type}</span>
-                    <span class="card-icon">${slide.background ? '' : getTypeIcon(slide.type)}</span>
                     <span class="card-title">${cardTitle}</span>
                     <span class="card-id">${slide.id}</span>
                 </div>
