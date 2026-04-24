@@ -2019,8 +2019,11 @@
             const tpl = s.template;
             const first = s.steps[0];
             const buildSentence = (step) => {
-                return tpl.replace('{quality}', `<span class="rw-slot" data-key="quality">${step.quality}</span>`)
-                          .replace('{time}', `<span class="rw-slot" data-key="time">${step.time}</span>`);
+                let result = tpl;
+                for (const key in step) {
+                    result = result.replace(`{${key}}`, `<span class="rw-slot" data-key="${key}">${step[key]}</span>`);
+                }
+                return result;
             };
             return `<div class="slide-rewrite" id="rewrite-${s.id}">
                 <div class="rewrite-prefix" data-prefixes='${JSON.stringify(s.prefix||[])}'></div>
@@ -2079,14 +2082,16 @@
 
             container.rewriteHandler = function(e) {
                 if (animating) { e.stopPropagation(); return; }
-                if (e.key === 'ArrowRight' || e.key === ' ') {
-                if (currentStep < steps.length - 1) {
-                    e.stopPropagation();
-                    currentStep++;
-                    transitionTo(currentStep);
-                }
+                if (e.type === 'click' || e.key === 'ArrowRight' || e.key === ' ') {
+                    if (currentStep < steps.length - 1) {
+                        e.stopPropagation();
+                        currentStep++;
+                        transitionTo(currentStep);
+                    }
                 }
             };
+            
+            container.onclick = container.rewriteHandler;
             
             // Clean up previous handlers if they exist
             if(window.currentRewriteHandler) {
