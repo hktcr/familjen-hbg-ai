@@ -222,26 +222,29 @@
       "style": "typewriter"
     },
     {
-      "id": "children-grid",
+      "id": "visual-critique",
       "section": "barn",
       "type": "case-grid",
-      "title": "Det nya uppdraget: Tre gränsdragningar",
+      "title": "Pedagogik: Visuell Källkritik",
       "cards": [
         {
-          "title": "Visuell Källkritik",
+          "title": "Den magiska katten",
           "color": "var(--sage)",
-          "desc": "När overkliga men fotorealistiska bilder kan genereras på sekunder, behöver personalen pedagogiska metoder för att samtala med barnen om vad som faktiskt är på riktigt.",
+          "desc": "Vi måste introducera AI tidigt, men inte genom att lämna barnen ensamma med en chattbot. Istället tittar vi tillsammans på overkliga men fotorealistiska bilder för att pedagogiskt samtala om vad som faktiskt är på riktigt.",
           "image": "assets/purple_cat.png"
-        },
+        }
+      ]
+    },
+    {
+      "id": "voice-cloning-risk",
+      "section": "barn",
+      "type": "case-grid",
+      "title": "Säkerhet: Röstkloning & Dokumentation",
+      "cards": [
         {
-          "title": "Emotionella surrogat",
-          "color": "var(--terra)",
-          "desc": "När leksaker hemma minns barnens hemligheter och agerar 'bästa vän', blir förskolans genuina, mänskliga relationer den kritiska motvikten för barnens empatiutveckling."
-        },
-        {
-          "title": "Data som valuta",
+          "title": "Det nya data-ansvaret",
           "color": "#a8423a",
-          "desc": "Tre sekunder film från förskolans Instagram räcker för att klona ett barns röst. Hur vi publicerar och dokumenterar barnens vardag kräver omedelbara, strama riktlinjer."
+          "desc": "Tre sekunder ljud från ett filmklipp på förskolans öppna Instagram räcker idag för att klona ett barns röst. Detta kräver en omedelbar och ny medvetenhet kring hur ledning och pedagoger dokumenterar barnens vardag."
         }
       ]
     },
