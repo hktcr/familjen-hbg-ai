@@ -532,6 +532,7 @@
             cursor: pointer;
             transition: all 0.3s;
             text-align: center;
+            border-top: 4px solid var(--card-color, var(--accent));
         }
 
         .modal-card:hover {
@@ -1030,6 +1031,25 @@
             color: var(--text-muted);
         }
 
+        .step-list li.highlight {
+            background: rgba(249, 115, 22, 0.15); /* var(--accent) with opacity */
+            border: 1px solid var(--accent);
+            border-left: 6px solid var(--accent);
+            transform: scale(1.03);
+            margin: 10px 0;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        .step-list li.highlight strong {
+            color: var(--accent);
+            font-size: 110%;
+        }
+
+        .step-list li.highlight span {
+            color: #fff;
+            font-weight: 500;
+        }
+
         .step-footer {
             color: var(--coral);
             font-size: clamp(1.2rem, 2vw, 1.8rem);
@@ -1393,7 +1413,8 @@
             .rewrite-prefix { font-size: 1.8rem; font-weight: 300; color: var(--accent); opacity: 0; transition: opacity 0.6s ease; font-style: italic; }
             .rewrite-prefix.visible { opacity: 1; }
             .rewrite-main { font-size: 3rem; font-weight: 300; line-height: 1.5; color: var(--text); }
-            .rewrite-main .rw-slot { display: inline; color: #fff; }
+            .rewrite-main .rw-slot { display: inline; color: #fff; transition: color 0.3s ease; }
+            .rewrite-main .rw-slot.changed { color: var(--accent); }
             .rewrite-main .rw-slot.active { border-right: 2px solid var(--accent); animation: blink-cursor 0.8s step-end infinite; color: var(--accent); }
             
             /* Case Grid */
@@ -1413,9 +1434,12 @@
             }
             .cg-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0,0,0,0.4); border-color: var(--accent); }
             .cg-card.expanded { grid-column: 1 / -1; }
-            .cg-title { font-size: 1.4rem; font-weight: 600; margin-bottom: 12px; color: var(--text); }
-            .cg-desc { font-size: 1.05rem; color: var(--text-muted); line-height: 1.6; }
-            .cg-card.expanded .cg-desc { font-size: 1.15rem; margin-top: 20px; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 20px; }
+            .cg-title { font-size: 2.2rem; font-weight: 600; margin-bottom: 16px; color: var(--text); }
+            .cg-desc { font-size: 1.6rem; color: var(--text-muted); line-height: 1.6; }
+            .cg-card.expanded .cg-desc { font-size: 1.8rem; margin-top: 24px; border-top: 1px dashed rgba(255,255,255,0.2); padding-top: 24px; }
+            .cg-image-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 24px 0; }
+            .cg-image-grid img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; cursor: zoom-in; transition: transform 0.2s; }
+            .cg-image-grid img:hover { transform: scale(1.05); }
             /* ===== LIGHTBOX ===== */
             .slide-lightbox {
             position: fixed;
@@ -1489,7 +1513,7 @@
         // Load slides from JSON
         async function loadSlides() {
             try {
-                const response = await fetch('slides.json');
+                const response = await fetch('slides.json?t=' + new Date().getTime());
                 const data = await response.json();
                 slidesData = data.slides;
                 renderCardView();
@@ -1784,7 +1808,7 @@
                 <h2>${s.title}</h2>
                 <div class="modal-cards-grid">
                     ${s.cards.map((c, i) => `
-                        <div class="modal-card" onclick="showCardModal(${currentSlideIndex}, ${i})">
+                        <div class="modal-card" style="--card-color:${c.color||'var(--accent)'}" onclick="showCardModal(${currentSlideIndex}, ${i})">
                             <div class="modal-card-icon">
                                 ${c.icon.endsWith('.png') ? `<img src="${c.icon}" alt="${c.front}">` : c.icon}
                             </div>
@@ -1799,11 +1823,11 @@
             const card = slidesData[slideIdx].cards[cardIdx];
             const backText = card.back.replace(/\\n/g, '<br>').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
             document.getElementById('incidentModalContent').innerHTML = `
-                <div class="card-modal-content">
+                <div class="card-modal-content" style="--card-color:${card.color||'var(--accent)'}">
                     <div class="card-modal-icon">
                         ${card.icon.endsWith('.png') ? `<img src="${card.icon}" alt="${card.front}">` : card.icon}
                     </div>
-                    <h3>${card.front}</h3>
+                    <h3 style="color: var(--card-color)">${card.front}</h3>
                     <div class="card-modal-text">${backText}</div>
                 </div>
             `;
@@ -2011,6 +2035,7 @@
                 <div class="cg-card" style="--card-color:${c.color||'var(--accent)'}" onclick="this.classList.toggle('expanded')">
                 <div class="cg-title">${c.title}</div>
                 ${c.image ? `<div class="cg-image-container" style="margin:16px 0;"><img src="${c.image}" style="width:100%; border-radius:8px; max-height:200px; object-fit:cover; cursor:zoom-in;" onclick="event.stopPropagation(); openLightbox('${c.image}')" /></div>` : ''}
+                ${c.images && c.images.length > 0 ? `<div class="cg-image-grid" onclick="event.stopPropagation();">${c.images.map(img => `<img src="${img}" onclick="openLightbox('${img}')" />`).join('')}</div>` : ''}
                 <div class="cg-desc">${c.desc}</div>
                 </div>
             `).join('')}
@@ -2048,18 +2073,22 @@
                 }
             }
 
-            async function typeSlot(slot, text) {
+            async function typeSlot(slot, text, isChanged) {
                 for (let i = 0; i <= text.length; i++) {
                 slot.textContent = text.substring(0, i);
                 await new Promise(r => setTimeout(r, 50));
                 }
                 slot.classList.remove('active');
+                if (isChanged) slot.classList.add('changed');
             }
 
             async function transitionTo(stepIdx) {
                 animating = true;
                 const step = steps[stepIdx];
                 const prevStep = steps[stepIdx - 1];
+
+                const slots = mainEl.querySelectorAll('.rw-slot');
+                slots.forEach(slot => slot.classList.remove('changed'));
 
                 if (prefixEl && prefixes[stepIdx - 1]) {
                 prefixEl.textContent = prefixes[stepIdx - 1];
@@ -2073,7 +2102,7 @@
                 if (prevStep[key] !== step[key]) {
                     await eraseSlot(slot, prevStep[key]);
                     await new Promise(r => setTimeout(r, 200));
-                    await typeSlot(slot, step[key]);
+                    await typeSlot(slot, step[key], true);
                 }
                 }
 
@@ -2117,7 +2146,7 @@
         function renderTokenDemo(s) {
             return `<div class="slide-token-demo">
                 <h2>${s.title}</h2>
-                <div class="desc">${s.description}</div>
+                ${s.description ? `<div class="desc">${s.description}</div>` : ''}
                 <div class="demo-box">
                     <div class="prompt-area">
                         "${s.prompt}<span class="predicted" id="w1"></span><span class="predicted" id="w2"></span><span class="predicted" id="w3"></span><span class="token-cursor" id="tokenCursor"></span>"
@@ -2323,9 +2352,12 @@
             
             if (e.key === 'Escape') {
                 closeSlide();
-            } else if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+            } else if (e.key === ' ' || e.key === 'Enter') {
                 e.preventDefault();
                 if (window.handleNextStep && window.handleNextStep()) return;
+                nextSlide();
+            } else if (e.key === 'ArrowRight') {
+                e.preventDefault();
                 nextSlide();
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();

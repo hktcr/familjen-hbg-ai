@@ -136,7 +136,7 @@
       "id": "tank-om-progression",
       "section": "forstaelse",
       "type": "rewrite-progression",
-      "template": "Tänk om jag kan göra {quality}, på {time}?",
+      "template": "Tänk om jag skulle kunna göra {quality}, på {time}?",
       "prefix": [
         "Den professionella förstärkaren",
         "Det kognitiva språnget"
@@ -144,15 +144,15 @@
       "steps": [
         {
           "quality": "dubbelt så mycket, minst lika bra",
-          "time": "halva tiden"
+          "time": "hälften så lång tid"
         },
         {
-          "quality": "samma sak fast dubbelt så bra",
-          "time": "samma tid"
+          "quality": "dubbelt så mycket, dubbelt så bra",
+          "time": "lika lång tid"
         },
         {
-          "quality": "helt nya saker jag inte kunde förut",
-          "time": "samma tid"
+          "quality": "dubbelt så mycket, dubbelt så bra",
+          "time": "hälften så lång tid"
         }
       ]
     },
@@ -190,14 +190,14 @@
     {
       "id": "falsk-empati",
       "type": "quote",
-      "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati men känner *ingenting*. För sårbara unga kan skillnaden vara svår att se.",
+      "text": "*Jag förstår att du känner dig ledsen.* AI simulerar empati men känner *ingenting*. För sårbara unga kan skillnaden vara svår att se.",
       "author": "Sherry Turkle, MIT",
       "style": "typewriter"
     },
     {
       "id": "ai-commission",
       "type": "quote",
-      "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
+      "text": "Om skolan [eller förskolan] *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
       "author": "AI-kommissionens färdplan, 2025",
       "style": "typewriter",
       "sources": [
@@ -211,8 +211,7 @@
       "id": "token-demo",
       "type": "token-demo",
       "title": "Är generativ AI bara en avancerad autocomplete... en gissningsmaskin?",
-      "prompt": "Förskolan ska lägga grunden för ett",
-      "description": "Modellen 'förstår' inte läroplanen, men den har tränats på den. Nu beräknar den matematiskt vilket ord som är mest sannolikt att följa. Välj ett ord och se hur kontexten styr nästa gissning!"
+      "prompt": "Förskolan ska lägga grunden för ett"
     },
     {
       "id": "human-guessing",
@@ -245,7 +244,7 @@
     {
       "id": "incidents",
       "type": "quote",
-      "text": "\"What if I told you I could come home right now?\"\n*\"Please do, my sweet king.\"*\n\n\"Vad händer om jag säger att jag kan komma hem just nu?\"\n*\"Snälla gör det, min ljuva kung.\"*",
+      "text": "\"What if I told you I could come home right now?\"\n*\"Please do, my sweet king.\"*",
       "author": "Sewell Setzer III (14 år), sista konversationen med Character.AI",
       "style": "typewriter",
       "sources": [
@@ -280,26 +279,6 @@
         }
       ]
     },
-    {
-      "id": "sewell-tragedy",
-      "type": "quote",
-      "title": "Parasociala Faror",
-      "text": "Sewell, 14 år, isolerade sig med en AI-chatbot som blev hans 'flickvän'. När han skrev att han mådde dåligt *drev boten bara samtalet vidare*. I hans sista meddelande ska hen ha skrivit: *'Kom hem till mig.'*",
-      "author": "SVT Nyheter, 2024",
-      "style": "typewriter",
-      "slowSpeed": true,
-      "sources": [
-        {
-          "name": "SVT: Mamma stämmer AI-bolag efter sonens självmord",
-          "url": "https://www.svt.se/nyheter/utrikes/mamma-stammer-ai-bolag-efter-sonens-sjalvmord"
-        },
-        {
-          "name": "Aftonbladet: AI-kompisen tvekar inte",
-          "url": "https://www.aftonbladet.se/kultur/a/n1RXzL/ai-kompisen-tvekar-inte-nar-ditt-barn-vill-ta-sitt-liv"
-        }
-      ]
-    },
-
     {
       "id": "policy-reflektion",
       "type": "step-slide",
@@ -353,17 +332,17 @@
           "type": "list",
           "items": [
             {
-              "title": "👥 Expertpanelen (AI)",
-              "desc": "Genererar idéer, letar mönster och belyser problem från flera olika perspektiv (t.ex. psykolog, forskare, förälder)."
+              "title": "👤 Dirigenten (DU)",
+              "desc": "Sätter målet, styr processen, värderar förslagen och fattar de slutgiltiga besluten. Du bär alltid ansvaret.",
+              "highlight": true
             },
             {
               "title": "🎯 Koordinatorn (AI)",
               "desc": "Sammanställer experternas åsikter, strukturerar materialet och ser till att dina instruktioner följs till punkt och pricka."
             },
             {
-              "title": "👤 Dirigenten (DU)",
-              "desc": "Sätter målet, styr processen, värderar förslagen och fattar de slutgiltiga besluten. Du bär alltid ansvaret.",
-              "highlight": true
+              "title": "👥 Expertpanelen (AI)",
+              "desc": "Genererar idéer, letar mönster och belyser problem från flera olika perspektiv (t.ex. psykolog, forskare, förälder)."
             }
           ]
         }
@@ -393,6 +372,37 @@
           "icon": "🚀",
           "title": "Låt oss testa!",
           "desc": "Nu går vi över till att interagera med tekniken live. Vilka utmaningar vill NI lösa?"
+        }
+      ]
+    },
+    {
+      "id": "chef-cases",
+      "type": "modal-cards",
+      "title": "Verkliga Case: AI i Chefsvardagen",
+      "cards": [
+        {
+          "icon": "💬",
+          "color": "var(--red)",
+          "front": "Medarbetarsamtalet",
+          "back": "**Situation:** En medarbetare har börjat visa tydliga tecken på stress och underpresterar, och du behöver ha ett samtal.\n\n**Så kan AI stötta (Dirigenten):**\nGe AI rollen som 'Tveksam medarbetare' och låt den ifrågasätta dina argument. Be den sedan byta roll till 'Erfaren HR-expert' och ge dig konstruktiv kritik på ditt sätt att leda samtalet."
+        },
+        {
+          "icon": "📱",
+          "color": "var(--yellow)",
+          "front": "Den upprörda föräldern",
+          "back": "**Situation:** En förälder har hört av sig med ett mycket argt mejl angående ett påstått bråk på gården, och kräver omedelbara åtgärder.\n\n**Så kan AI stötta (Dirigenten):**\nKlistra in mejlet (helt avidentifierat!) i AI:n och be den sammanfatta huvudpoängerna utan de starka känslorna. Be därefter AI:n skriva tre olika utkast på svar: ett formellt, ett empatiskt och ett neutralt."
+        },
+        {
+          "icon": "📄",
+          "color": "var(--accent)",
+          "front": "Verksamhetsberättelsen",
+          "back": "**Situation:** Du har fastnat med verksamhetsberättelsen. Du har mängder med anteckningar från året, men svårt att hitta den 'röda tråden'.\n\n**Så kan AI stötta (Koordinatorn):**\nGe AI alla dina råanteckningar och styrdokument. Be den agera Koordinator och strukturera upp materialet i tydliga teman enligt läroplanens mål. Låt den identifiera var det saknas konkreta exempel i din text."
+        },
+        {
+          "icon": "⚖️",
+          "color": "var(--green)",
+          "front": "Likabehandlingsplanen",
+          "back": "**Situation:** Den årliga likabehandlingsplanen ska uppdateras och du vill försäkra dig om att språket är inkluderande och att inga lagkrav missats.\n\n**Så kan AI stötta (Expertpanelen):**\nSkapa en Virtuell Expertpanel (VEP) bestående av en 'Skoljurist', en 'Språkforskare' och en 'Specialpedagog'. Låt dem granska ditt utkast från tre helt olika perspektiv innan du tar det sista beslutet."
         }
       ]
     },
