@@ -256,33 +256,6 @@
       ]
     },
     {
-      "id": "misinfo-disinfo",
-      "type": "grid",
-      "title": "Sanning & Källkritik",
-      "cards": [
-        {
-          "icon": "🤷",
-          "title": "Misinformation",
-          "desc": "Felaktig info som sprids OMEDVETET. Personen tror att det stämmer."
-        },
-        {
-          "icon": "🎯",
-          "title": "Desinformation",
-          "desc": "Felaktig info som sprids MEDVETET. Syftet är att manipulera."
-        },
-        {
-          "icon": "🧠",
-          "title": "Förskolans grund",
-          "desc": "Källkritik för små barn börjar med att tidigt plantera frågan: 'Har en dator eller en människa gjort detta?'"
-        },
-        {
-          "icon": "🛡️",
-          "title": "Lösningen: VEP",
-          "desc": "Använd Virtuella Expertpaneler (VEP). Låt AI agera 'djävulens advokat' eller källkritisk forskarpanel för att granska material du är osäker på."
-        }
-      ]
-    },
-    {
       "id": "gdpr-kort",
       "type": "quote",
       "title": "GDPR i prompts",
