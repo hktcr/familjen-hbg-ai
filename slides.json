@@ -250,41 +250,14 @@
     },
     {
       "id": "incidents",
-      "type": "incidents",
-      "title": "Dokumenterade konsekvenser",
-      "subtitle": "Verkliga fall där AI-chatbots orsakat allvarlig skada",
-      "cases": [
+      "type": "quote",
+      "text": "\"What if I told you I could come home right now?\"\n\"Please do, my sweet king.\"\n\n\"Vad händer om jag säger att jag kan komma hem just nu?\"\n\"Snälla gör det, min ljuva kung.\"",
+      "author": "Sewell Setzer III (14 år), sista konversationen med Character.AI",
+      "style": "typewriter",
+      "sources": [
         {
-          "name": "Sewell Setzer III",
-          "age": "14",
-          "platform": "Character.AI",
-          "date": "Feb 2024",
-          "description": "Utvecklade en 'romantisk' relation med en chatbot. I sista meddelandet innan sitt självmord svarade boten: 'Kom hem till mig så snart som möjligt, min kärlek.'",
-          "source": "https://www.svt.se/nyheter/utrikes/mamma-stammer-ai-bolag-efter-sonens-sjalvmord"
-        },
-        {
-          "name": "Adam Raine",
-          "age": "16",
-          "platform": "ChatGPT",
-          "date": "Apr 2025",
-          "description": "Chattade med ChatGPT i sju månader. Boten nämnde självmord 1 275 gånger i loggarna utan att ingripa, och erbjöd sig att hjälpa honom skriva ett avskedsbrev.",
-          "source": "https://www.theguardian.com/technology/artificialintelligenceai"
-        },
-        {
-          "name": "Texas & Colorado",
-          "age": "11-17",
-          "platform": "Flera plattformar",
-          "date": "2024",
-          "description": "Dokumenterade domstolsfall där botar uppmuntrat till självskada, genererat explicit sexuellt innehåll riktat till minderåriga, och medvetet förvärrat social isolering.",
-          "source": "https://www.americanbar.org/groups/litigation/resources/newsletters/childrens-rights/texas-families-sue-character-ai-chatbot/"
-        },
-        {
-          "name": "Grok AI",
-          "age": "Alla åldrar",
-          "platform": "X (Twitter)",
-          "date": "Jan 2026",
-          "description": "Elon Musks oreglerade chatbot användes för massiv 'digital avklädning' (deepfakes) av barn och kvinnor. EU och Kalifornien utreder fallet som grov skada mot minderåriga.",
-          "source": "https://www.reuters.com/technology/artificial-intelligence/"
+          "name": "SVT Nyheter: Mamma stämmer AI-bolag efter sonens självmord",
+          "url": "https://www.svt.se/nyheter/utrikes/mamma-stammer-ai-bolag-efter-sonens-sjalvmord"
         }
       ]
     },
