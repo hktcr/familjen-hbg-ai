@@ -352,7 +352,6 @@
       "org": "F.d. Google, University of Toronto",
       "bio": "'Internet kommer översvämmas av falska foton, videor och texter. Den genomsnittliga personen kommer inte längre kunna veta vad som är sant.'",
       "contact": "Lämnade Google 2023 för att varna för AI-risker",
-      "avatar": "assets/hinton_portrait.png",
       "sources": [
         {
           "name": "NYT: The Godfather of A.I. Leaves Google",
@@ -362,28 +361,33 @@
     },
     {
       "id": "policy-reflektion",
-      "type": "grid",
-      "title": "Har vi...?",
-      "cards": [
+      "type": "step-slide",
+      "steps": [
         {
-          "icon": "📋",
-          "title": "Policyer?",
-          "desc": "Tydliga riktlinjer för AI-användning i förskoleverksamheten?"
+          "type": "headline",
+          "title": "Fyra kritiska ledningsfrågor",
+          "subtitle": "Riktning för det systematiska arbetet"
         },
         {
-          "icon": "🚨",
-          "title": "Krisberedskap?",
-          "desc": "Rutiner när elever hänvisar till AI-samtal?"
-        },
-        {
-          "icon": "📚",
-          "title": "Kompetensutveckling?",
-          "desc": "Plan för att hålla oss uppdaterade?"
-        },
-        {
-          "icon": "🤝",
-          "title": "Tillgång till tjänster?",
-          "desc": "Möjlighet att erbjuda AI-stöd på ett säkert sätt?"
+          "type": "list",
+          "items": [
+            {
+              "title": "Lokala riktlinjer",
+              "desc": "Finns det tydliga regler för pedagogernas AI-användning i vår verksamhet?"
+            },
+            {
+              "title": "Krisberedskap",
+              "desc": "Har vi rutiner om ett barn påverkas negativt av AI-karaktärer i hemmet?"
+            },
+            {
+              "title": "Kompetensutveckling",
+              "desc": "Får personalen fortbildning i teknikens möjligheter och fallgropar?"
+            },
+            {
+              "title": "Säker infrastruktur",
+              "desc": "Erbjuder vi GDPR-säkrade verktyg, eller hänvisas pedagogerna till öppna plattformar?"
+            }
+          ]
         }
       ]
     }
