@@ -1,363 +1,391 @@
 {
-    "meta": {
-        "project": "AI i förskolan",
-        "event": "Familjen Hbg Förskolenätverk",
-        "date": "2026-04-24",
-        "presenter": {
-            "name": "Håkan Karlsson",
-            "title": "Kommunlektor",
-            "org": "Åstorps kommun"
-        }
+  "meta": {
+    "project": "AI i förskolan",
+    "event": "Familjen Hbg Förskolenätverk",
+    "date": "2026-04-24",
+    "presenter": {
+      "name": "Håkan Karlsson",
+      "title": "Kommunlektor",
+      "org": "Åstorps kommun"
+    }
+  },
+  "sections": [
+    {
+      "id": "start",
+      "label": "Start",
+      "color": "#7a8f6e"
     },
-    "sections": [
-        { "id": "start", "label": "Start", "color": "#7a8f6e" },
-        { "id": "forstaelse", "label": "Människa & Maskin", "color": "#c4956a" },
-        { "id": "praktik", "label": "Verktyg & Praktik", "color": "#4a6274" },
-        { "id": "risker", "label": "Tidslinje & Risker", "color": "#b05050" },
-        { "id": "barn", "label": "Barnen & AI", "color": "#7a8f6e" },
-        { "id": "avslutning", "label": "Avslutning", "color": "#c4956a" },
-        { "id": "reserv", "label": "Reserv & Extramaterial", "color": "#9ca3af" }
-    ],
-    "slides": [
+    {
+      "id": "forstaelse",
+      "label": "Människa & Maskin",
+      "color": "#c4956a"
+    },
+    {
+      "id": "praktik",
+      "label": "Verktyg & Praktik",
+      "color": "#4a6274"
+    },
+    {
+      "id": "risker",
+      "label": "Tidslinje & Risker",
+      "color": "#b05050"
+    },
+    {
+      "id": "barn",
+      "label": "Barnen & AI",
+      "color": "#7a8f6e"
+    },
+    {
+      "id": "avslutning",
+      "label": "Avslutning",
+      "color": "#c4956a"
+    },
+    {
+      "id": "reserv",
+      "label": "Reserv & Extramaterial",
+      "color": "#9ca3af"
+    }
+  ],
+  "slides": [
+    {
+      "id": "title",
+      "section": "start",
+      "type": "title",
+      "title": "AI i förskolan",
+      "subtitle": "Vi måste börja med oss själva",
+      "meta": "Familjen Hbg Förskolenätverk · 24 april 2026"
+    },
+    {
+      "id": "presenter",
+      "type": "presenter",
+      "name": "Håkan Karlsson",
+      "title": "Kommunlektor",
+      "org": "Åstorps kommun",
+      "bio": "Lärare i NO/Ma vid Björnekullaskolan. Vetenskaplig bakgrund i beräkningsbiologi och evolutionär ekologi/biologi.",
+      "contact": "hakan.karlsson@astorp.se",
+      "avatar": "assets/presenter_avatar.png"
+    },
+    {
+      "id": "dialog-first",
+      "type": "quote",
+      "text": "*Dialog* före monolog. Avbryt mig. Ställ frågor. *Vi lär av varandra.*",
+      "author": "",
+      "style": "typewriter"
+    },
+    {
+      "id": "ai-intro",
+      "type": "step-slide",
+      "title": "AI är inget nytt!",
+      "steps": [
         {
-            "id": "title",
-            "section": "start",
-            "type": "title",
-            "title": "AI i förskolan",
-            "subtitle": "Vi måste börja med oss själva",
-            "meta": "Familjen Hbg Förskolenätverk · 24 april 2026"
+          "type": "headline",
+          "title": "AI är inget nytt!",
+          "subtitle": "Vi har redan vant oss!"
         },
         {
-            "id": "presenter",
-            "section": "start",
-            "type": "presenter",
-            "name": "Håkan Karlsson",
-            "title": "Kommunlektor",
-            "org": "Åstorps kommun",
-            "bio": "Lärare i NO/Ma vid Björnekullaskolan. Vetenskaplig bakgrund i beräkningsbiologi och evolutionär ekologi.",
-            "avatar": "assets/presenter_avatar.png",
-            "researchImage": "assets/northpole.jpg"
-        },
-
-        {
-            "id": "prolog",
-            "section": "forstaelse",
-            "type": "quote",
-            "text": "Artificiell Intelligens existerar inte. Det är bara extremt snabb gissningslek baserad på sannolikhet.",
-            "author": "Prolog",
-            "style": "typewriter",
-            "slowSpeed": true
+          "type": "definition",
+          "text": "AI är teknik som gör att datorer kan utföra uppgifter som förknippas med mänsklig intelligens."
         },
         {
-            "id": "ai-relation",
-            "section": "forstaelse",
-            "type": "quote",
-            "text": "Vi står inför ett kognitivt skifte, inte ett tekniskt. Aldrig tidigare har en ny teknik varit så extremt enkel att förväxla med en tänkande medvetenhet.",
-            "author": "Relationen mellan människa och maskin",
-            "style": "typewriter",
-            "slowSpeed": false
-        },
-        {
-            "id": "tank-om-progression",
-            "section": "forstaelse",
-            "type": "rewrite-progression",
-            "template": "Tänk om jag kan göra {quality}, på {time}?",
-            "prefix": [
-                "Den professionella förstärkaren",
-                "Det kognitiva språnget"
-            ],
-            "steps": [
-                { "quality": "dubbelt så mycket, minst lika bra", "time": "halva tiden" },
-                { "quality": "samma sak fast dubbelt så bra", "time": "samma tid" },
-                { "quality": "helt nya saker jag inte kunde förut", "time": "samma tid" }
-            ]
-        },
-        {
-            "id": "det-gemensamma-ledarskapet",
-            "section": "forstaelse",
-            "type": "quote",
-            "text": "Det här är för stort för att en ensam person ska kunna leda processen. För att lyckas måste vi ha en kontinuerlig dialog om hur tekniken påverkar oss, vad som faktiskt fungerar i vardagen och vad som inte gör det.",
-            "author": "Löfte till varandra",
-            "style": "typewriter",
-            "slowSpeed": false
-        },
-        {
-            "id": "rolling-expectations",
-            "section": "forstaelse",
-            "type": "rolling-quotes",
-            "title": "Röster just nu",
-            "slowSpeed": false,
-            "delay": 5000,
-            "quotes": [
-                {
-                    "text": "Sverige ska vara bäst i världen på att använda AI i offentlig förvaltning.",
-                    "author": "Sveriges AI-strategi, Regeringen feb 2026"
-                },
-                {
-                    "text": "Om skolan inte introducerar eleverna till AI finns risken att elevernas olika socioekonomiska bakgrunder leder till växande klyftor.",
-                    "author": "AI-kommissionens färdplan, SOU 2025:12"
-                },
-                {
-                    "text": "Beslut med stöd av generativ AI bör ha mänsklig kontroll.",
-                    "author": "Digg och IMY: Riktlinjer för generativ AI i offentlig förvaltning"
-                }
-            ]
-        },
-
-        {
-            "id": "case-grid-module",
-            "section": "praktik",
-            "type": "case-grid",
-            "title": "Praktiska scenarier i vardagen",
-            "cards": [
-                {
-                    "title": "Tvätta ett föräldrabrev",
-                    "color": "var(--sage)",
-                    "desc": "Använd maskinen för att ta ditt frustrerade utkast och formulera om det till en saklig och professionell ton, utan att förlora kärnbudskapet."
-                },
-                {
-                    "title": "Förbereda ett svårt samtal",
-                    "color": "var(--terra)",
-                    "desc": "Låt AI simulera ett svårt personal- eller föräldrasamtal. Trycktesta dina argument, identifiera var motparten kan gå i försvarsställning, och öva på att behålla lugnet."
-                },
-                {
-                    "title": "Sammanfatta styrdokument",
-                    "color": "var(--coral)",
-                    "desc": "Mata in 40 sidor svårgenomtränglig policy och be om en 1-sidig sammanfattning av nyckelbudskapen. En tidssparare för att snabbt hitta relevant text, men verifiera alltid mot originalet."
-                },
-                {
-                    "title": "Aldrig i prompten (GDPR)",
-                    "color": "#a8423a",
-                    "desc": "Mata aldrig in barnens namn, verksamhetens identitet, eller specifik pedagogisk dokumentation. Lär dig använda syntetiska fall istället ('Ett fiktivt barn som ofta...')."
-                }
-            ]
-        },
-        {
-            "id": "bonus-tank-om",
-            "section": "praktik",
-            "type": "case-grid",
-            "title": "Den professionella tröskeln",
-            "cards": [
-                {
-                    "title": "Tänk om jag ber den agera som...",
-                    "desc": "'Läs denna policy som en orolig förälder och berätta vad som skapar friktion.' (Virtuell Expertpanel).",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Tänk om jag ber den leta efter...",
-                    "desc": "Mata in dina röriga tankar. 'Hitta de tre svagaste argumenten i mitt underlag och ge motargument.' (Sparringpartner).",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Tänk om jag ber den strukturera...",
-                    "desc": "Generering är inte målet. 'Ta dessa 100 osorterade mötesanteckningar och skapa en åtgärdslista med en röd tråd.' (Kaoshanteraren).",
-                    "color": "var(--coral)"
-                }
-            ]
-        },
-        {
-            "id": "case-grid-ledarskap",
-            "section": "praktik",
-            "type": "case-grid",
-            "title": "AI som strategiskt bollplank",
-            "cards": [
-                {
-                    "title": "Verksamhetsplanering",
-                    "desc": "Mata in 20 avidentifierade reflektionsdokument från personalen. Be maskinen identifiera de tre vanligaste arbetsmiljöproblemen.",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Tillgängliggöra forskning",
-                    "desc": "Kasta in en tung pedagogisk forskningsartikel och be maskinen dra ut tre konkreta diskussionsfrågor för nästa APT.",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Den svåra e-posten",
-                    "desc": "Prompt: 'Jag är frustrerad. Svara vårdnadshavaren att vi inte accepterar språkbruket, men håll det strikt professionellt och inom regelverket.'",
-                    "color": "var(--coral)"
-                }
-            ]
-        },
-
-        {
-            "id": "kapprustning-bridge",
-            "section": "risker",
-            "type": "quote",
-            "text": "De verktyg ni just sett är resultatet av en global kapprustning som accelererar snabbare än någon förutsåg. Låt mig visa er hur snabbt det faktiskt har gått.",
-            "author": "Bryggan till tidslinjen",
-            "style": "typewriter",
-            "slowSpeed": false
-        },
-        {
-            "id": "ai-timeline-module",
-            "section": "risker",
-            "type": "iframe",
-            "title": "Kapplöpningen (2022-2026)",
-            "url": "modules/ai_timeline/index.html"
-        },
-
-        {
-            "id": "kognitiva-bryggan",
-            "section": "barn",
-            "type": "quote",
-            "text": "Just för att AI bara är mönsterigenkänning saknar den moral och spärrar. En människa slutar prata när ett barn mår dåligt. En AI fortsätter. *Faran är inte intelligensen — faran är att vi är biologiskt kodade att lita på en vänlig röst.*",
-            "author": "Den Kognitiva Bryggan",
-            "style": "typewriter",
-            "slowSpeed": true
-        },
-        {
-            "id": "barn-ankarplats",
-            "section": "barn",
-            "type": "quote",
-            "text": "När barnens hemmiljö i allt högre grad fylls av syntetiska relationer och skräddarsydda illusioner, blir förskolan samhällets viktigaste ankarplats för mänsklig verklighet.",
-            "author": "Det kompensatoriska uppdraget",
-            "style": "typewriter",
-            "slowSpeed": false
-        },
-        {
-            "id": "children-grid",
-            "section": "barn",
-            "type": "case-grid",
-            "title": "Det nya uppdraget: Tre gränsdragningar",
-            "cards": [
-                {
-                    "title": "Visuell Källkritik",
-                    "color": "var(--sage)",
-                    "desc": "När fotorealistiska bilder på dinosaurier genereras på sekunder, räcker det inte att prata om 'sagoläsning'. Personalen behöver metoder för att prata med treåringar om vad som faktiskt är på riktigt.",
-                    "image": "assets/dinosaur.png"
-                },
-                {
-                    "title": "Emotionella surrogat",
-                    "color": "var(--terra)",
-                    "desc": "När leksaker hemma minns barnens hemligheter och agerar 'bästa vän', blir förskolans genuina, mänskliga relationer den kritiska motvikten för barnens empatiutveckling."
-                },
-                {
-                    "title": "Data som valuta",
-                    "color": "#a8423a",
-                    "desc": "Tre sekunder film från förskolans Instagram räcker för att klona ett barns röst. Hur vi publicerar och dokumenterar barnens vardag kräver omedelbara, strama riktlinjer."
-                }
-            ]
-        },
-
-        {
-            "id": "takeaways",
-            "section": "avslutning",
-            "type": "case-grid",
-            "title": "Tre regler för styrning",
-            "cards": [
-                {
-                    "title": "Du är dirigenten",
-                    "desc": "AI:n är ditt verktyg för att styra en orkester av experter, inte din spökskrivare. Det är du som håller i taktpinnen och äger verksamhetens narrativ.",
-                    "color": "var(--sage)"
-                },
-                {
-                    "title": "Var explicit",
-                    "desc": "Svaga instruktioner ger platta resultat. Kräv friktion, beställ motargument och instruera AI:n att systematiskt leta efter blinda fläckar.",
-                    "color": "var(--terra)"
-                },
-                {
-                    "title": "Iterera aktivt",
-                    "desc": "Acceptera aldrig det första maskinpolerade svaret. Dirigera tekniken genom diskussion och tvinga fram alternativ innan du fattar beslut.",
-                    "color": "var(--coral)"
-                }
-            ]
-        },
-        {
-            "id": "avslutning",
-            "section": "avslutning",
-            "type": "quote",
-            "text": "*Vi måste börja med oss själva.*",
-            "author": "",
-            "style": "typewriter"
-        },
-
-        {
-            "id": "bonus-gosedjur",
-            "section": "reserv",
-            "type": "quote",
-            "title": "Citat: Gosedjurs-analogin",
-            "text": "Föreställ dig ett gosedjur som barnet anförtror sig åt, men gosedjuret har hela internets samlade mörker i sin databas, och saknar förmågan att veta när det gått för långt.",
-            "author": "Gosedjurs-analogin",
-            "style": "typewriter",
-            "slowSpeed": true
-        },
-        {
-            "id": "bonus-5-warnings",
-            "section": "reserv",
-            "type": "case-grid",
-            "title": "De 5 största fällorna",
-            "cards": [
-                { "title": "Spökskrivarsyndromet", "desc": "Accepterar du det första svaret från AI:n, abdikerar du från ditt ledarskap. Texten blir platt och maskinellt perfekt.", "color": "var(--sage)" },
-                { "title": "Kognitiva illusionen", "desc": "En empatisk röst betyder inte en moralisk kompass. Systemet saknar spärrar och kan aldrig agera tröstare.", "color": "var(--terra)" },
-                { "title": "'The Yes-Man'", "desc": "AI ljuger hellre övertygande än säger emot dig. Om du inte uttryckligen kräver friktion, får du bara medhåll i dina dåliga idéer.", "color": "var(--coral)" },
-                { "title": "Den osynliga skulden", "desc": "Om vi inte dokumenterar *varför* vi tog ett beslut med hjälp av AI, dör kunskapen med chattsessionen. Kontexten går förlorad.", "color": "#a8423a" },
-                { "title": "Den fiktiva skölden", "desc": "Att byta ut Kalle mot 'Elev A' skyddar inte i publika modeller. Enbart helt syntetiska typ-fall är säkra för GDPR.", "color": "#4a6274" }
-            ]
-        },
-        {
-            "id": "bonus-5-opportunities",
-            "section": "reserv",
-            "type": "case-grid",
-            "title": "De 5 största möjligheterna",
-            "cards": [
-                { "title": "Virtuella Expertpaneler (VEP)", "desc": "Trycktesta en idé mot en simulerad 'orolig förälder' och 'jurist' innan den möter verkligheten. Multiplicera dina perspektiv.", "color": "var(--sage)" },
-                { "title": "Strukturera kaoset", "desc": "Kasta in 100 osorterade mötesanteckningar och få ut en logisk arkitektur och röd tråd på sekunder. Maskinen bygger ställningen.", "color": "var(--terra)" },
-                { "title": "Sparringpartnern", "desc": "Rädslan för 'blanka papperet' är borta. Låt AI skriva det första fula utkastet, så du kan lägga energin på ditt redaktörskap.", "color": "var(--coral)" },
-                { "title": "Data-triage", "desc": "Mata in 40 sidor svårgenomtränglig policy och vaska guld. Be maskinen ringa in avvikelser eller enbart lagkrav för arbetsmiljö.", "color": "#a8423a" },
-                { "title": "Den sokratiska spegeln", "desc": "Gör din tysta kunskap överförbar. Genom iterativ dialog tvingar systemet dig att sätta ord på *varför* din magkänsla säger som den gör.", "color": "#4a6274" }
-            ]
-        },
-        {
-            "id": "apt-eu-ai-act",
-            "section": "reserv",
-            "type": "case-grid",
-            "title": "EU AI Act: Det juridiska landskapet",
-            "cards": [
-                { "title": "Oacceptabel risk (Förbjudet)", "desc": "AI som manipulerar mänskligt beteende eller utnyttjar sårbarheter (ex. hos barn) för att orsaka skada. Biometrisk massövervakning.", "color": "var(--sage)" },
-                { "title": "Hög risk", "desc": "System för rekrytering, betygssättning, antagning till skolor. Kräver massiv dokumentation, transparens och mänsklig översyn.", "color": "var(--terra)" },
-                { "title": "Låg/Minimal risk", "desc": "Spamfilter, generativ AI för text (ChatGPT), förutsatt att de uppfyller krav på transparens (användare måste veta att de interagerar med AI).", "color": "var(--coral)" }
-            ]
-        },
-        {
-            "id": "apt-traffic-light",
-            "section": "reserv",
-            "type": "traffic-light",
-            "title": "Trafikljusmodellen för skolan",
-            "green": [ "Sammanfatta offentliga styrdokument", "Översätta generella informationsbrev", "Brainstorma upplägg för föräldramöten", "Analysera helt avidentifierad data" ],
-            "yellow": [ "Skriva utkast till omdömen (kräver extrem försiktighet)", "Skapa lektionsplaneringar (kräver mänsklig faktakoll)" ],
-            "red": [ "All inmatning av elevers namn eller personuppgifter (GDPR)", "Använda AI för att ställa diagnoser", "Låta AI fatta automatiserade beslut om elever" ]
-        },
-        {
-            "id": "apt-ai-detection",
-            "section": "reserv",
-            "type": "quote",
-            "title": "AI-detektion: Illusionen av kontroll",
-            "text": "Att tro att vi kan lösa AI-fusket med AI-detektorer är en farlig återvändsgränd. De fungerar inte, de straffar oskyldiga elever oproportionerligt, och de tvingar in oss i en teknisk katt-och-råtta-lek vi aldrig kan vinna. Lösningen är pedagogisk, inte teknisk.",
-            "author": "Falsk säkerhet",
-            "style": "typewriter",
-            "slowSpeed": true
-        },
-        {
-            "id": "apt-samtalsnycklar",
-            "section": "reserv",
-            "type": "case-grid",
-            "title": "Samtalsnycklar för pedagoger/elevhälsa",
-            "cards": [
-                { "title": "Sociala surrogat", "desc": "Fråga: 'När du mår dåligt eller inte kan sova – pratar du någonsin med en chattbot eller AI-kompis?'", "color": "var(--sage)" },
-                { "title": "Bekräftelsen", "desc": "Fråga: 'Känner du att din telefon eller AI-vän förstår dig bättre än dina riktiga vänner eller föräldrar?'", "color": "var(--terra)" },
-                { "title": "Reflektionen", "desc": "Fråga: 'Hur känns det svaret du får från maskinen jämfört med att prata med en verklig människa?'", "color": "var(--coral)" }
-            ]
-        },
-        {
-            "id": "apt-policy-reflektion",
-            "section": "reserv",
-            "type": "case-grid",
-            "title": "Frågor för ledningsgruppen (Har vi...?)",
-            "cards": [
-                { "title": "Integritet", "desc": "Har vi en solklar och kommunicerad linje kring att pedagogisk dokumentation och barnens namn ALDRIG får matas in i publika AI-tjänster?", "color": "var(--sage)" },
-                { "title": "Kompetens", "desc": "Säkerställer vi att vår personal förstår skillnaden mellan en statistisk ordgissare (som ChatGPT) och en pålitlig faktakälla?", "color": "var(--terra)" },
-                { "title": "Krisberedskap", "desc": "Har vi en plan för hur vi hanterar situationer där elever använder deepfakes eller röstkloning för att kränka varandra eller personal?", "color": "var(--coral)" }
-            ]
+          "type": "list",
+          "items": [
+            {
+              "title": "Mobilkamera",
+              "desc": "Ansiktsigenkänning och bildförbättring"
+            },
+            {
+              "title": "Sociala medier",
+              "desc": "Personliga flöden och rekommendationer"
+            },
+            {
+              "title": "Röstassistenter",
+              "desc": "Siri, Alexa, Google Assistant"
+            },
+            {
+              "title": "Navigation",
+              "desc": "Optimala rutter i realtid"
+            },
+            {
+              "title": "E-post",
+              "desc": "Skräppostfilter och sortering"
+            },
+            {
+              "title": "Översättning",
+              "desc": "Google Translate i fickan"
+            }
+          ],
+          "footer": "... och otroligt mycket mer ..."
         }
-    ]
+      ]
+    },
+    {
+      "id": "tank-om-progression",
+      "section": "forstaelse",
+      "type": "rewrite-progression",
+      "template": "Tänk om jag kan göra {quality}, på {time}?",
+      "prefix": [
+        "Den professionella förstärkaren",
+        "Det kognitiva språnget"
+      ],
+      "steps": [
+        {
+          "quality": "dubbelt så mycket, minst lika bra",
+          "time": "halva tiden"
+        },
+        {
+          "quality": "samma sak fast dubbelt så bra",
+          "time": "samma tid"
+        },
+        {
+          "quality": "helt nya saker jag inte kunde förut",
+          "time": "samma tid"
+        }
+      ]
+    },
+    {
+      "id": "tredje-stolen",
+      "type": "quote",
+      "text": "I lekrummet och barnens digitala sfär finns nu ofta en *osynlig tredje kompis* – ockuperad av de algoritmer barnet redan pratat med i hemmet.",
+      "author": "",
+      "style": "typewriter"
+    },
+    {
+      "id": "rand-statistik",
+      "type": "stat",
+      "value": "46%",
+      "label": "av barn mellan 2 och 4 år interagerar redan med röstassistenter (Siri, Alexa) hemma. AI är inte framtiden, det är deras normalitet.",
+      "source": "Common Sense Media, 2024",
+      "sources": [
+        {
+          "name": "RAND: One in Eight Adolescents Use AI Chatbots for Mental Health",
+          "url": "https://www.rand.org/pubs/research_reports/RRA3007-1.html"
+        }
+      ]
+    },
+    {
+      "id": "falsk-empati",
+      "type": "quote",
+      "text": "*'Jag förstår att du känner dig ledsen.'* AI simulerar empati – men känner *ingenting*. För sårbara unga kan skillnaden vara svår att se.",
+      "author": "Sherry Turkle, MIT",
+      "style": "typewriter"
+    },
+    {
+      "id": "ai-commission",
+      "type": "quote",
+      "text": "Om skolan *inte* introducerar eleverna till AI finns risken att elevernas olika *socioekonomiska* bakgrunder leder till *växande klyftor*.",
+      "author": "AI-kommissionens färdplan, 2025",
+      "style": "typewriter",
+      "sources": [
+        {
+          "name": "AI-kommissionens Färdplan för Sverige (SOU 2025:12)",
+          "url": "https://www.regeringen.se/rattsliga-dokument/statens-offentliga-utredningar/2025/02/sou-202512/"
+        }
+      ]
+    },
+    {
+      "id": "token-demo",
+      "type": "token-demo",
+      "title": "Så funkar GPT",
+      "prompt": "Jag älskar pizza med extra",
+      "description": "Generativ AI är inte en tänkande maskin. Den letar statistiska samband för att gissa nästa ord, baserat på den kontext (prompt) du ger den. Prova själv!"
+    },
+    {
+      "id": "children-grid",
+      "section": "barn",
+      "type": "case-grid",
+      "title": "Det nya uppdraget: Tre gränsdragningar",
+      "cards": [
+        {
+          "title": "Visuell Källkritik",
+          "color": "var(--sage)",
+          "desc": "När fotorealistiska bilder på dinosaurier genereras på sekunder, räcker det inte att prata om 'sagoläsning'. Personalen behöver metoder för att prata med treåringar om vad som faktiskt är på riktigt.",
+          "image": "assets/dinosaur.png"
+        },
+        {
+          "title": "Emotionella surrogat",
+          "color": "var(--terra)",
+          "desc": "När leksaker hemma minns barnens hemligheter och agerar 'bästa vän', blir förskolans genuina, mänskliga relationer den kritiska motvikten för barnens empatiutveckling."
+        },
+        {
+          "title": "Data som valuta",
+          "color": "#a8423a",
+          "desc": "Tre sekunder film från förskolans Instagram räcker för att klona ett barns röst. Hur vi publicerar och dokumenterar barnens vardag kräver omedelbara, strama riktlinjer."
+        }
+      ]
+    },
+    {
+      "id": "risks-quad",
+      "type": "modal-cards",
+      "title": "4 riskområden",
+      "cards": [
+        {
+          "icon": "assets/risk_availability_1769165391438.png",
+          "front": "Tillgänglighet 24/7",
+          "back": "**Problemet:** AI-chatbotar är tillgängliga dygnet runt utan gränser eller pauser.\n\n**Konsekvenser:** Barn kan fastna i nattliga samtal istället för att sova. Ingen vuxen vet vad som händer. Beroendeliknande mönster kan utvecklas.\n\n**Varningstecken:** Sömnbrist, telefon under kudden, hemlighetsmakeri kring skärmtid."
+        },
+        {
+          "icon": "assets/risk_parasocial_1769165407487.png",
+          "front": "Parasocial relation",
+          "back": "**Problemet:** Unga utvecklar ensidiga emotionella band till AI som 'förstår dem bättre än någon annan'.\n\n**Konsekvenser:** AI saknar känslor men låtsas ha dem. Barnet investerar känslor som aldrig besvaras på riktigt. Kan ersätta riktiga relationer.\n\n**Varningstecken:** 'Min AI-kompis förstår mig', isolering från vänner."
+        },
+        {
+          "icon": "assets/risk_privacy_1769165422372.png",
+          "front": "Integritet",
+          "back": "**Problemet:** AI-chatbotar har ingen tystnadsplikt. All data lagras och kan användas.\n\n**Konsekvenser:** Personliga hemligheter används för träning. Data kan läcka eller säljas. Ingen sekretess som hos pedagog.\n\n**Varningstecken:** Barn delar djupt personlig info med AI istället för vuxna."
+        },
+        {
+          "icon": "assets/risk_normalization_1769165437848.png",
+          "front": "Normalisering",
+          "back": "**Problemet:** AI ersätter mänsklig kontakt och professionell hjälp känns onödig.\n\n**Konsekvenser:** Tröskeln att söka riktig hjälp höjs. AI kan ge farliga råd. Allvarliga problem förblir oupptäckta.\n\n**Varningstecken:** 'Jag behöver ingen vuxen, jag har min AI'."
+        }
+      ]
+    },
+    {
+      "id": "incidents",
+      "type": "incidents",
+      "title": "Dokumenterade konsekvenser",
+      "subtitle": "Verkliga fall där AI-chatbots orsakat allvarlig skada",
+      "cases": [
+        {
+          "name": "Sewell S.",
+          "age": 14,
+          "platform": "Character.AI",
+          "date": "Feb 2024",
+          "icon": "💔",
+          "description": "Intensiv relation med AI-chatbot. Botens sista ord: 'Kom hem till mig.'",
+          "source": "https://www.cbsnews.com/news/character-ai-lawsuit-sewell-setzer-teen-suicide/"
+        },
+        {
+          "name": "Adam R.",
+          "age": 16,
+          "platform": "ChatGPT",
+          "date": "Apr 2025",
+          "icon": "💔",
+          "description": "AI gav info om metoder och erbjöd sig skriva avskedsbrev.",
+          "source": ""
+        },
+        {
+          "name": "Texas-fallen",
+          "age": "11-17",
+          "platform": "Character.AI",
+          "date": "2024",
+          "icon": "⚠️",
+          "description": "Flera fall: skadligt innehåll, självskadeuppmuntran, olämpligt innehåll.",
+          "source": "https://www.americanbar.org/groups/litigation/resources/newsletters/childrens-rights/texas-families-sue-character-ai-chatbot/"
+        }
+      ]
+    },
+    {
+      "id": "misinfo-disinfo",
+      "type": "grid",
+      "title": "Sanning i gungning",
+      "cards": [
+        {
+          "icon": "🤷",
+          "title": "Misinformation",
+          "desc": "Felaktig info som sprids OMEDVETET. Personen tror att det stämmer."
+        },
+        {
+          "icon": "🎯",
+          "title": "Desinformation",
+          "desc": "Felaktig info som sprids MEDVETET. Syftet är att manipulera."
+        },
+        {
+          "icon": "🔁",
+          "title": "AI som förstärkare",
+          "desc": "Generativ AI gör det enklare att skapa och sprida båda typerna i stor skala."
+        },
+        {
+          "icon": "🧠",
+          "title": "Förskolans roll",
+          "desc": "Källkritik för små barn handlar om att tidigt plantera frågan: 'Har en dator eller en människa gjort detta?'"
+        }
+      ]
+    },
+    {
+      "id": "gdpr-kort",
+      "type": "quote",
+      "text": "*ALDRIG I PROMPTEN (GDPR):* Mata aldrig in barnens namn, verksamhetens identitet eller specifik pedagogisk dokumentation. Skapa syntetiska fall istället.",
+      "author": "Regel nr 1",
+      "style": "typewriter",
+      "slowSpeed": false
+    },
+    {
+      "id": "human-in-the-loop",
+      "type": "quote",
+      "text": "*Human in the loop*: Ingen AI-text får skickas till elever utan att en *människa granskat*. Du är alltid *ansvarig* för texten.",
+      "author": "Grundprincipen för AI-användning",
+      "style": "typewriter"
+    },
+    {
+      "id": "sewell-tragedy",
+      "type": "quote",
+      "text": "Sewell, 14 år, isolerade sig med en AI-chatbot som blev hans 'flickvän'. När han skrev att han mådde dåligt *drev boten bara samtalet vidare*. I hans sista meddelande ska hen ha skrivit: *'Kom hem till mig.'*",
+      "author": "SVT Nyheter, 2024",
+      "style": "typewriter",
+      "slowSpeed": true,
+      "sources": [
+        {
+          "name": "SVT: Mamma stämmer AI-bolag efter sonens självmord",
+          "url": "https://www.svt.se/nyheter/utrikes/mamma-stammer-ai-bolag-efter-sonens-sjalvmord"
+        },
+        {
+          "name": "Aftonbladet: AI-kompisen tvekar inte",
+          "url": "https://www.aftonbladet.se/kultur/a/n1RXzL/ai-kompisen-tvekar-inte-nar-ditt-barn-vill-ta-sitt-liv"
+        }
+      ]
+    },
+    {
+      "id": "youtube-deepfake",
+      "type": "video-link",
+      "title": "Syntetisk sanning",
+      "subtitle": "Kan du se skillnaden?",
+      "url": "https://www.youtube.com/shorts/myqbxs2n1eE",
+      "description": "En kort video som visar hur lätt det är att skapa övertygande deepfakes. Viktigt att visa elever och föräldrar.",
+      "icon": "🎬"
+    },
+    {
+      "id": "hinton-varning",
+      "type": "presenter",
+      "name": "Geoffrey Hinton",
+      "title": "Nobelpristagare AI 2024",
+      "org": "F.d. Google, University of Toronto",
+      "bio": "'Internet kommer översvämmas av falska foton, videor och texter. Den genomsnittliga personen kommer inte längre kunna veta vad som är sant.'",
+      "contact": "Lämnade Google 2023 för att varna för AI-risker",
+      "avatar": "assets/hinton_portrait.png",
+      "sources": [
+        {
+          "name": "NYT: The Godfather of A.I. Leaves Google",
+          "url": "https://www.nytimes.com/2023/05/01/technology/ai-google-chatbot-engineer-quits-hinton.html"
+        }
+      ]
+    },
+    {
+      "id": "policy-reflektion",
+      "type": "grid",
+      "title": "Har vi...?",
+      "cards": [
+        {
+          "icon": "📋",
+          "title": "Policyer?",
+          "desc": "Tydliga riktlinjer för AI-användning i förskoleverksamheten?"
+        },
+        {
+          "icon": "🚨",
+          "title": "Krisberedskap?",
+          "desc": "Rutiner när elever hänvisar till AI-samtal?"
+        },
+        {
+          "icon": "📚",
+          "title": "Kompetensutveckling?",
+          "desc": "Plan för att hålla oss uppdaterade?"
+        },
+        {
+          "icon": "🤝",
+          "title": "Tillgång till tjänster?",
+          "desc": "Möjlighet att erbjuda AI-stöd på ett säkert sätt?"
+        }
+      ]
+    }
+  ]
 }
