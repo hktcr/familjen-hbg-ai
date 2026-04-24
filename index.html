@@ -1818,12 +1818,11 @@
 
         function renderIncidents(s) {
             return `<div class="slide-incidents">
-                <h2>⚠️ ${s.title}</h2>
+                <h2>${s.title}</h2>
                 <div class="subtitle">${s.subtitle}</div>
                 <div class="incidents-grid">
                     ${s.cases.map((c, i) => `
                         <div class="incident-card" onclick="showIncident(${currentSlideIndex}, ${i})">
-                            <div class="incident-icon">${c.icon}</div>
                             <div class="incident-name">${c.name}</div>
                             <div class="incident-age">${c.age} år</div>
                             <div class="incident-platform">${c.platform} • ${c.date}</div>
@@ -1837,9 +1836,9 @@
         function showIncident(slideIdx, caseIdx) {
             const incident = slidesData[slideIdx].cases[caseIdx];
             document.getElementById('incidentModalContent').innerHTML = `
-                <h3>${incident.icon} ${incident.name}, ${incident.age} år</h3>
+                <h3>${incident.name}, ${incident.age} år</h3>
                 <p>${incident.description}</p>
-                ${incident.source ? `<p><a href="${incident.source}" target="_blank">Läs mer →</a></p>` : ''}
+                ${incident.source ? `<p><a href="${incident.source}" target="_blank" class="source-button">Läs dokumentation →</a></p>` : ''}
             `;
             document.getElementById('incidentModal').classList.add('active');
         }
