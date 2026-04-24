@@ -1413,9 +1413,9 @@
             .rewrite-prefix { font-size: 1.8rem; font-weight: 300; color: var(--accent); opacity: 0; transition: opacity 0.6s ease; font-style: italic; }
             .rewrite-prefix.visible { opacity: 1; }
             .rewrite-main { font-size: 3rem; font-weight: 300; line-height: 1.5; color: var(--text); }
-            .rewrite-main .rw-slot { display: inline; color: #fff; transition: color 0.3s ease; }
-            .rewrite-main .rw-slot.changed { color: var(--accent); }
+            .rewrite-main .rw-slot { display: inline; color: #fff; transition: color 0.4s ease; }
             .rewrite-main .rw-slot.active { border-right: 2px solid var(--accent); animation: blink-cursor 0.8s step-end infinite; color: var(--accent); }
+            .rewrite-main .rw-slot.changed { color: var(--accent); }
             
             /* Case Grid */
             .slide-case-grid { max-width: 1200px; margin: 0 auto; text-align: center; }
@@ -2052,7 +2052,7 @@
                 }
                 return result;
             };
-            return `<div class="slide-rewrite" id="rewrite-${s.id}">
+            return `<div class="slide-rewrite" id="rewrite-${s.id}" onclick="if(window.handleNextStep && window.handleNextStep()) return; else nextSlide();">
                 <div class="rewrite-prefix" data-prefixes='${JSON.stringify(s.prefix||[])}'></div>
                 <div class="rewrite-main">${buildSentence(first)}</div>
             </div>`;
@@ -2357,6 +2357,7 @@
                 nextSlide();
             } else if (e.key === 'ArrowRight') {
                 e.preventDefault();
+                if (window.handleNextStep && window.handleNextStep()) return;
                 nextSlide();
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();
