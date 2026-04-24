@@ -257,7 +257,7 @@
     {
       "id": "misinfo-disinfo",
       "type": "grid",
-      "title": "Sanning i gungning",
+      "title": "Sanning & Källkritik",
       "cards": [
         {
           "icon": "🤷",
@@ -270,14 +270,14 @@
           "desc": "Felaktig info som sprids MEDVETET. Syftet är att manipulera."
         },
         {
-          "icon": "🔁",
-          "title": "AI som förstärkare",
-          "desc": "Generativ AI gör det enklare att skapa och sprida båda typerna i stor skala."
+          "icon": "🧠",
+          "title": "Förskolans grund",
+          "desc": "Källkritik för små barn börjar med att tidigt plantera frågan: 'Har en dator eller en människa gjort detta?'"
         },
         {
-          "icon": "🧠",
-          "title": "Förskolans roll",
-          "desc": "Källkritik för små barn handlar om att tidigt plantera frågan: 'Har en dator eller en människa gjort detta?'"
+          "icon": "🛡️",
+          "title": "Lösningen: VEP",
+          "desc": "Använd Virtuella Expertpaneler (VEP). Låt AI agera 'djävulens advokat' eller källkritisk forskarpanel för att granska material du är osäker på."
         }
       ]
     },
