@@ -258,8 +258,8 @@
     {
       "id": "gdpr-kort",
       "type": "quote",
-      "title": "GDPR i prompts",
-      "text": "*ALDRIG I PROMPTEN (GDPR):* Mata aldrig in barnens namn, verksamhetens identitet eller specifik pedagogisk dokumentation. *Beskriv istället situationen generellt utan att någon individ kan pekas ut.*",
+      "title": "Säkerhet i praktiken",
+      "text": "*Glöm aldrig GDPR och andra riktlinjer för informationssäkerhet.* Mata aldrig in barnens namn, verksamhetens identitet eller känslig pedagogisk dokumentation i era prompter. *Beskriv istället situationen generellt, utan att någon individ kan pekas ut.*",
       "style": "typewriter",
       "slowSpeed": false
     },
