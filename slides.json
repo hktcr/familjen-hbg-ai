@@ -228,30 +228,24 @@
       "title": "Pedagogik: Visuell Källkritik",
       "cards": [
         {
-          "title": "Den magiska katten",
+          "title": "Vad är på riktigt?",
           "color": "var(--sage)",
-          "desc": "Vi måste introducera AI tidigt, men inte genom att lämna barnen ensamma med en chattbot. Istället tittar vi tillsammans på overkliga men fotorealistiska bilder för att pedagogiskt samtala om vad som faktiskt är på riktigt.",
-          "image": "assets/purple_cat.png"
-        }
-      ]
-    },
-    {
-      "id": "voice-cloning-risk",
-      "section": "barn",
-      "type": "case-grid",
-      "title": "Säkerhet: Röstkloning & Dokumentation",
-      "cards": [
-        {
-          "title": "Det nya data-ansvaret",
-          "color": "#a8423a",
-          "desc": "Tre sekunder ljud från ett filmklipp på förskolans öppna Instagram räcker idag för att klona ett barns röst. Detta kräver en omedelbar och ny medvetenhet kring hur ledning och pedagoger dokumenterar barnens vardag."
+          "desc": "Vi måste introducera AI tidigt, men inte genom att lämna barnen ensamma med en chattbot. Istället tittar vi tillsammans på overkliga men fotorealistiska bilder för att pedagogiskt samtala om vad som faktiskt är på riktigt, vem som har skapat dem och varför.",
+          "images": [
+            "assets/purple_cat.png",
+            "assets/flying_dog.png",
+            "assets/rainbow_elephant.png",
+            "assets/snowman_beach.png",
+            "assets/candy_tree.png",
+            "assets/cloud_car.png"
+          ]
         }
       ]
     },
     {
       "id": "incidents",
       "type": "quote",
-      "text": "\"What if I told you I could come home right now?\"\n\"Please do, my sweet king.\"\n\n\"Vad händer om jag säger att jag kan komma hem just nu?\"\n\"Snälla gör det, min ljuva kung.\"",
+      "text": "\"What if I told you I could come home right now?\"\n*\"Please do, my sweet king.\"*\n\n\"Vad händer om jag säger att jag kan komma hem just nu?\"\n*\"Snälla gör det, min ljuva kung.\"*",
       "author": "Sewell Setzer III (14 år), sista konversationen med Character.AI",
       "style": "typewriter",
       "sources": [
