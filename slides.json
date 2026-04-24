@@ -409,6 +409,12 @@
           "color": "var(--blue)",
           "front": "Den nya idén",
           "back": "Du vill revolutionera höstens föräldramöte och göra det mer interaktivt, men du är fast i gamla hjulspår. Du behöver någon att bolla vilda pedagogiska idéer med."
+        },
+        {
+          "icon": "🤝",
+          "color": "var(--purple)",
+          "front": "Rekryteringen",
+          "back": "Du ska anställa en ny förskollärare och vill komma bort från platta standardfrågor. Du behöver designa situationsbaserade intervjucase som verkligen testar kandidatens förmåga i kris."
         }
       ]
     },
