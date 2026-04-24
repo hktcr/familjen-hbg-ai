@@ -1743,7 +1743,7 @@
                 }
             }
 
-            container.innerHTML = '"<span class="cursor"></span>';
+            container.innerHTML = '<span class="cursor"></span>';
             setTimeout(typeNext, 500);
         }
 
@@ -1966,7 +1966,8 @@
                 } else if (step.type === 'list') {
                     html += `<ul class="step-list">`;
                     step.items.forEach(item => {
-                        html += `<li><strong>${item.title}:</strong> <span>${item.desc}</span></li>`;
+                        const hlClass = item.highlight ? ' class="highlight"' : '';
+                        html += `<li${hlClass}><strong>${item.title}:</strong> <span>${item.desc}</span></li>`;
                     });
                     html += `</ul>`;
                     if (step.footer) {
@@ -2147,12 +2148,83 @@
                     { word: 'tryggt', prob: '4%' },
                     { word: 'hållbart', prob: '1%' }
                 ],
-                // Step 2: depends on step 1
                 'livslångt': [
                     { word: 'lärande', prob: '98%' },
                     { word: 'intresse', prob: '1%' },
                     { word: 'engagemang', prob: '0.5%' },
                     { word: 'utforskande', prob: '0.5%' }
+                ],
+                'lärande': [
+                    { word: '.', prob: '50%' },
+                    { word: 'som', prob: '30%' },
+                    { word: 'och', prob: '15%' },
+                    { word: 'genom', prob: '5%' }
+                ],
+                'som': [
+                    { word: 'är', prob: '60%' },
+                    { word: 'bygger', prob: '20%' },
+                    { word: 'utgår', prob: '15%' },
+                    { word: 'skapar', prob: '5%' }
+                ],
+                'är': [
+                    { word: 'roligt', prob: '40%' },
+                    { word: 'meningsfullt', prob: '30%' },
+                    { word: 'tryggt', prob: '20%' },
+                    { word: 'utmanande', prob: '10%' }
+                ],
+                'roligt': [
+                    { word: '.', prob: '80%' },
+                    { word: 'och', prob: '20%' }
+                ],
+                'meningsfullt': [
+                    { word: '.', prob: '70%' },
+                    { word: 'och', prob: '30%' }
+                ],
+                'tryggt': [
+                    { word: 'klimat', prob: '60%' },
+                    { word: 'liv', prob: '20%' },
+                    { word: '.', prob: '15%' },
+                    { word: 'lärande', prob: '5%' }
+                ],
+                'och': [
+                    { word: 'meningsfullt', prob: '40%' },
+                    { word: 'lärorikt', prob: '30%' },
+                    { word: 'tryggt', prob: '20%' },
+                    { word: 'roligt', prob: '10%' }
+                ],
+                'lärorikt': [
+                    { word: '.', prob: '90%' },
+                    { word: 'och', prob: '10%' }
+                ],
+                'klimat': [
+                    { word: 'där', prob: '60%' },
+                    { word: '.', prob: '20%' },
+                    { word: 'och', prob: '15%' },
+                    { word: 'för', prob: '5%' }
+                ],
+                'där': [
+                    { word: 'alla', prob: '50%' },
+                    { word: 'barn', prob: '30%' },
+                    { word: 'lärande', prob: '15%' },
+                    { word: 'vi', prob: '5%' }
+                ],
+                'alla': [
+                    { word: 'barn', prob: '80%' },
+                    { word: 'får', prob: '20%' }
+                ],
+                'barn': [
+                    { word: 'får', prob: '60%' },
+                    { word: 'kan', prob: '30%' },
+                    { word: '.', prob: '10%' }
+                ],
+                'får': [
+                    { word: 'utvecklas', prob: '70%' },
+                    { word: 'leka', prob: '20%' },
+                    { word: 'vara', prob: '10%' }
+                ],
+                'utvecklas': [
+                    { word: '.', prob: '80%' },
+                    { word: 'och', prob: '20%' }
                 ],
                 'lustfyllt': [
                     { word: 'lärande', prob: '80%' },
@@ -2160,30 +2232,26 @@
                     { word: 'klimat', prob: '5%' },
                     { word: 'möte', prob: '5%' }
                 ],
-                'tryggt': [
-                    { word: 'klimat', prob: '60%' },
-                    { word: 'liv', prob: '20%' },
-                    { word: 'och', prob: '15%' },
-                    { word: 'lärande', prob: '5%' }
+                'utforskande': [
+                    { word: 'av', prob: '50%' },
+                    { word: '.', prob: '30%' },
+                    { word: 'i', prob: '15%' },
+                    { word: 'och', prob: '5%' }
+                ],
+                'av': [
+                    { word: 'omvärlden', prob: '60%' },
+                    { word: 'naturen', prob: '20%' },
+                    { word: 'språket', prob: '20%' }
+                ],
+                'omvärlden': [
+                    { word: '.', prob: '90%' },
+                    { word: 'och', prob: '10%' }
                 ],
                 'hållbart': [
                     { word: 'samhälle', prob: '70%' },
                     { word: 'liv', prob: '15%' },
                     { word: 'lärande', prob: '10%' },
                     { word: 'och', prob: '5%' }
-                ],
-                // Step 3: depends on step 2
-                'lärande': [
-                    { word: '.', prob: '70%' },
-                    { word: 'som', prob: '15%' },
-                    { word: 'och', prob: '10%' },
-                    { word: 'genom', prob: '5%' }
-                ],
-                'klimat': [
-                    { word: 'där', prob: '60%' },
-                    { word: '.', prob: '20%' },
-                    { word: 'och', prob: '15%' },
-                    { word: 'för', prob: '5%' }
                 ],
                 'samhälle': [
                     { word: '.', prob: '50%' },
@@ -2196,36 +2264,6 @@
                     { word: 'i', prob: '20%' },
                     { word: 'och', prob: '20%' },
                     { word: 'som', prob: '10%' }
-                ],
-                'och': [
-                    { word: 'meningsfullt', prob: '40%' },
-                    { word: 'lärorikt', prob: '30%' },
-                    { word: 'tryggt', prob: '20%' },
-                    { word: 'roligt', prob: '10%' }
-                ],
-                'intresse': [
-                    { word: 'för', prob: '70%' },
-                    { word: '.', prob: '20%' },
-                    { word: 'att', prob: '8%' },
-                    { word: 'och', prob: '2%' }
-                ],
-                'engagemang': [
-                    { word: 'i', prob: '50%' },
-                    { word: '.', prob: '30%' },
-                    { word: 'för', prob: '15%' },
-                    { word: 'och', prob: '5%' }
-                ],
-                'utforskande': [
-                    { word: '.', prob: '40%' },
-                    { word: 'av', prob: '30%' },
-                    { word: 'i', prob: '20%' },
-                    { word: 'och', prob: '10%' }
-                ],
-                'möte': [
-                    { word: 'med', prob: '80%' },
-                    { word: '.', prob: '10%' },
-                    { word: 'mellan', prob: '8%' },
-                    { word: 'som', prob: '2%' }
                 ]
             };
 

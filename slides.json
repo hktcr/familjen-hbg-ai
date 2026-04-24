@@ -299,30 +299,7 @@
         }
       ]
     },
-    {
-      "id": "youtube-deepfake",
-      "type": "video-link",
-      "title": "Syntetisk sanning",
-      "subtitle": "Kan du se skillnaden?",
-      "url": "https://www.youtube.com/shorts/myqbxs2n1eE",
-      "description": "En kort video som visar hur lätt det är att skapa övertygande deepfakes. Viktigt att visa elever och föräldrar.",
-      "icon": "🎬"
-    },
-    {
-      "id": "hinton-varning",
-      "type": "presenter",
-      "name": "Geoffrey Hinton",
-      "title": "Nobelpristagare AI 2024",
-      "org": "F.d. Google, University of Toronto",
-      "bio": "'Internet kommer översvämmas av falska foton, videor och texter. Den genomsnittliga personen kommer inte längre kunna veta vad som är sant.'",
-      "contact": "Lämnade Google 2023 för att varna för AI-risker",
-      "sources": [
-        {
-          "name": "NYT: The Godfather of A.I. Leaves Google",
-          "url": "https://www.nytimes.com/2023/05/01/technology/ai-google-chatbot-engineer-quits-hinton.html"
-        }
-      ]
-    },
+
     {
       "id": "policy-reflektion",
       "type": "step-slide",
@@ -337,7 +314,7 @@
           "items": [
             {
               "title": "Lokala riktlinjer",
-              "desc": "Finns det tydliga regler för pedagogernas AI-användning i vår verksamhet?"
+              "desc": "Finns det tydligt stöd och riktlinjer för pedagogernas AI-användning i vår verksamhet?"
             },
             {
               "title": "Krisberedskap",
@@ -359,7 +336,7 @@
       "id": "dirigent-intro",
       "type": "quote",
       "title": "Från publik till dirigent",
-      "text": "En orkester utan dirigent spelar bara noter. Med en dirigent skapar de musik.",
+      "text": "En orkester utan dirigent spelar bara noter.\n\nMed en *dirigent* skapar de *musik*.",
       "author": "Det är dags att bli dirigent.",
       "style": "typewriter"
     },
@@ -385,7 +362,8 @@
             },
             {
               "title": "👤 Dirigenten (DU)",
-              "desc": "Sätter målet, styr processen, värderar förslagen och fattar de slutgiltiga besluten. Du bär alltid ansvaret."
+              "desc": "Sätter målet, styr processen, värderar förslagen och fattar de slutgiltiga besluten. Du bär alltid ansvaret.",
+              "highlight": true
             }
           ]
         }
@@ -415,6 +393,74 @@
           "icon": "🚀",
           "title": "Låt oss testa!",
           "desc": "Nu går vi över till att interagera med tekniken live. Vilka utmaningar vill NI lösa?"
+        }
+      ]
+    }
+    },
+    {
+      "id": "misinfo-disinfo",
+      "section": "reserv",
+      "type": "grid",
+      "title": "Sanning & Källkritik",
+      "cards": [
+        {
+          "icon": "🤷",
+          "title": "Misinformation",
+          "desc": "Felaktig info som sprids OMEDVETET. Personen tror att det stämmer."
+        },
+        {
+          "icon": "🎯",
+          "title": "Desinformation",
+          "desc": "Felaktig info som sprids MEDVETET. Syftet är att manipulera."
+        },
+        {
+          "icon": "🧠",
+          "title": "Förskolans grund",
+          "desc": "Källkritik för små barn börjar med att tidigt plantera frågan: 'Har en dator eller en människa gjort detta?'"
+        },
+        {
+          "icon": "🛡️",
+          "title": "Lösningen: VEP",
+          "desc": "Använd Virtuella Expertpaneler (VEP). Låt AI agera 'djävulens advokat' eller källkritisk forskarpanel för att granska material du är osäker på."
+        }
+      ]
+    },
+    {
+      "id": "voice-cloning-risk",
+      "section": "reserv",
+      "type": "case-grid",
+      "title": "Säkerhet: Röstkloning & Dokumentation",
+      "cards": [
+        {
+          "title": "Det nya data-ansvaret",
+          "color": "#a8423a",
+          "desc": "Tre sekunder ljud från ett filmklipp på förskolans öppna Instagram räcker idag för att klona ett barns röst. Detta kräver en omedelbar och ny medvetenhet kring hur ledning och pedagoger dokumenterar barnens vardag."
+        }
+      ]
+    },
+    {
+      "id": "youtube-deepfake",
+      "section": "reserv",
+      "type": "video-link",
+      "title": "Syntetisk sanning",
+      "subtitle": "Kan du se skillnaden?",
+      "url": "https://www.youtube.com/shorts/myqbxs2n1eE",
+      "description": "En kort video som visar hur lätt det är att skapa övertygande deepfakes. Viktigt att visa elever och föräldrar.",
+      "icon": "🎬"
+    },
+    {
+      "id": "hinton-varning",
+      "section": "reserv",
+      "type": "presenter",
+      "name": "Geoffrey Hinton",
+      "title": "Nobelpristagare AI 2024",
+      "org": "F.d. Google, University of Toronto",
+      "bio": "'Internet kommer översvämmas av falska foton, videor och texter. Den genomsnittliga personen kommer inte längre kunna veta vad som är sant.'",
+      "contact": "Lämnade Google 2023 för att varna för AI-risker",
+      "sources": [
+        {
+          "name": "NYT: The Godfather of A.I. Leaves Google",
+          "url": "https://www.nytimes.com/2023/05/01/technology/ai-google-chatbot-engineer-quits-hinton.html"
         }
       ]
     }
