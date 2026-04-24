@@ -1607,6 +1607,7 @@
         }
 
         function renderCurrentSlide() {
+            window.handleNextStep = null;
             const slide = slidesData[currentSlideIndex];
             const content = document.getElementById('slideContent');
             const slideView = document.getElementById('slideView');
@@ -1943,8 +1944,16 @@
 
         function renderStepSlide(s) {
             currentStepIndex = 0;
+            window.handleNextStep = () => {
+                if (currentStepIndex < s.steps.length - 1) {
+                    currentStepIndex++;
+                    updateStepDisplay();
+                    return true;
+                }
+                return false;
+            };
             let html = `<div class="slide-step">
-                <div class="step-container" onclick="nextStep('${s.id}')">`;
+                <div class="step-container" onclick="if(window.handleNextStep && !window.handleNextStep()) nextSlide();">`;
 
             s.steps.forEach((step, i) => {
                 html += `<div class="step-content ${i === 0 ? 'active' : ''}" data-step="${i}">`;
@@ -1975,15 +1984,6 @@
             </div>`;
 
             return html;
-        }
-
-        function nextStep(slideId) {
-            const slide = slidesData.find(s => s.id === slideId);
-            if (!slide || !slide.steps) return;
-
-            const totalSteps = slide.steps.length;
-            currentStepIndex = (currentStepIndex + 1) % totalSteps;
-            updateStepDisplay();
         }
 
         function goToStep(stepIndex, event) {
@@ -2081,25 +2081,21 @@
                 animating = false;
             }
 
-            container.rewriteHandler = function(e) {
-                if (animating) { e.stopPropagation(); return; }
-                if (e.type === 'click' || e.key === 'ArrowRight' || e.key === ' ') {
-                    if (currentStep < steps.length - 1) {
-                        e.stopPropagation();
-                        currentStep++;
-                        transitionTo(currentStep);
-                    }
+            window.handleNextStep = () => {
+                if (animating) return true;
+                if (currentStep < steps.length - 1) {
+                    currentStep++;
+                    transitionTo(currentStep);
+                    return true;
                 }
+                return false;
             };
             
-            container.onclick = container.rewriteHandler;
-            
-            // Clean up previous handlers if they exist
-            if(window.currentRewriteHandler) {
-                document.removeEventListener('keydown', window.currentRewriteHandler);
-            }
-            window.currentRewriteHandler = container.rewriteHandler;
-            document.addEventListener('keydown', container.rewriteHandler);
+            container.onclick = function(e) {
+                if (window.handleNextStep && !window.handleNextStep()) {
+                    nextSlide();
+                }
+            };
         }
 
         function renderToolLinks(s) {
@@ -2291,6 +2287,7 @@
                 closeSlide();
             } else if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
                 e.preventDefault();
+                if (window.handleNextStep && window.handleNextStep()) return;
                 nextSlide();
             } else if (e.key === 'ArrowLeft') {
                 e.preventDefault();
