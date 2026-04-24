@@ -185,9 +185,9 @@
     {
       "id": "token-demo",
       "type": "token-demo",
-      "title": "Så funkar GPT",
-      "prompt": "Jag älskar pizza med extra",
-      "description": "Generativ AI är inte en tänkande maskin. Den letar statistiska samband för att gissa nästa ord, baserat på den kontext (prompt) du ger den. Prova själv!"
+      "title": "Så funkar 'Gissningsmaskinen'",
+      "prompt": "Förskolan ska lägga grunden för ett",
+      "description": "Modellen 'förstår' inte läroplanen, men den har tränats på den. Nu beräknar den matematiskt vilket ord som är mest sannolikt att följa. Välj ett ord och se hur kontexten styr nästa gissning!"
     },
     {
       "id": "children-grid",
