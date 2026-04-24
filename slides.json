@@ -383,26 +383,32 @@
         {
           "icon": "💬",
           "color": "var(--red)",
-          "front": "Medarbetarsamtalet",
-          "back": "**Situation:** En medarbetare har börjat visa tydliga tecken på stress och underpresterar, och du behöver ha ett samtal.\n\n**Så kan AI stötta (Dirigenten):**\nGe AI rollen som 'Tveksam medarbetare' och låt den ifrågasätta dina argument. Be den sedan byta roll till 'Erfaren HR-expert' och ge dig konstruktiv kritik på ditt sätt att leda samtalet."
+          "front": "Det tuffa samtalet",
+          "back": "En medarbetare har börjat visa tydliga tecken på stress, underpresterar och har en negativ attityd i arbetslaget. Du behöver ha ett korrigerande samtal, men är orolig för att det ska eskalera till konflikt."
         },
         {
           "icon": "📱",
           "color": "var(--yellow)",
-          "front": "Den upprörda föräldern",
-          "back": "**Situation:** En förälder har hört av sig med ett mycket argt mejl angående ett påstått bråk på gården, och kräver omedelbara åtgärder.\n\n**Så kan AI stötta (Dirigenten):**\nKlistra in mejlet (helt avidentifierat!) i AI:n och be den sammanfatta huvudpoängerna utan de starka känslorna. Be därefter AI:n skriva tre olika utkast på svar: ett formellt, ett empatiskt och ett neutralt."
+          "front": "Det heta mejlet",
+          "back": "En vårdnadshavare har skickat ett extremt långt och emotionellt laddat mejl sent på kvällen angående en påstådd incident. De kräver omedelbara åtgärder och språket är hätskt."
         },
         {
           "icon": "📄",
           "color": "var(--accent)",
-          "front": "Verksamhetsberättelsen",
-          "back": "**Situation:** Du har fastnat med verksamhetsberättelsen. Du har mängder med anteckningar från året, men svårt att hitta den 'röda tråden'.\n\n**Så kan AI stötta (Koordinatorn):**\nGe AI alla dina råanteckningar och styrdokument. Be den agera Koordinator och strukturera upp materialet i tydliga teman enligt läroplanens mål. Låt den identifiera var det saknas konkreta exempel i din text."
+          "front": "Blankt papper",
+          "back": "Det är dags att skriva verksamhetsberättelsen. Du har mängder med lösryckta anteckningar, loggböcker och halvfärdiga tankar från året, men noll energi att bygga den röda tråden."
         },
         {
           "icon": "⚖️",
           "color": "var(--green)",
-          "front": "Likabehandlingsplanen",
-          "back": "**Situation:** Den årliga likabehandlingsplanen ska uppdateras och du vill försäkra dig om att språket är inkluderande och att inga lagkrav missats.\n\n**Så kan AI stötta (Expertpanelen):**\nSkapa en Virtuell Expertpanel (VEP) bestående av en 'Skoljurist', en 'Språkforskare' och en 'Specialpedagog'. Låt dem granska ditt utkast från tre helt olika perspektiv innan du tar det sista beslutet."
+          "front": "Snårskogen",
+          "back": "Likabehandlingsplanen ska revideras. Den måste vara juridiskt vattentät, språkligt inkluderande och samtidigt begriplig för all personal. Du känner dig ensam i ansvaret."
+        },
+        {
+          "icon": "💡",
+          "color": "var(--blue)",
+          "front": "Den nya idén",
+          "back": "Du vill revolutionera höstens föräldramöte och göra det mer interaktivt, men du är fast i gamla hjulspår. Du behöver någon att bolla vilda pedagogiska idéer med."
         }
       ]
     },

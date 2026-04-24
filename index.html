@@ -1821,17 +1821,33 @@
 
         function showCardModal(slideIdx, cardIdx) {
             const card = slidesData[slideIdx].cards[cardIdx];
-            const backText = card.back.replace(/\\n/g, '<br>').replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
             document.getElementById('incidentModalContent').innerHTML = `
                 <div class="card-modal-content" style="--card-color:${card.color||'var(--accent)'}">
                     <div class="card-modal-icon">
                         ${card.icon.endsWith('.png') ? `<img src="${card.icon}" alt="${card.front}">` : card.icon}
                     </div>
                     <h3 style="color: var(--card-color)">${card.front}</h3>
-                    <div class="card-modal-text">${backText}</div>
+                    <div class="card-modal-text" id="cardModalTextTarget"></div>
                 </div>
             `;
             document.getElementById('incidentModal').classList.add('active');
+            
+            // Typewriter effect
+            const target = document.getElementById('cardModalTextTarget');
+            target.innerHTML = '';
+            const text = card.back;
+            let i = 0;
+            if (window.cardTypewriter) clearInterval(window.cardTypewriter);
+            window.cardTypewriter = setInterval(() => {
+                if (i >= text.length) {
+                    clearInterval(window.cardTypewriter);
+                    target.innerHTML = text.replace(/\n/g, '<br>') + '<span class="cursor" style="color:var(--card-color)">|</span>';
+                    return;
+                }
+                const partialText = text.substring(0, i + 1).replace(/\n/g, '<br>');
+                target.innerHTML = partialText + '<span class="cursor" style="color:var(--card-color)">|</span>';
+                i++;
+            }, 30);
         }
 
         function renderTrafficLight(s) {
@@ -1882,6 +1898,7 @@
         }
 
         function closeIncidentModal(e) {
+            if (window.cardTypewriter) clearInterval(window.cardTypewriter);
             document.getElementById('incidentModal').classList.remove('active');
         }
 
